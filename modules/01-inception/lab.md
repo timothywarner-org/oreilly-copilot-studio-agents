@@ -1,31 +1,24 @@
-# Inception lab
+# Inception lab: Plan before you click
 
-**Target:** LO1. **Artifact:** [worksheet.md](worksheet.md).
+**LO1. Required learner artifact:** [agent brief](worksheet.md). **No code required.** The seven-minute exercise is a planning task; agent creation is guided instructor work, with optional follow-along.
 
-These steps operationalize the approved activity. They are newly authored guidance, not proof that the
-workflow has been run in your tenant. Never bypass tenant policy to complete an exercise.
+1. **Minute 0-1:** Write the user and their job. Use “A Contoso employee wants to understand one Azure concept and practise it.”
+2. **Minute 1-3:** Write one instruction, one topic, and one testable success criterion before reading the worked answer below.
+3. **Minute 3-5:** Swap with a partner, or critique your own work. Could another person tell whether the test passed? What request should the assistant decline?
+4. **Minute 5-7:** Revise one vague statement. Submit or say your instruction and its test. Keep actual results **NOT RUN** until observed.
 
-## Steps
+**Worked answer, reveal after writing:**
 
-1. Write the user persona: a cloud beginner seeking study support. Distinguish this persona from you, the maker.
-2. Complete the job, non-goals, and source authority fields in worksheet.md before opening authoring controls.
-3. For the maker route, sign in to Copilot Studio and select your approved nonproduction environment. Follow the documented standard-harness creation route in the environment notes.
-4. Create a blank agent named AZ-900 Cert-Prep Assistant. Inspect Overview, then use the Instruction section’s Edit control to paste the reviewed sample instructions and save. Verify the orchestration configuration in your actual surface.
-5. Compare the generated defaults with sample-agent/topic-map.json. Remove or decline suggested capabilities that do not serve the agreed scope.
-6. Test a normal study request, an unrelated request, and a request to guarantee an exam pass. Record observed behavior or mark NOT RUN.
-7. Explain one safe boundary aloud. Save the actual checkpoint privately if you created an agent.
+| Field | Example |
+| --- | --- |
+| Instruction | Present one original practice question, then wait for my answer before explaining it. |
+| Topic | Shared responsibility practice: explain, collect a choice, give feedback. |
+| Success | In a fresh test, the first response contains one question and no key; feedback arrives only after the learner replies. |
+| Hard failure | Claims it booked an exam, contacted a mentor, or guarantees a pass. |
+| Source | Original course concept file for the narrow lesson; Microsoft Learn for current exam scope. |
 
-## Checkpoint
+**Optional maker follow-along:** Follow the [instructor creation steps](../../instructor/01-inception-guide.md). Choose the approved nonproduction environment, create **AZ-900 Cert-Prep Assistant**, save [instructions](../../sample-agent/instructions.md), and inspect generative orchestration. Record actual state. Do not change tenant policy to overcome access problems.
 
-You can name the user, job, allowed actions, unsupported actions, and a testable failure condition without relying on the portal UI.
+**Recovery:** Complete the worksheet while the instructor demonstrates. This exercises the planning objective; it does not count as a personal working agent. Pair with a maker or complete creation after access is resolved.
 
-## Recovery
-
-Without working tenant access, complete the worksheet using a diagram and predicted behavior.
-Label predicted responses **PREDICTED**. Leave execution results **NOT RUN**.
-Do not publish personal data or screenshots containing identities or secrets.
-
-## Optional stretch
-
-Change one assumption in your worksheet, then explain which downstream module or evaluation case must change.
-Do not add a new platform, production connector, or unrelated scenario.
+**Exit question:** Why does “be accurate” fail as a success metric? **Answer:** It does not specify a request, acceptable response, evidence, or failure threshold.

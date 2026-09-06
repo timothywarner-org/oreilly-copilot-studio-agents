@@ -1,5 +1,7 @@
 # CreateStudyPlan — bounded agent-flow design
 
+**Optional advanced follow-up.** The live course uses [GetStudySession](core-study-session.md), with one text input and a fixed 30-minute output. This older multi-day design and its Node reference are retained for independent extension. They are not prerequisites or the core demonstration.
+
 **Implementation specification, not a deployed flow.** This is a suggested teaching realization of
 the proposal’s study-plan or lab-generator action pattern. The core route is no-code.
 

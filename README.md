@@ -6,8 +6,8 @@
 
 [Course & registration](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/) · [Start learning](START-HERE.md) · [Instructor desk](instructor/run-of-show.md) · [TechTrainerTim](https://techtrainertim.com)
 
-> **Preparation scaffold — private origin intended.** The learning path, sample inputs, worksheets,
-> and local checks are supplied. A Copilot Studio agent has **not** been deployed or certified by these tests.
+> **Course teaching kit, private source repository.** The learning path, sample inputs, worksheets,
+> worked examples, timed instructor guides, and local checks are supplied. A Copilot Studio agent has **not** been deployed or certified by these tests.
 > See [remaining checks](docs/known-gaps.md). Node.js and GitHub tools are optional instructor tooling,
 > not prerequisites for the no-code class.
 
@@ -25,7 +25,7 @@ AZ-900 is the assistant’s subject matter; this repository teaches agent buildi
 | [03 · Extend](modules/03-extend/README.md) | Add a study-plan action; distinguish flows, MCP, and agent delegation. | A bounded tool contract and a deliberate escalation path. |
 | [04 · Operate](modules/04-operate/README.md) | Evaluate, observe, govern, and prepare publication. | Evidence and a go/no-go pilot decision. |
 
-Each module contains a learner lab and a worksheet. You can participate through a **maker route**
+Each module contains a learner lab and worksheet, with worked answers and a timed instructor guide. You can participate through a **maker route**
 with tenant access or an **observer route** using the same prompts and acceptance criteria.
 
 ## The four promised outcomes
@@ -38,6 +38,12 @@ with tenant access or an **observer route** using the same prompts and acceptanc
 The [alignment map](docs/acceptance-map.md) connects each outcome to a demo, a learner artifact,
 and evaluation cases. The [curriculum delta](docs/course-delta.md) explains what changed from
 *How to Create AI Agents Like a Pro* without dragging its old scope into this class.
+
+## Teaching and distribution
+
+Read the [teaching design](docs/teaching-design.md), [complete promise map](docs/promise-coverage.md), and [co-instructor desk](instructor/co-instructor.md). The core tool is **GetStudySession**, with one focus and a fixed 30-minute output. The multi-day Node example is optional advanced practice.
+
+The [slide manuscript](instructor/teaching-slides.json) supports a 26-slide companion. Binary slides stay outside Git. The [learner package procedure](learner/README.md) produces a curated local folder for the producer. A genuine native YAML capture and attendee-access check remain distribution gates.
 
 ## Start here
 

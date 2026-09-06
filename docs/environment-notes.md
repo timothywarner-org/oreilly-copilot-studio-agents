@@ -3,6 +3,8 @@
 **No tenant configuration has been verified by this repository.**
 The June proposal’s terminology is preserved in the course; current product documentation is checked separately.
 
+The current build procedures and exact source findings are in [Build research](../sources/research-build.md), [Extend research](../sources/research-extend.md), and [Operate research](../sources/research-operate.md). The core uses an original uploaded file and GetStudySession. Do not substitute the limited Teams plan for the full authoring experience required for generative orchestration.
+
 ## Product surface to verify
 
 Microsoft’s **Create and delete agents** page, updated September 1, 2026, now describes the

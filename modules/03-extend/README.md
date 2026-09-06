@@ -1,35 +1,28 @@
-# 03 · Extend: Actions, MCP, and Subagent Patterns
+# 03 · Extend: give the assistant one reliable tool
 
-**Give the agent one bounded capability, not unrestricted autonomy.**
+**LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
 
-**Outcome LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
+**The question:** When should our assistant stop writing an answer and use a bounded capability?
 
-**Schedule:** 60 minutes including a 10-minute break.
-Instruction, demonstration, learner work, and Q&A stay inside the teaching block.
+Our demonstration is **GetStudySession**: choose cloud, security, or governance and receive an authored 30-minute study session. This illustrates predictable tool behavior without arrays, coding, deployment, or complex scheduling. It does not book exams, create resources, or contact a mentor.
 
-## What this module covers
+**50 minutes of teaching and practice, followed by a 10-minute break.**
 
-Actions, agent flows, HTTP tools, MCP, child/connected agents, A2A/Foundry/Fabric/M365 SDK concepts, authentication, DLP, external-model approval, and least privilege.
+| Minutes | Activity | Evidence of learning |
+| --- | --- | --- |
+| 0-5 | Predict answer, clarify, tool, or mentor | Explain the next move for four requests |
+| 5-20 | Build one condition, inspect the completed flow, bind and test | Identify input, returned status, and actual flow run |
+| 20-30 | Compare extension and human handoff patterns | Choose the smallest sufficient capability |
+| 30-40 | Learner decision task | Completed tool boundary and escalation decision |
+| 40-45 | Debrief and failure check | Separate a failed call from an unsupported request |
+| 45-50 | Q&A | Resolve uncertainties before operations |
 
-## Demonstration and learner work
+Start with [the lab](lab.md), complete [the worksheet](worksheet.md), and compare [worked answers](worked-example.md) after committing to your answer. The [instructor guide](../../instructor/03-extend-guide.md) contains the demonstration and talk track.
 
-**Instructor demonstration:** Extend the assistant with a study-plan action pattern and inspect a real tool result or explicitly labelled local fallback.
+**Maker participation is optional.** Everyone predicts and interprets the same cases. Learners with approved access may add the instructor's already published flow in their environment. This repository provides a build recipe, not an importable flow or a claim of tenant execution.
 
-**Proposal’s mini-exercise:** Choose one tool the agent should call and one situation it must escalate.
+**Checkpoint:** Explain why a fluent sentence is insufficient proof of a tool call. Identify one request this agent must decline or refer to a person.
 
-Open [the lab](lab.md), then complete [the worksheet](worksheet.md).
-The maker and observer routes have the same learning outcome.
-
-## Evidence before moving on
-
-You can distinguish a narrative answer, a validated tool result, a blocked action, and a real human handoff.
-
-**Reflection:** Why does adding MCP not remove the need to inspect permissions and tool scope?
-
-## References
-
-- [Approved curriculum](../../sources/proposal-curriculum.md)
-- [Environment notes](../../docs/environment-notes.md)
-- https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp
+**References:** [Core flow recipe](../../sample-agent/tools/core-study-session.md), [extension decisions](../../sample-agent/tools/extension-decisions.md), [verified documentation](../../sources/research-extend.md).
 
 **Continue:** [Operate](../04-operate/README.md)

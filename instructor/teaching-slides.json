@@ -1,0 +1,313 @@
+{
+  "title": "Build AI Agents to Automate Your Workflows",
+  "purpose": "Sparse teaching companion. Use the four instructor guides for the detailed demonstrations. These are original course slides, not an O'Reilly-branded template.",
+  "slides": [
+    {
+      "section": "Welcome",
+      "title": "Build AI Agents to Automate Your Workflows",
+      "lines": [
+        "An AZ-900 study assistant in Microsoft Copilot Studio",
+        "Tim Warner"
+      ],
+      "notes": "Today you are the maker. The person using your assistant is studying Azure fundamentals. We will keep one assistant on screen and improve it through the class. You can build with me if your environment is ready or work through the same decisions in the workbook. Show a brief prepared end-state example, clearly identifying whether it is live or recorded. Do not spend the opening troubleshooting learner accounts.",
+      "sources": []
+    },
+    {
+      "section": "Welcome",
+      "title": "Four decisions",
+      "lines": [
+        "1. What job is the assistant allowed to do?",
+        "2. What supports its answer?",
+        "3. When should it call a tool?",
+        "4. What would justify a pilot?"
+      ],
+      "notes": "Each decision produces something we can inspect. By the end you will have a brief, a teaching sequence, a tool contract, and a pilot decision. We will keep returning to these four questions. A successful exercise is a decision you can explain with evidence. Following a cursor is useful practice, but it is not the only way to participate.",
+      "sources": []
+    },
+    {
+      "section": "Inception",
+      "title": "The assistant's job",
+      "lines": [
+        "Contoso colleagues need help studying Azure fundamentals.",
+        "The assistant explains, checks understanding, and suggests a session.",
+        "Exam booking and pass guarantees sit outside its job."
+      ],
+      "notes": "Ask the group to distinguish the maker from the assistant's user. The same distinction applies to an HR or help desk assistant. Write a sentence naming the user and a specific job before discussing configuration. A small scope gives us testable failures. Our invented Contoso scenario is a teaching example, not a record of customer use.",
+      "sources": []
+    },
+    {
+      "section": "Inception",
+      "title": "The agent model",
+      "lines": [
+        "Instructions describe the job and boundaries.",
+        "Knowledge supplies reference material.",
+        "Topics structure conversations. Tools perform operations.",
+        "Orchestration selects the next capability."
+      ],
+      "notes": "Explain the components using one incoming study question. The agent can retrieve information, enter a topic, or call a tool. The channel is where the user interacts. A trigger starts work, while orchestration chooses how to proceed. Contrast a conversational request with an event-triggered process without adding another automation. Demonstrate the documented standard-harness configuration in the Module 1 guide.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
+      ]
+    },
+    {
+      "section": "Inception",
+      "title": "A boundary we can test",
+      "lines": [
+        "Weak instruction: Be accurate.",
+        "Better instruction: State when a source does not support an answer.",
+        "Test: What is my employer's exam refund policy?"
+      ],
+      "notes": "Read the two instructions and give learners time to explain which is easier to test. The model can still fail despite a good instruction. Our success criterion concerns observed cases, not all future behavior. Create the shell, enter the reviewed instructions, and try the boundary prompt. Inspect the response before calling the checkpoint complete.",
+      "sources": []
+    },
+    {
+      "section": "Inception",
+      "title": "Your agent brief",
+      "lines": [
+        "Write one instruction and one topic.",
+        "Add a measurable success criterion.",
+        "Explain the failure that your criterion would catch."
+      ],
+      "notes": "Use the Inception worksheet. Give quiet writing time before taking responses. A useful criterion might require zero invented exam-policy claims across the rehearsal set, with every unrun case reported. Ask a learner to explain why a criterion can pass a small test set without guaranteeing production behavior. Close with the Module 1 hinge question and preserve question time.",
+      "sources": []
+    },
+    {
+      "section": "Break",
+      "title": "10-minute break",
+      "lines": [
+        "Return at 10:00 AM Central",
+        "Next: the source behind the answer"
+      ],
+      "notes": "Show the return time in text and say it aloud. Preserve the scheduled break. Confirm the knowledge checkpoint is ready while learners are away. If the session timing shifts, announce the revised return time clearly.",
+      "sources": []
+    },
+    {
+      "section": "Build",
+      "title": "The source behind the answer",
+      "lines": [
+        "One short course-authored reference file",
+        "One answer with an inspectable supporting passage",
+        "One question the file cannot answer"
+      ],
+      "notes": "Use the small original knowledge file first so learners can inspect its entire scope. Identify it as course-authored material. It is not the official study guide and does not establish current exam policy. Add the file, wait for its documented readiness state, and test retrieval. A saved filename alone does not establish success. Use the official study guide as the separately checked extension.",
+      "sources": []
+    },
+    {
+      "section": "Build",
+      "title": "Knowledge scope",
+      "lines": [
+        "Agent knowledge supports general requests.",
+        "A generative answers node can constrain a topic's search.",
+        "Configured scope and retrieval evidence matter more than list order."
+      ],
+      "notes": "Use the Build guide's verified settings comparison. Inspect the actual node's selected-source controls. Do not promise that the visible order of source names guarantees search priority. Explain that source limits vary with type and orchestration. We deliberately keep the core small rather than asking beginners to memorize a quota table.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-node"
+      ]
+    },
+    {
+      "section": "Build",
+      "title": "A topic that waits",
+      "lines": [
+        "Explain a bounded concept.",
+        "Present one original question.",
+        "Wait for the learner's answer.",
+        "Give feedback and a route for uncertainty."
+      ],
+      "notes": "Ask the class what goes wrong if the answer appears with the question. Use one explicit practice topic and its Question node so the wait is part of the authored conversation. The other purposes in the topic map still matter, but we do not need to live-build five topics to understand them. Demonstrate missing input, an answer, and the feedback branch.",
+      "sources": []
+    },
+    {
+      "section": "Build",
+      "title": "Missing input and missing evidence",
+      "lines": [
+        "Missing input: ask a specific question.",
+        "Missing evidence: state the limitation.",
+        "A plausible citation still needs inspection."
+      ],
+      "notes": "Compare explicit collection with documented dynamic topic inputs in the guide. AutomaticTaskInput appears in the proposal, but use verified current controls rather than guessing a YAML field. Demonstrate the fallback before and after a small improvement. Have learners inspect the exact passage supporting the answer. A direct hostile user message and an instruction inside retrieved content are different tests.",
+      "sources": []
+    },
+    {
+      "section": "Build",
+      "title": "Your teaching sequence",
+      "lines": [
+        "Choose one Azure concept.",
+        "Write the question before the feedback.",
+        "Mark the wait point and the unsupported-answer branch."
+      ],
+      "notes": "Use the Build worksheet and allow time to work before revealing the example answer. Ask a learner to trace the conversation after an incorrect response. They should preserve feedback and an honest uncertainty route, not simply congratulate every answer. An observer can diagram and explain the path now, then complete the authoring lab later.",
+      "sources": []
+    },
+    {
+      "section": "Break",
+      "title": "10-minute break",
+      "lines": [
+        "Return at 11:00 AM Central",
+        "Next: one useful tool"
+      ],
+      "notes": "Save the Build checkpoint. Confirm the prepared flow is accessible and its direct test has completed. Keep a genuine recorded fallback available.",
+      "sources": []
+    },
+    {
+      "section": "Extend",
+      "title": "One useful tool",
+      "lines": [
+        "GetStudySession",
+        "Input: cloud, security, or governance",
+        "Output: status and a fixed 30-minute plan"
+      ],
+      "notes": "A tool gives us a result we can inspect. For the first example we need no external API, array, loop, or custom application. The fixed session is an authored teaching choice. It does not register anyone, send email, or save a study record. The old multi-day local function remains optional follow-up and is not today's flow.",
+      "sources": []
+    },
+    {
+      "section": "Extend",
+      "title": "A bounded flow",
+      "lines": [
+        "Validate the requested focus.",
+        "Select the authored study session.",
+        "Return status and plan to the agent.",
+        "Inspect the actual returned values."
+      ],
+      "notes": "Use the Extend guide to show the documented trigger, conditions, and response. Demonstrate one condition and reveal the prepared remaining conditions if time is tight. Test the flow directly before testing its binding to the agent. When input is absent the agent should clarify. An unsupported value must not masquerade as a successful plan.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create"
+      ]
+    },
+    {
+      "section": "Extend",
+      "title": "Choosing an extension",
+      "lines": [
+        "A topic controls a conversation.",
+        "A flow performs defined steps.",
+        "HTTP and MCP provide access to capabilities.",
+        "A specialist agent handles a delegated task."
+      ],
+      "notes": "Use one example for each mechanism in the extension comparison. Explain child and connected agents, A2A, and the named platform connections at the promised conceptual depth. The protocol does not grant permission. A small assistant need not acquire another agent just because the connection exists. Keep identity, data, and result validation visible.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp"
+      ]
+    },
+    {
+      "section": "Extend",
+      "title": "Authority and handoff",
+      "lines": [
+        "Which identity calls the capability?",
+        "What data crosses the boundary?",
+        "What happens when the request exceeds the tool?"
+      ],
+      "notes": "Use an exam-registration request. The assistant should explain its limitation and identify an appropriate official route. A real human transfer requires a configured authorized mechanism. It must not invent a ticket number. Discuss DLP, connector authentication, external-model approval, and least privilege through this single boundary decision rather than a separate administration workshop.",
+      "sources": []
+    },
+    {
+      "section": "Extend",
+      "title": "Your tool decision",
+      "lines": [
+        "Choose one request that needs a tool.",
+        "Choose one request that must escalate.",
+        "Name the evidence that would prove the tool ran."
+      ],
+      "notes": "Give learners the Extend worksheet. Reveal the worked example only after they choose. A returned status and plan plus the actual execution trace are stronger evidence than a sentence claiming the action succeeded. Ask what happens if the tool fails or returns unsupported. Preserve the five-minute questions and recovery allowance.",
+      "sources": []
+    },
+    {
+      "section": "Break",
+      "title": "10-minute break",
+      "lines": [
+        "Return at 12:00 PM Central",
+        "Next: the pilot decision"
+      ],
+      "notes": "Save the flow checkpoint and open the prepared native evaluation, comparison, and operational evidence. Distinguish real recordings from synthetic classroom examples before displaying either.",
+      "sources": []
+    },
+    {
+      "section": "Operate",
+      "title": "Evaluation before a pilot",
+      "lines": [
+        "Use a small, explicit test set.",
+        "Inspect responses, sources, and tool results.",
+        "Keep failures and unrun cases visible."
+      ],
+      "notes": "Run the compact live subset after completing all 12 cases in rehearsal. Explain the difference between the repo's portable planning JSON and the native evaluation format. Use the actual native evaluation experience and inspect a failed case. Do not count an unexecuted check as a pass.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro"
+      ]
+    },
+    {
+      "section": "Operate",
+      "title": "A useful comparison",
+      "lines": [
+        "Keep the test set fixed.",
+        "Change one instruction or configuration.",
+        "Compare failures, answer quality, and latency."
+      ],
+      "notes": "Use the guide's native comparison walkthrough. Start with an approved available model and inspect the same cases before considering a model change. A larger or newer model is not evidence of better results for this job. Record the configuration and source state so the comparison has meaning. Use the labelled synthetic example only when teaching the reasoning, not as proof of tenant performance.",
+      "sources": []
+    },
+    {
+      "section": "Operate",
+      "title": "Operational evidence",
+      "lines": [
+        "A test-panel response is one observation.",
+        "Channel conversations reveal actual usage.",
+        "Containment alone does not establish a useful answer."
+      ],
+      "notes": "Inspect the real activity and operational views described in the guide. Analytics have their own scope and refresh behavior. Use a transcript or sanitized excerpt to investigate why users leave or escalate. Walk the clearly labelled synthetic calculation if actual volume is too small. Always state the denominator and distinguish resolution from abandonment.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-summary"
+      ]
+    },
+    {
+      "section": "Operate",
+      "title": "The pilot boundary",
+      "lines": [
+        "Named audience and approved channel",
+        "Verified entitlement and authentication",
+        "An owner, failure route, and rollback plan"
+      ],
+      "notes": "Use the documented scoped Teams publishing walkthrough in the Operate guide. Publication and audience access are separate checks. Compare SharePoint and Microsoft 365 Copilot as channel choices without promising every learner can publish. Trial access can support building and testing while publication requires the appropriate entitlement. Show a genuine recorded route if live publication is unavailable.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-fundamentals-publish-channels",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions"
+      ]
+    },
+    {
+      "section": "Operate",
+      "title": "Five concerns, concrete controls",
+      "lines": [
+        "Reliability: an honest failure route",
+        "Security: an explicit access boundary",
+        "Operational excellence: an owner and regression checks",
+        "Performance efficiency: bounded work",
+        "Experience optimization: a useful answer and clear next step"
+      ],
+      "notes": "Walk through one control for each concern, using the same assistant. The worksheet provides space for learners to make the choices themselves. Ask which control would change if the source contained confidential employee material. Explain that this is a design review lens, not a compliance certification.",
+      "sources": [
+        "https://learn.microsoft.com/en-us/power-platform/well-architected/"
+      ]
+    },
+    {
+      "section": "Operate",
+      "title": "Your pilot decision",
+      "lines": [
+        "Which assistant would you pilot first?",
+        "What evidence supports that decision?",
+        "Which governance question must be answered first?"
+      ],
+      "notes": "Use the Operate worksheet. A reasonable answer may be conditional or no-go. Require a named audience, evidence, unresolved checks, and an owner. Have learners explain the first change needed to make the pilot acceptable. This exercise assesses their decision, not their ability to memorize product labels.",
+      "sources": []
+    },
+    {
+      "section": "Follow-up",
+      "title": "Independent practice",
+      "lines": [
+        "Complete the authoring lab in your own environment.",
+        "Inspect the genuine native YAML with the export guide.",
+        "Extend one topic and rerun the relevant cases."
+      ],
+      "notes": "Use the supplied export inspection guide and a genuine sanitized native artifact prepared before distribution. Do not present the planning JSON as an importable agent. Point learners to the workbook and official sources. Ask them to retrieve the four decisions from memory before ending. Keep the final ten minutes for this transfer exercise and questions.",
+      "sources": []
+    }
+  ]
+}

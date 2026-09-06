@@ -16,6 +16,14 @@ and evaluation decisions without provisioning anything during class.
 No coding, paid API key, Python installation, or GitHub Copilot subscription is required for the core course.
 VS Code and the repository’s Node.js checks are optional.
 
+**Access check before class:** this course uses the full Copilot Studio authoring experience with generative orchestration. The limited Copilot Studio for Teams plan is not the equivalent environment. A trial can support creation and testing but does not permit publishing. The instructor demonstrates the licensed publishing route. See the [verified licensing source](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions).
+
+## The smallest complete build
+
+Use one original knowledge file, one shared-responsibility practice topic with a real wait point, and one **GetStudySession** tool. The tool accepts cloud, security, or governance and returns a fixed 30-minute activity. Broader integrations are explained through this example. The complete walkthroughs linked from each module support independent practice after class.
+
+Observer exercises develop the same decisions, but independent authoring proficiency requires completing the maker lab later.
+
 ## Before the session
 
 1. Open the [first module](modules/01-inception/README.md) and its worksheet.

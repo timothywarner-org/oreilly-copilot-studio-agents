@@ -1,26 +1,25 @@
-# Remaining delivery checks
+# Delivery status and remaining checks
 
-## Supplied and locally checkable
+## Authored and reviewable
 
-Four objective-mapped modules; learner worksheets; instructor run of show; original practice prompts;
-a synthetic agent brief and knowledge material; topic/tool specifications; 12 agent evaluation scenarios;
-a no-network Node.js reference function; a private-origin publishing script; metadata and CI configuration.
+Four redesigned modules preserve the approved objectives. Each has a lab, worksheet, worked answers, and timed instructor guide. The package includes a 26-slide manuscript, source-reviewed native build procedures, the simple GetStudySession recipe, native evaluation and scoped publishing procedures, synthetic operational examples, a YAML inspection guide, a promise register, and a learner-package generator.
 
-## Not performed by package creation
+The existing local repository has been preserved and published privately to GitHub. Local validation establishes repository integrity and optional Node reference behavior. It does not execute Copilot Studio.
 
-- Windows installation under `C:\github` and authenticated GitHub publication.
-- Creation, import, or execution of a Copilot Studio agent in Tim’s tenant.
-- Verification of actual tenant licenses, roles, credit consumption, connector policies, or models.
-- A real agent-flow/MCP connection, human handoff, channel publication, or native evaluation run.
-- Collection of live analytics, observation of audience access, or a hosted GitHub Actions run.
-- A complete course slide deck or approved learner-distribution package.
+## Tenant and delivery gates
 
-There are no fabricated `.mcs.yml` exports and no success screenshots. Topic and flow documents are
-**specifications**. Record real native exports after rehearsal, after inspecting them for secrets,
-identifiers, private source URLs, and licensing constraints.
+- Actual environment, authoring experience, roles, licenses, credits, models and policy configuration.
+- Real shell creation, source retrieval, topic wait point and fallback behavior.
+- Real GetStudySession flow, agent binding, all supported inputs, unsupported input, missing input and tool unavailability behavior.
+- Native evaluation runs and same-case comparison, plus manual multi-turn checks.
+- Genuine operational evidence from channel use, scoped publishing and second-user access.
+- A real sanitized native YAML artifact for the promised follow-up inspection. The guide is provided; an export is not fabricated.
+- Producer-approved learner distribution and verified attendee access. A private GitHub URL alone does not satisfy this.
+- Timed rehearsal of all blocks and genuine recorded recovery material.
+- Editorial correction of the registration-page audience mismatch.
 
-## Before live delivery
+Use [the rehearsal record](../instructor/rehearsal-record.md) to close gates with actual observations. The [promise map](promise-coverage.md) identifies what each supports. Synthetic examples are labelled and must never be presented as tenant results. Runtime-exception testing beyond the supplied tool-unavailability exercise remains an optional separate check; do not claim it from a disabled-tool test.
 
-Work through [the preflight](../instructor/preflight.md). Rehearse all four checkpoints.
-Log what is demonstrated, what is a design explanation, and what remains unavailable.
-Do not use the local study-plan demo as evidence that a cloud tool is connected.
+## Materials and binary outputs
+
+The PowerPoint companion and generated learner ZIP are delivered separately from Git under the repository's binary/distribution rules. The editable slide manuscript and package generator are versioned. Creating the package does not send it to attendees, change visibility, or establish publisher distribution approval. Complete [the preflight](../instructor/preflight.md) before delivery.

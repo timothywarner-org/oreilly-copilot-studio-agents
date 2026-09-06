@@ -1,15 +1,24 @@
-AZURE STUDY CONCEPTS — ORIGINAL DEMONSTRATION NOTES
+AZURE CONCEPTS FOR THE CONTOSO STUDY COACH
+Original course teaching reference. Reviewed 2026-09-05.
+This is a small, course-authored explanation, not a Microsoft publication, exam dump, or complete AZ-900 study guide. Contoso is fictional. It contains no current exam prices, pass predictions, scheduling details, or objective weights.
 
-Purpose: a short, original grounding fixture for the course’s assistant. Not a complete exam syllabus.
-Authority for actual objective coverage: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900
+CLOUD: SHARED RESPONSIBILITY
+Moving a workload to Azure changes who operates parts of the technology. It does not remove the customer's responsibility for data, identities, and the configuration they control.
+With infrastructure as a service (IaaS), Microsoft operates the physical infrastructure. A customer using an Azure virtual machine manages the guest operating system and its applications. Contoso must therefore plan how the guest operating system is patched.
+With platform as a service (PaaS), the customer deploys an application while the service manages the underlying operating system and platform. Azure App Service is an example. Contoso still controls its application code, configuration, data, and access.
+With software as a service (SaaS), the customer uses a ready-made application, such as Microsoft 365. Customer data and access responsibilities remain.
+The exact boundary depends on the service and configuration. Check the relevant service documentation for an actual workload.
 
-The live AZ-900 study guide groups its skills under cloud concepts, Azure architecture and services,
-and Azure management and governance. Check that guide for the current wording and exam details.
+SECURITY: ACCESS IS STILL A CUSTOMER DECISION
+A cloud service cannot decide who at Contoso should see Contoso's data. Contoso manages its users and access permissions. Grant only the access needed for the task and review it. Moving to a managed service does not make all users administrators or make all information public.
 
-Practice example: compare a need to understand a cloud concept, a need to identify an Azure service,
-and a need to understand governance. Explain what evidence would support a service-selection answer.
-Do not supply a certification guarantee or infer exam policies from these notes.
+GOVERNANCE: TURN AN INTENTION INTO A CHECK
+For this course's fictional Contoso training assistant, an owner must be named before a pilot. The owner reviews whether answers are supported and whether access is appropriate. This is an invented teaching rule, not an Azure or Microsoft certification requirement.
+The AZ-900 study guide includes Azure management and governance alongside cloud concepts and Azure architecture and services. Use the current official guide to identify the complete scope. The three short focus labels in our study-session tool, cloud, security, and governance, are teaching shortcuts, not the official three exam-domain names.
 
-A useful study loop is: read an authoritative explanation, explain the concept in your own words,
-answer an original practice question, inspect the explanation, and revisit the concept you missed.
-That loop is a teaching suggestion for this course, not a Microsoft certification requirement.
+SOURCE TRAIL
+The shared-responsibility explanations above paraphrase Microsoft Learn:
+https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
+The current examination scope is maintained in Microsoft's AZ-900 study guide:
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900
+Open those sources to verify current details. A URL printed in this file is a reference for the reader; it does not prove that an agent retrieved that webpage.

@@ -31,6 +31,10 @@ The action revisions used by CI were resolved through GitHub in this conversatio
 `actions/setup-node` v6 → `249970729cb0ef3589644e2896645e5dc5ba9c38`.
 Dependabot is configured for future action updates. No hosted CI success is claimed before the first actual run.
 
+## Current course build research
+
+The redesign uses Microsoft Learn MCP search followed by full-page retrieval. Read [Inception and Build sources](research-build.md), [Extend sources](research-extend.md), and [Operate sources](research-operate.md) for the checked pages, supported procedures, and authored teaching choices. These notes supersede broad scaffold descriptions where details differ. No documentation retrieval establishes tenant execution.
+
 ## Source hierarchy
 
 Keep the proposal and public page distinct. Do not silently erase a difference between them.

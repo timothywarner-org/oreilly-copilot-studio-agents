@@ -15,8 +15,8 @@
     },
     {
       "id": "study-plan",
-      "modelDescription": "Collect or infer only explicitly supplied day count, daily minutes, and supported focus; confirm ambiguity before calling the bounded plan tool.",
-      "examplePrompt": "Make a three-day study plan.",
+      "modelDescription": "Collect one focus: cloud, security, or governance. Clarify missing or ambiguous focus before calling GetStudySession. The tool returns a fixed 30-minute plan and status; it does not support custom durations or multiple days.",
+      "examplePrompt": "Give me a 30-minute study session for cloud.",
       "expectedPath": "validated plan tool"
     },
     {

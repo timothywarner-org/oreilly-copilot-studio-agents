@@ -1,5 +1,7 @@
 # Instructor preflight
 
+**Use the [co-instructor desk](co-instructor.md), four [timed guides](run-of-show.md), and [rehearsal record](rehearsal-record.md).** Written instructions are complete when reviewed; actual demonstration evidence remains a separate gate.
+
 ## Course and learner access
 
 - [ ] Read the public page and proposal discrepancy register, including the audience wording.
@@ -17,7 +19,7 @@
 - [ ] Create the agent shell; paste the reviewed instructions; confirm orchestration configuration.
 - [ ] Add the intended knowledge and verify processing/retrieval; do not assume a saved URL was indexed.
 - [ ] Rehearse topic input behavior, including AutomaticTaskInput versus explicit collection.
-- [ ] Build and bind the actual study-plan agent flow or selected tool. No dummy action labelled “complete.”
+- [ ] Build and bind the core GetStudySession flow; test all three focuses, unsupported focus and missing input. Keep the multi-day Node design optional.
 - [ ] Check MCP/delegation availability, allowed tools, authentication, and data policy before showing them.
 - [ ] Verify the human-handoff mechanism, or explicitly present it as a design pattern.
 - [ ] Verify publishing entitlement and the selected channel; do not promise it for trial accounts.
@@ -29,6 +31,8 @@
 - [ ] Record observed results independently from the expected-result rubric.
 - [ ] Re-run failing cases after changes; leave unavailable checks NOT RUN.
 - [ ] Save four known checkpoints privately, including a fallback for each module.
+- [ ] Capture a genuine sanitized native YAML topic using the [export guide](../sample-agent/exports/README.md); verify it is in the approved follow-up package.
+- [ ] Use the [learner package procedure](../learner/README.md), inspect its contents, and verify attendee access through the producer.
 - [ ] Make local `npm test` and `npm run validate` pass after edits.
 - [ ] Inspect the Git diff for private data and publisher-only assets before any push.
 - [ ] Verify GitHub visibility is PRIVATE and inspect the first actual CI result after publication.

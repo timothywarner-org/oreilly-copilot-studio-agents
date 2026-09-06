@@ -37,6 +37,23 @@ export async function validateRepository(base = root) {
   const template = await load('evals/results.template.json');
   const sourceManifest = await load('sample-agent/knowledge/sources.json');
   const packageInfo = await load('package.json');
+  const coreTool = await load('sample-agent/tools/core-study-session.json');
+  const coreRecipe = await readFile(resolve(base, 'sample-agent/tools/core-study-session.md'), 'utf8');
+  const teachingSlides = await load('instructor/teaching-slides.json');
+  const learnerFiles = await load('learner/package-files.json');
+  // The authored contract and paste-ready recipe must agree even though neither executes a flow.
+  assert(coreTool.name === 'GetStudySession' && coreTool.sessionMinutes === 30, 'Unexpected core study-session contract.');
+  assert(coreTool.input.allowedValues.join('|') === 'cloud|security|governance', 'Core focus choices changed without curriculum review.');
+  for (const focus of coreTool.input.allowedValues) {
+    assert(typeof coreTool.plans[focus] === 'string' && coreRecipe.includes(coreTool.plans[focus]), `Core plan differs between fixture and recipe: ${focus}`);
+  }
+  assert(coreTool.supportedStatus !== coreTool.unsupported.status, 'Core tool must distinguish success from unsupported input.');
+  assert(teachingSlides.slides.every(slide => slide.title && slide.lines.length && slide.notes), 'Teaching slides need visible content and speaker notes.');
+  assert(new Set(learnerFiles).size === learnerFiles.length, 'Duplicate learner-package entry.');
+  for (const entry of learnerFiles) {
+    assert(safeRelativePath(entry), `Unsafe learner-package path: ${entry}`);
+    try { await lstat(resolve(base, entry)); } catch { errors.push(`Missing learner-package source: ${entry}`); }
+  }
   const requiredModuleIds = ['01-inception', '02-build', '03-extend', '04-operate'];
   assert(course.id === 'oreilly-copilot-studio-agents-2026-09-08', 'Wrong course identity.');
   assert(course.modules.map(m => m.id).join('|') === requiredModuleIds.join('|'), 'Expected exactly the four approved modules.');
@@ -72,6 +89,11 @@ export async function validateRepository(base = root) {
       try { await lstat(resolve(base, m.path, filename)); } catch { errors.push(`Missing ${m.path}/${filename}`); }
     }
     for (const id of m.learningObjectiveIds) assert(objectiveIds.has(id), `Unknown objective in ${m.id}.`);
+    try {
+      const guide = await readFile(resolve(base, `instructor/${m.id}-guide.md`), 'utf8');
+      const objective = course.objectives.find(item => item.id === m.learningObjectiveIds[0]);
+      assert(guide.includes(objective.text), `Instructor guide does not preserve the objective: ${m.id}`);
+    } catch { errors.push(`Missing instructor guide: ${m.id}`); }
   }
   assert(alignment.length === 4 && new Set(alignment.map(a => a.objectiveId)).size === 4, 'Incomplete alignment map.');
   for (const row of alignment) {

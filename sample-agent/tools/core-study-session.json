@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "name": "GetStudySession",
+  "kind": "authored-test-fixture-not-native-flow",
+  "input": {
+    "name": "focus",
+    "type": "Text",
+    "allowedValues": [
+      "cloud",
+      "security",
+      "governance"
+    ]
+  },
+  "outputs": {
+    "status": "Text",
+    "plan": "Text"
+  },
+  "sessionMinutes": 30,
+  "plans": {
+    "cloud": "Cloud study session, 30 minutes. Minutes 0-10: Read the cloud concepts section of the current AZ-900 study guide. Minutes 10-20: Explain shared responsibility for infrastructure, platform, and software services using a Contoso example. Minutes 20-25: Without notes, name one responsibility the customer keeps in every service model. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor.",
+    "security": "Security study session, 30 minutes. Minutes 0-10: Read the identity, access, and security material linked from the current AZ-900 study guide. Minutes 10-20: Explain authentication and authorization using a WoodGrove Bank employee example. Minutes 20-25: Without notes, explain why signing in does not grant every permission. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor.",
+    "governance": "Governance study session, 30 minutes. Minutes 0-10: Read the management and governance material linked from the current AZ-900 study guide. Minutes 10-20: Explain Azure Policy and resource locks using a Tailwind Traders example. Minutes 20-25: Without notes, explain why a resource lock and an access permission solve different problems. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor."
+  },
+  "supportedStatus": "ok",
+  "unsupported": {
+    "status": "unsupported",
+    "plan": "Choose cloud, security, or governance."
+  }
+}

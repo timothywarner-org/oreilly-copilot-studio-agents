@@ -72,7 +72,7 @@
       "scheduledMinutes": 60,
       "instructionAndPracticeMinutes": 50,
       "breakMinutes": 10,
-      "artifact": "A bounded study-plan tool contract and human-handoff decision",
+      "artifact": "A GetStudySession contract and human-handoff decision",
       "path": "modules/03-extend"
     },
     {
@@ -90,7 +90,7 @@
     }
   ],
   "wrapUpMinutes": 10,
-  "status": "scaffold: local tests do not verify tenant deployment",
+  "status": "authored course kit: documentation reviewed; tenant rehearsal remains unverified",
   "codingRequiredForLearners": false,
   "scopeExclusions": [
     "Context Engineering with MCP as a separate course",

@@ -1,5 +1,7 @@
 # Outcomes → activities → evidence
 
+Use the detailed [registration promise register](promise-coverage.md) and [teaching design](teaching-design.md) with this outcome summary. The core extension is GetStudySession, a fixed 30-minute session selected by one focus. The multi-day reference remains optional follow-up.
+
 | Outcome | Demonstration | Learner evidence | Cases |
 | --- | --- | --- | --- |
 | LO1 · Plan | Agent shell, instruction boundary, topic map | [Inception worksheet](../modules/01-inception/worksheet.md) with measurable success criteria | E01–E03 |
