@@ -1,0 +1,91 @@
+{
+  "agentTested": false,
+  "runAt": null,
+  "environmentRecordedPrivately": false,
+  "results": [
+    {
+      "caseId": "E01",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E02",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E03",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E04",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E05",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E06",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E07",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E08",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E09",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E10",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E11",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    },
+    {
+      "caseId": "E12",
+      "status": "NOT RUN",
+      "observedResponse": null,
+      "evidence": null,
+      "notes": null
+    }
+  ]
+}

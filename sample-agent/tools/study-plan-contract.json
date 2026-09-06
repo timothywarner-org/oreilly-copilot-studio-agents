@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateStudyPlan input — demonstration contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "days",
+    "minutesPerDay",
+    "focus"
+  ],
+  "properties": {
+    "days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 14
+    },
+    "minutesPerDay": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 120
+    },
+    "focus": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "cloud-concepts",
+          "azure-architecture-services",
+          "management-governance"
+        ]
+      }
+    }
+  }
+}

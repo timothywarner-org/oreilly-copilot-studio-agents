@@ -1,0 +1,31 @@
+name: Course material problem
+description: Report a specific learner, demo, source, or accessibility issue.
+title: "[Course] "
+labels: [curriculum]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include tokens, presenter links, tenant identifiers, or learner records."
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Inception
+        - Build
+        - Extend
+        - Operate
+        - Repository setup
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected behavior and actual behavior
+      description: Include a file path and reproducible steps, with private data removed.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Supporting source or observation

@@ -1,0 +1,26 @@
+{
+  "format": "knowledge-planning-manifest-not-native-import",
+  "sources": [
+    {
+      "id": "az900-guide",
+      "kind": "official-url",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900",
+      "authority": "Microsoft Learn",
+      "purpose": "Current exam objective scope; verify the live guide before teaching"
+    },
+    {
+      "id": "azure-concepts",
+      "kind": "local-file",
+      "path": "sample-agent/knowledge/azure-concepts.txt",
+      "authority": "Original course practice fixture",
+      "purpose": "Bounded demonstration notes; not an exhaustive syllabus"
+    },
+    {
+      "id": "training-policy",
+      "kind": "local-file",
+      "path": "sample-agent/knowledge/training-policy.txt",
+      "authority": "Fictional demonstration policy",
+      "purpose": "Tool limits and unsupported actions for this synthetic scenario"
+    }
+  ]
+}

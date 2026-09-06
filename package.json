@@ -1,0 +1,17 @@
+{
+  "name": "oreilly-copilot-studio-agents",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Companion to Tim Warner's O'Reilly course: build an AZ-900 study assistant with Microsoft Copilot Studio through Inception, Build, Extend, and Operate.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-repo.mjs",
+    "demo:plan": "node scripts/run-study-plan.mjs",
+    "eval:template": "node scripts/create-eval-record.mjs"
+  }
+}

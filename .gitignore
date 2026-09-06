@@ -1,0 +1,24 @@
+# Local evidence, private references, and secrets are never teaching assets.
+.local/
+.private/
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.log
+*.zip
+# Keep recordings and publisher-only binaries outside Git.
+*.pptx
+*.mp4
+*.mov
+.DS_Store
+Thumbs.db
+
+# This training repo intentionally versions its VS Code workspace configuration.
+!.vscode/
+!.vscode/extensions.json
+!.vscode/mcp.json

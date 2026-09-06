@@ -1,0 +1,15 @@
+AZURE STUDY CONCEPTS — ORIGINAL DEMONSTRATION NOTES
+
+Purpose: a short, original grounding fixture for the course’s assistant. Not a complete exam syllabus.
+Authority for actual objective coverage: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900
+
+The live AZ-900 study guide groups its skills under cloud concepts, Azure architecture and services,
+and Azure management and governance. Check that guide for the current wording and exam details.
+
+Practice example: compare a need to understand a cloud concept, a need to identify an Azure service,
+and a need to understand governance. Explain what evidence would support a service-selection answer.
+Do not supply a certification guarantee or infer exam policies from these notes.
+
+A useful study loop is: read an authoritative explanation, explain the concept in your own words,
+answer an original practice question, inspect the explanation, and revisit the concept you missed.
+That loop is a teaching suggestion for this course, not a Microsoft certification requirement.

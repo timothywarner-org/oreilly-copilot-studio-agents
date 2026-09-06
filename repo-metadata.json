@@ -1,0 +1,50 @@
+{
+  "name": "oreilly-copilot-studio-agents",
+  "owner": "timothywarner-org",
+  "private": true,
+  "defaultBranch": "main",
+  "description": "Companion to Tim Warner's O'Reilly course: build an AZ-900 study assistant with Microsoft Copilot Studio through Inception, Build, Extend, and Operate.",
+  "homepage": "https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/",
+  "topics": [
+    "copilot-studio",
+    "ai-agents",
+    "microsoft-365",
+    "power-platform",
+    "power-automate",
+    "azure",
+    "az-900",
+    "model-context-protocol",
+    "agent-evaluation",
+    "oreilly",
+    "hands-on-training",
+    "generative-ai"
+  ],
+  "initialTag": "v0.1.0-scaffold",
+  "labels": [
+    {
+      "name": "curriculum",
+      "color": "8250DF",
+      "description": "Learning objectives, scope, sequencing, or alignment"
+    },
+    {
+      "name": "demo",
+      "color": "1F6FEB",
+      "description": "Instructor demonstrations and recovery paths"
+    },
+    {
+      "name": "source-drift",
+      "color": "9A6700",
+      "description": "Published course or Microsoft documentation changed"
+    },
+    {
+      "name": "accessibility",
+      "color": "0969DA",
+      "description": "Readability, alternative participation, or accessibility"
+    },
+    {
+      "name": "bug",
+      "color": "6639BA",
+      "description": "Reproducible repository or exercise defect"
+    }
+  ]
+}
