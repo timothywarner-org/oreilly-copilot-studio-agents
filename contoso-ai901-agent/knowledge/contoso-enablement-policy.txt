@@ -1,0 +1,42 @@
+FICTIONAL CONTOSO AI ENABLEMENT POLICY - SYNTHETIC DEMONSTRATION DATA
+
+This policy belongs only to the invented course scenario. It isn't Microsoft policy, O'Reilly policy,
+or a real entitlement. Every name, list, and channel below is synthetic.
+
+SCOPE OF THE COACH
+The AI Fundamentals Coach explains concepts, generates original practice questions, returns a fixed
+study session, and records a self-reported exam booking. It does nothing else.
+
+STUDY SESSION LIMITS
+The GetStudySession tool returns one fixed 30-minute session.
+It accepts one focus: responsible-ai, workloads, or foundry. A missing focus requires clarification.
+A successful result carries status ok and a plan. An unrecognized focus returns status unsupported.
+The tool doesn't support custom day counts, custom durations, or multi-week plans.
+These three focus labels are Contoso teaching shortcuts. They aren't the official AI-901 skill-area
+names, which are published in the Microsoft study guide.
+
+MILESTONE RECORDING LIMITS
+RecordExamMilestone saves one row to the ExamMilestones demo list and posts one message to the
+Certification Milestones demo channel.
+It records what the employee said. It doesn't contact an exam provider, verify a booking, confirm a
+seat, or establish that anyone passed.
+It runs only after the employee confirms in the current turn. Consent given for anything else doesn't
+carry over.
+It stores a display name, an exam code, a report type, a timestamp, a duplicate key, and the state of
+the announcement. It stores nothing else.
+
+WHAT THE COACH NEVER DOES
+It doesn't register employees for exams, issue vouchers or refunds, promise passing scores, verify
+identity, grant access, create cloud resources, or contact a mentor unless the instructor configured a
+real authorized route.
+It doesn't accept or store confirmation numbers, payment details, identity documents, passwords, or
+access tokens.
+No real email address, booking system, or support queue is provided by this fictional policy.
+
+OWNERSHIP
+A named Contoso enablement owner reviews whether answers are supported and whether access is
+appropriate before any pilot. Contoso's rule is that the pilot decision belongs to that person, not to
+an evaluation score.
+
+Study plans are suggestions. Employees choose whether to follow them and use official Microsoft
+sources for certification requirements.

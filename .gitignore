@@ -2,6 +2,9 @@
 .local/
 .private/
 node_modules/
+# Also match a bare symlink or junction named node_modules; the trailing-slash
+# pattern above only matches a real directory, so git offered to commit the link.
+node_modules
 .env
 .env.*
 !.env.example
