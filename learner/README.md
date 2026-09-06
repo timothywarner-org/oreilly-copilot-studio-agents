@@ -1,6 +1,6 @@
 # Learner package
 
-**No local runtime is needed to take the class.** The package contains the four labs and worksheets, complete walkthroughs for independent practice, worked examples, source notes, the original knowledge files, and the small study-session recipe. A browser and approved Copilot Studio access support the maker route. The observer route uses the same decision exercises.
+**No local runtime is needed to take the class.** The package contains the four labs and worksheets, complete walkthroughs for independent practice, worked examples, source notes, the original knowledge files, and the small study-session recipe. All live exercises work without tenant access. A browser and approved Copilot Studio access support optional independent practice. Module 1 demonstrates trial setup.
 
 ## Instructor packaging
 

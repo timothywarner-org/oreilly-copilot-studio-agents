@@ -6,7 +6,7 @@ Producer: **Joan Lee**. Use the private presenter link in the calendar invitatio
 | Central time | Activity | Exit evidence |
 | --- | --- | --- |
 | 08:30–09:00 | Producer/audio/screen-share check; resource-link and title-slide confirmation | Console and primary/fallback demo paths ready |
-| 09:00–09:50 | Inception: design and shell; practice and Q&A within block | Agent brief and explicit success metrics |
+| 09:00–09:50 | Inception: trial setup, design and shell; practice and Q&A within block | Agent brief and explicit success metrics |
 | 09:50–10:00 | Break | Display return time in text |
 | 10:00–10:50 | Build: knowledge, topics, input handling; practice and Q&A | Teach-check-handoff topic and grounded answer |
 | 10:50–11:00 | Break | Save checkpoint |
@@ -21,13 +21,13 @@ This implements the public page’s 60/60/60/50/10 schedule. It does not add bre
 
 | Block | Detailed guide | Companion slides | Checkpoint |
 | --- | --- | --- | --- |
-| Inception | [01 guide](01-inception-guide.md) | 1-6, break 7 | C1: shell and boundary |
-| Build | [02 guide](02-build-guide.md) | 8-12, break 13 | C2: source and wait point |
-| Extend | [03 guide](03-extend-guide.md) | 14-18, break 19 | C3: GetStudySession result |
-| Operate | [04 guide](04-operate-guide.md) | 20-25 | C4: evaluation and scoped channel |
-| Wrap-up | [Co-instructor desk](co-instructor.md) | 26 | First pilot and next independent attempt |
+| Inception | [01 guide](01-inception-guide.md) | 1-9, break 10 | C1: shell and boundary |
+| Build | [02 guide](02-build-guide.md) | 11-16, break 17 | C2: source and wait point |
+| Extend | [03 guide](03-extend-guide.md) | 18-25, break 26 | C3: GetStudySession result |
+| Operate | [04 guide](04-operate-guide.md) | 27-34 | C4: evaluation and scoped channel |
+| Wrap-up | [Co-instructor desk](co-instructor.md) | 35 | First pilot and next independent attempt |
 
-The four guides contain the authoritative minute allocations, worked examples and recovery actions. Slides prompt discussion and demonstrations; they do not replace the guides. Each block includes learner work and question time. Keep the same agent visible and reuse its brief, sources, tool boundary and evidence sheet.
+The four guides contain the authoritative minute allocations, worked examples and recovery actions. Slides prompt discussion and demonstrations; they do not replace the guides. Each block includes short, account-independent decisions and question time. The instructor performs the build; independent authoring is optional follow-up. Keep the same agent visible and reuse its brief, sources, tool boundary and evidence sheet.
 
 Read [teaching design](../docs/teaching-design.md) for the rationale and [promise coverage](../docs/promise-coverage.md) for the full registration-page map. Record a timed rehearsal using [this template](rehearsal-record.md).
 

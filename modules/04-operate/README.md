@@ -13,7 +13,7 @@ Native evaluations, test sets, activity maps, version comparison, analytics, tra
 
 ## Demonstration and learner work
 
-**Instructor demonstration:** Run three native evaluations, inspect an activity map, compare the same tests before and after one change, read operational evidence, and actually publish and test a scoped Teams agent. See the [timed instructor guide](../../instructor/04-operate-guide.md).
+**Instructor demonstration:** Inspect the prepared three-case semantic set, run a separate E08-only tool-use check, inspect its activity map, compare genuine prepared semantic results before and after one change, read operational evidence, and republish/test a scoped Teams agent. The sets, channel and app installation are prepared in rehearsal. See the [timed instructor guide](../../instructor/04-operate-guide.md).
 
 | Minutes | Activity | Evidence |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ Native evaluations, test sets, activity maps, version comparison, analytics, tra
 | 38-45 | Learner pilot decision | Worksheet and evidence status |
 | 45-50 | Q&A | One safe extension and its new test |
 
-**Maker route:** run three tests on the Module 3 agent. **Observer route:** use the same [worked example](worked-example.md) and produce the same decision. Trial licenses allow building and test-panel use but **cannot publish**. The instructor needs a licensed, rehearsed publishing environment. [Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+**During class:** observe the instructor's tests and use the [worked example](worked-example.md) to make a pilot decision. No account or learner execution is required. **Optional follow-up:** run the three tests independently when approved access is available. Trial licenses allow building and test-panel use but **cannot publish**. The instructor needs a licensed, rehearsed publishing environment. [Licensing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
 **Proposal’s mini-exercise:** Name the first agent you would safely pilot and the governance question it must answer first.
 

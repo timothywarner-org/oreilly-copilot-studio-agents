@@ -2,6 +2,14 @@
 
 **LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
 
+## Three-minute live decision
+
+1. **Cloud:** What input goes in, and what two outputs should return?
+2. **Quantum:** What should the direct flow return, and what evidence would you inspect?
+3. **Exam registration:** Write one truthful sentence explaining the assistant's boundary.
+
+Use chat, paper, or this page. The instructor performs the live demonstration. The detailed table below supports the debrief and optional after-class practice; completing it is not required during these three minutes.
+
 | Decision | Your record |
 | --- | --- |
 | Explain shared responsibility: next move and why | |

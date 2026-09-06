@@ -2,7 +2,7 @@
 
 **LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
-**Duration:** 50 teaching minutes, then a 10-minute break. **Status:** Documentation-grounded build instructions; live results remain **NOT RUN** until rehearsed. **Core:** one file and one practice topic. Azure subject matter is deliberately narrow so learners can concentrate on agent behavior.
+**Duration:** 50 teaching minutes, then a 10-minute break. **Status:** Documentation-grounded build instructions; live results remain **NOT RUN** until rehearsed. **Format:** Instructor-led demonstration with universal prediction and decision exercises. No learner account or builder time is required. **Core:** one file and one practice topic. Azure subject matter is deliberately narrow so learners can concentrate on agent behavior.
 
 **Before class:** Open the saved shell, [learner lab](../modules/02-build/lab.md), [concept file](../sample-agent/knowledge/azure-concepts.txt), [worksheet](../modules/02-build/worksheet.md), and [sources](../sources/research-build.md). Rehearse the full topic and source processing in advance. Keep a completed topic available to inspect if live authoring exceeds 12 minutes. Prepare the small input demonstration described below; disable it after the comparison. Do not invent a recording or ready agent if preparation has not happened.
 
@@ -109,13 +109,13 @@ Save and repeat the same unsupported prompt in a fresh test. Inspect the actual 
 
 **IF IT FAILS:** Do not spend Q&A rebuilding escalation. Stop at an honest message, preserve the failed path, and mark repeated fallback as needing rehearsal. Never assert a human agent is connected just because a topic is named Escalate.
 
-## 38-45: Learners make one change
+## 38-45: Everyone diagnoses one teaching decision
 
 **SAY:** “Rewrite the feedback for one wrong answer. Your learner should understand the misconception, not just see the word incorrect.”
 
-**DO:** Use the lab's two-minute rewrite, three-minute test or paired trace, and two-minute evidence record. Reveal the worked answer only after the rewrite. Ask a maker to explain both the supporting paragraph and the wait point.
+**DO:** Use the lab's two-minute rewrite, three-minute node trace, and two-minute evidence record. The instructor runs the selected example while learners predict its branch; no learner authoring is scheduled. Reveal the worked answer only after the rewrite. Ask a maker to explain both the supporting paragraph and the wait point.
 
-**EXPECT:** Maker evidence is an actual response; observer evidence is a labeled prediction. Both explain the decision, but only the former establishes a running result.
+**EXPECT:** Everyone can explain the wait and feedback from the demonstrated trace. Label the response OBSERVED DEMO and predictions PREDICTED. Personal agent execution is not assessed during class; optional independent authoring is available afterward.
 
 **IF IT FAILS:** Use “host versus guest” as the prompt. Keep the same question and change only feedback.
 

@@ -2,7 +2,7 @@
 
 **Outcome LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
-**Smallest useful build:** One original text file, one authored shared-responsibility topic, and an honest fallback. The instructor demonstrates source configuration and input tuning. Learners change and test one part, rather than race to assemble five topics.
+**Smallest useful build:** One original text file, one authored shared-responsibility topic, and an honest fallback. The instructor demonstrates source configuration and input tuning. Everyone predicts, traces and explains one teaching decision without needing a tenant. Authoring is optional after-class practice.
 
 | Minutes | Learning move | Evidence |
 | --- | --- | --- |
@@ -12,7 +12,7 @@
 | 17-29 | Build teach-question-wait-feedback | Correct and incorrect answer paths |
 | 29-34 | Compare automatic topic inputs with an explicit question | Supplied versus missing input |
 | 34-38 | Repair fallback | Before/after behavior |
-| 38-45 | Learner change, test, and explanation | Completed worksheet |
+| 38-45 | Universal rewrite, trace, and explanation | Completed worksheet |
 | 45-50 | Hinge question and Q&A | Defend a design choice |
 | 50-60 | Break | Return ready for Extend |
 

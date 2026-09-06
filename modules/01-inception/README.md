@@ -1,22 +1,22 @@
-# 01 · Inception: Give the assistant one useful job
+# 01 · Inception: One useful job and a way to try it
 
 **Outcome LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
 
-You are the **maker**. Your fictional user is a Contoso employee beginning Azure study. We build one small coach: explain a concept, check understanding, offer one 30-minute study session, and admit when it cannot help. This is a maker workshop using Azure study as its example, not an AZ-900 exam-preparation class.
+**Audience:** Makers learning through instructor-led demonstrations. Contoso's employees are the assistant users. Its trainers need consistent Azure-onboarding explanations and practice. No learner account or authoring is required during class.
 
-| Minutes | Learning move | Evidence |
+| Minutes | Activity | Evidence |
 | --- | --- | --- |
-| 0-5 | Predict how a useful coach responds | One learner prediction |
-| 5-13 | Learn agent parts through the same request | Component map |
-| 13-21 | Write the brief together | Worked brief |
-| 21-33 | Create and inspect the agent shell | Saved instructions, or NOT RUN |
-| 33-38 | Map five conversations and choose a model baseline | Routing and model decision |
-| 38-45 | Write, compare, and improve a brief | Completed worksheet |
-| 45-50 | Hinge question and Q&A | Explain one boundary |
-| 50-60 | Break | Return ready for Build |
+| 0-4 | Contoso learning problem | Distinguish maker from assistant user |
+| 4-11 | Agent parts | Explain instruction, source, topic and tool |
+| 11-20 | Trial-access walkthrough | Account, block, expiry and publishing decisions |
+| 20-28 | Design the brief | Job, source and observable boundary |
+| 28-38 | Instructor creates the shell | Observed configuration and test |
+| 38-45 | Universal planning exercise, topic map and model baseline | One instruction, test and topic |
+| 45-50 | Hinge question and Q&A | Defend a decision |
+| 50-60 | Break | No required setup work |
 
-**Do:** [lab](lab.md), then [worksheet](worksheet.md). **Instructor:** [complete delivery guide](../../instructor/01-inception-guide.md).
+**Do:** [planning exercise](lab.md) and [worksheet](worksheet.md). **Instructor:** [delivery guide](../../instructor/01-inception-guide.md).
 
-**Checkpoint:** Name the user, job, instruction, topic, source, and observable failure. A saved shell is not yet a grounded assistant.
+The trial walkthrough prepares optional independent practice. Work/school accounts and organization policy affect access; nobody must obtain administrator approval during class. A trial supports building and test chat, not publishing.
 
-**Continue:** [Build](../02-build/README.md). [Product sources](../../sources/research-build.md).
+**Continue:** [Build](../02-build/README.md). [Trial source notes](../../sources/research-trial.md).

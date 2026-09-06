@@ -43,7 +43,7 @@ and evaluation cases. The [curriculum delta](docs/course-delta.md) explains what
 
 Read the [teaching design](docs/teaching-design.md), [complete promise map](docs/promise-coverage.md), and [co-instructor desk](instructor/co-instructor.md). The core tool is **GetStudySession**, with one focus and a fixed 30-minute output. The multi-day Node example is optional advanced practice.
 
-The [slide manuscript](instructor/teaching-slides.json) supports a 26-slide companion. Binary slides stay outside Git. The [learner package procedure](learner/README.md) produces a curated local folder for the producer. A genuine native YAML capture and attendee-access check remain distribution gates.
+The [slide manuscript](instructor/teaching-slides.json) supports a 35-slide companion. Binary slides stay outside Git. The [learner package procedure](learner/README.md) produces a curated local folder for the producer. A genuine native YAML capture and attendee-access check remain distribution gates.
 
 ## Start here
 

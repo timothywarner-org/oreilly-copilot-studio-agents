@@ -1,6 +1,6 @@
 # Registration promises and delivery evidence
 
-**Authority:** [published registration page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/), checked September 5, 2026. The four objective strings in course.json remain unchanged. This register describes authored coverage, not completed tenant rehearsal.
+**Authority:** [published registration page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/), checked September 6, 2026. The four objective strings in course.json remain unchanged. This register describes authored coverage, not completed tenant rehearsal.
 
 | Promise area | Where and how it is taught | Sign-off evidence |
 | --- | --- | --- |
@@ -26,7 +26,7 @@
 | Security, DLP, boundaries and approval | Each tool/source decision plus Operate pilot review | Named controls and owner, no bypass of tenant policy |
 | Well-Architected concerns | Operate worked risk/control for each of the five concerns | Learner fills a control for each in the pilot worksheet |
 | VS Code/YAML awareness and follow-up | [Export inspection](../sample-agent/exports/README.md) | Genuine sanitized native export attached before learner distribution |
-| No-code first-time maker route | Guided core labs and optional observer participation | Independent authoring remains a later check for observers |
+| No-code audience participation | Instructor-led build, universal decision exercises, optional later labs | No tenant access required for participation |
 | Learner preparation and follow-up | [Start here](../START-HERE.md), learner workbook generator, independent practice | Producer confirms accessible package before event |
 | Four-hour schedule and exercises | [Run of show](../instructor/run-of-show.md), per-guide timeboxes | Timed rehearsal including exercise and question time |
 
@@ -37,3 +37,5 @@ The public opening identifies certification candidates as the audience while its
 ## Honest completion criteria
 
 Authored materials count as **covered in the teaching package**. Mark the course **rehearsed** only after the actual evidence above exists. The export, learner access, and live demonstration gates cannot be closed by a local test or by this document's existence.
+
+The [template deck coverage map](presentation-coverage.md) links every objective to exact slide numbers. Trial onboarding is demonstrated in Inception; account approval and authoring are not scheduled learner dependencies.

@@ -1,8 +1,8 @@
 # Build lab: Teach, wait, then respond
 
-**LO2. No code required.** Follow the instructor's worked build first. The seven-minute exercise changes one small part of the topic; completing every authoring step from scratch is after-class practice.
+**LO2. No account or code required during class.** Watch the instructor build and test the topic, then complete the seven-minute explanation-and-trace exercise. The authoring recipe is supplied for optional independent practice afterward.
 
-## Core authoring path
+## Instructor demonstration and optional after-class authoring recipe
 
 1. Start with your saved Module 1 agent. Upload [azure-concepts.txt](../../sample-agent/knowledge/azure-concepts.txt) through **Knowledge > Add knowledge**, name it **Contoso Azure concepts**, and describe it as “Original course reference for shared responsibility and the three narrow study focuses; not current exam administration or a Microsoft publication.” Select **Add to agent**. Wait for processing and check an actual response; file upload alone is not verification.
 2. In **Settings > Generative AI**, turn off **Allow ungrounded responses** and **Use information from the web** for the controlled demonstration. Review the [caveats](../../instructor/02-build-guide.md): this does not make all generated claims correct.
@@ -31,11 +31,11 @@ These are **original teaching materials**, not real exam questions. A fixed auth
 ## Seven-minute learner exercise
 
 1. **Minutes 0-2:** Rewrite the incorrect-answer feedback to explain the misconception in your own words.
-2. **Minutes 2-5:** Maker: update that Message node and test the incorrect answer in a fresh conversation. Observer: trace the nodes and tell your partner exactly when the agent waits and which response should follow. Label predictions **PREDICTED**.
+2. **Minutes 2-5:** Trace the nodes and tell your partner, or write down, exactly when the agent waits and which feedback follows the Microsoft choice. The instructor tests a selected example. Label predictions **PREDICTED** and its actual response **OBSERVED DEMO**.
 3. **Minutes 5-7:** Record the supporting passage, the wait point, and your feedback. Explain why an automatically filled topic input is wrong for a new quiz answer.
 
 **Worked answer:** “Microsoft manages the physical host, but Contoso manages the guest OS. I confused the host with the guest.” The wait point is the Question node configured **Ask every time**, not a question mark in a Message node.
 
 **Recovery:** If knowledge is still processing, inspect the file and mark retrieval **NOT RUN**. If authoring is blocked, use the worksheet and complete the build after class. Do not call observer predictions a working assistant.
 
-**After class:** Repeat the full build from step 1. Use the [instructor guide](../../instructor/02-build-guide.md) for automatic inputs, fallback repair, source limits, and the official-guide extension.
+**Optional after class:** Use the Module 1 trial walkthrough, then complete the full build from step 1 in your approved environment. You do not need an instructor-shared flow. This is independent practice, not required class participation. Use the [instructor guide](../../instructor/02-build-guide.md) for automatic inputs, fallback repair, source limits, and the official-guide extension.

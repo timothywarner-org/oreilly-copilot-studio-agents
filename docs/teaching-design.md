@@ -1,56 +1,44 @@
 # Teaching design: one assistant, four decisions
 
-**Audience:** first-time Copilot Studio makers with ordinary Microsoft 365 skills. The assistant's user is an Azure beginner. Teaching Azure certification content is not this class's learning outcome.
+**Audience:** First-time Copilot Studio makers and technical professionals. **Format:** Instructor-led demonstrations with short universal prediction, explanation and decision exercises. Learners are not required to have a Copilot Studio account or build during class.
 
-**Design decision:** keep the approved four objectives verbatim. Teach one small assistant through a worked example, a short attempt, and a visible check. Add each capability only after learners can explain the previous one.
+Contoso trainers need a consistent internal Azure-onboarding activity. The assistant helps employees understand a concept, attempt a question and choose a study session. The audience designs the assistant; the employee is its user. This is not an AZ-900 preparation class.
 
-## The minimum successful course
+## Progressive example and exact outcomes
 
-| Stage | Learner decision | Instructor demonstration | Learner evidence |
-| --- | --- | --- | --- |
-| Inception | What job is this assistant allowed to do? | Create the shell and test an explicit boundary | One instruction, one topic, one measurable success criterion |
-| Build | What supports this answer? | Add one small original knowledge file and one teach-question-wait-feedback topic | A topic sequence, a source check, and a response to missing evidence |
-| Extend | When must the agent use a tool? | Call GetStudySession for a fixed 30-minute session | A tool contract and an escalation decision |
-| Operate | What would justify a limited pilot? | Inspect test results, compare a change, and publish to a scoped channel when authorized | A defensible pilot decision with an owner and unresolved checks |
+Keep the four approved objectives verbatim. The same agent progresses through planning, grounding, a bounded tool, and a justified pilot decision.
 
-The first three blocks each contain 50 teaching minutes plus a 10-minute break. Operate contains 50 teaching minutes. The final 10 minutes are wrap-up and questions. Detailed allocations live in the four instructor guides. **Total: 240 minutes.**
-
-## What makes this achievable
-
-1. Use a prepared nonproduction environment. Account creation and tenant troubleshooting happen before class.
-2. Begin with one short, original text file. Public search ingestion is an extension, not the first success dependency.
-3. Build one explicit practice topic. Show the other topic purposes in the map without authoring five separate topics live.
-4. Use one text input and a fixed study-session output. Arrays, loops, daily allocations, APIs, and hosting are unnecessary for the first tool call.
-5. Demonstrate native evaluation and one selected publishing channel. Explain other channels through the same identity, audience, and approval questions.
-6. Prepare checkpoints in advance. Live-build the instructive change, then inspect its result. A 20-minute rescue operation teaches very little about agent design.
-
-## Participation and assessment
-
-**Maker:** follows the demonstrated configuration with a working account. **Observer:** predicts the branch or result, inspects the instructor's evidence, and explains the decision. Observer participation supports conceptual understanding but does not establish independent authoring proficiency. Offer the same lab for later independent completion.
-
-Use the rhythm **predict, demonstrate, try, explain**. Give the question before the answer. Allow 30 to 60 seconds of thinking before inviting responses. Ask learners to identify the evidence that would change their answer.
-
-| Check | Ready to continue | Reteach when |
+| Stage | Instructor demonstrates | Everyone practices |
 | --- | --- | --- |
-| Job | Learner names a specific user, allowed behavior, and testable boundary | They describe an all-purpose assistant or use only 'be accurate' |
-| Grounding | Learner can inspect the supporting passage and identify a missing answer | They treat a plausible citation as proof |
-| Tool | Learner distinguishes returned data from a generated claim of success | They believe naming a tool means it ran |
-| Pilot | Learner names evidence, audience, failure handling, and owner | They equate one good answer with operational readiness |
+| Inception | Trial access, shell, instructions and boundary | Write one instruction, test and topic |
+| Build | One original source, teach-question-wait-feedback, fallback and input choice | Predict the branch, revise feedback and explain evidence |
+| Extend | Fixed GetStudySession contract and actual invocation | Choose answer, clarification, tool or human boundary |
+| Operate | Native evaluation, operational evidence and scoped publication | Defend a pilot decision and controls |
 
-The four worksheet exercises assess the advertised decisions. They do not certify product mastery or AZ-900 readiness.
+Trial setup is taught in Module 1, including organizational account requirements and administrator-controlled blocks. No learner must activate a trial, change policy or secure permission during class. The instructor's licensed environment supports demonstrations unavailable to trial users.
 
-## Depth budget
+## Timing and participation
 
-**Build and inspect:** instructions, one knowledge source, one practice topic, one study-session flow, a small live evaluation subset, and one scoped publishing route.
+Inception and Build each contain 50 teaching minutes and a 10-minute break. Extend has the same structure. Operate has 50 teaching minutes; wrap-up has 10. **Total: 240 minutes.** Per-guide schedules include learner exercises and Q&A rather than adding them afterward.
 
-**Explain with an example:** triggers versus topic initiation, agent/topic knowledge scope, model choice, MCP, HTTP, child and connected agents, A2A and the named platform connections, DLP, authentication, human handoff, other channels, version comparison, containment, and the five Well-Architected concerns.
+Use **predict, demonstrate, explain**. Give 30-60 seconds to think before revealing answers. The seven-minute Build activity is a paper/chat/partner trace and feedback exercise, not a builder lab. No mandatory catch-up work occurs during breaks.
 
-**After class:** extend the topic map, inspect a genuine native YAML export, complete independent authoring, run all 12 cases, or attempt the existing multi-day reference design. The optional Node example remains an advanced local oracle and is not the tool demonstrated in the core class.
+An actual instructor result is **OBSERVED DEMO**. A learner prediction is **PREDICTED**. Personal tenant execution is **NOT RUN** unless independently performed. These labels report different evidence; observing is the intended participation mode, not a lesser access track.
 
-## Rehearsal acceptance
+## Scope and simplicity
 
-The written course can be complete while delivery checks remain pending. Sign-off requires a real shell, working retrieval, an actual wait point, a bound flow with inspected outputs, a native evaluation record, a rehearsed scoped publication route, operational evidence, and a sanitized native export. Use [the preflight](../instructor/preflight.md) and [remaining checks](known-gaps.md). Never turn an expected output into a claimed observation.
+Use one small original TXT source before adding public-web dependencies. Author one practice topic during the demonstration and explain the five advertised topic purposes. Keep the study-session tool to one text input and fixed reviewed output. Its teaching value is a visible contract and actual tool invocation, not unnecessary algorithmic complexity.
 
-## Source policy
+Explain MCP, HTTP, agent taxonomy, other channels, source limits and model selection with concrete decisions. Do not turn those comparisons into additional deployment workshops. A larger model cannot repair a wrongly configured input.
 
-The public page determines learner promises. The approved proposal preserves the exact objectives. Microsoft Learn establishes documented product behavior. The three research notes separate mutable UI facts from the stable teaching decisions above. A documentation check establishes what Microsoft documents, not what Tim's tenant has enabled.
+## Optional independent follow-up
+
+The full no-code authoring recipes remain available after class. Learners can use the trial walkthrough, create their own agent, repeat the topic build, inspect a genuine sanitized YAML capture and run the checks in an approved environment. Trial users can build/test but cannot publish the agent. Access and environment policy remain organization decisions.
+
+The universal exercises assess the course's design and interpretation decisions. They do not certify independent authoring proficiency or exam readiness.
+
+## Delivery verification
+
+Rehearse actual source retrieval, waiting, bound flow, native evaluation, scoped publishing, channel behavior and recovery captures. Complete the genuine YAML and learner-distribution gates. Keep expected behavior distinct from observed execution. Use [preflight](../instructor/preflight.md), [rehearsal record](../instructor/rehearsal-record.md), and [remaining checks](known-gaps.md).
+
+The public registration page supplies learner promises, the proposal preserves objectives, and Microsoft Learn grounds current product procedures. The user's instruction establishes the instructor-led delivery format. See [pedagogy revision](pedagogy-revision.md) and [trial sources](../sources/research-trial.md).

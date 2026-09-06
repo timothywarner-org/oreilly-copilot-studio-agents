@@ -36,5 +36,7 @@
   "evals/native-live-three.csv",
   "evals/results.template.json",
   "practice/README.md",
-  "practice/coach-prompt.md"
+  "practice/coach-prompt.md",
+  "evals/native-tool-one.csv",
+  "sources/research-trial.md"
 ]

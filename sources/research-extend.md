@@ -23,3 +23,9 @@
 **Why not Switch:** A Condition route is directly documented for Power Automate cloud flows and uses the standard designer's action insertion. We avoid relying on desktop-flow Switch documentation for a cloud-flow recipe. The resulting three comparisons are simple enough to inspect in one screen.
 
 **Recheck before delivery:** Actual harness, labels, flow field type picker, tenant availability and permissions, preview states, model approvals, channel handoff limitations, and actual runtime behavior. Documentation is mutable. Nothing here is a recorded deployment, native export, or live evaluation result.
+
+## Audience-fit review, 2026-09-06
+
+Repeated Microsoft Learn MCP search and full-page retrieval of the create-agent-flow, MCP extension, add-other-agents, and generic-handoff pages above. The documented pattern still supports the core design. This refresh does not establish a tenant run.
+
+The guide now distinguishes **tool** (callable capability), **flow** (implementation), and **actions** (steps). Its comparison uses a hypothetical Contoso course catalog to explain HTTP versus MCP, and nested versus separate agent boundaries to explain child versus connected agents. A2A labels a protocol connection, not a child-agent category. The eight-slide sequence is an authored teaching recommendation within the existing 50 minutes.

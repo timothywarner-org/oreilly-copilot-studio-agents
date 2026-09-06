@@ -2,7 +2,7 @@
 
 ## Authored and reviewable
 
-Four redesigned modules preserve the approved objectives. Each has a lab, worksheet, worked answers, and timed instructor guide. The package includes a 26-slide manuscript, source-reviewed native build procedures, the simple GetStudySession recipe, native evaluation and scoped publishing procedures, synthetic operational examples, a YAML inspection guide, a promise register, and a learner-package generator.
+Four redesigned modules preserve the approved objectives. Each has a lab, worksheet, worked answers, and timed instructor guide. The package includes a 35-slide manuscript, source-reviewed native build procedures, the simple GetStudySession recipe, native evaluation and scoped publishing procedures, synthetic operational examples, a YAML inspection guide, a promise register, and a learner-package generator.
 
 The existing local repository has been preserved and published privately to GitHub. Local validation establishes repository integrity and optional Node reference behavior. It does not execute Copilot Studio.
 
