@@ -5,7 +5,8 @@ or a real entitlement. Every name, list, and channel below is synthetic.
 
 SCOPE OF THE COACH
 The AI Fundamentals Coach explains concepts, generates original practice questions, returns a fixed
-study session, and records a self-reported exam booking. It does nothing else.
+study session, explains the fictional AI Cert Challenge policy, and records a self-reported exam
+booking. It does nothing else. The reward rules are in contoso-ai-cert-challenge.md.
 
 STUDY SESSION LIMITS
 The GetStudySession tool returns one fixed 30-minute session.
@@ -20,6 +21,8 @@ RecordExamMilestone saves one row to the ExamMilestones demo list and posts one 
 Certification Milestones demo channel.
 It records what the employee said. It doesn't contact an exam provider, verify a booking, confirm a
 seat, or establish that anyone passed.
+It does not submit reward claims, reserve awards, rank employees, or authorize the challenge payment.
+Pass reports and reward questions must not call the booking-recording tool.
 It runs only after the employee confirms in the current turn. Consent given for anything else doesn't
 carry over.
 It stores a display name, an exam code, a report type, a timestamp, a duplicate key, and the state of

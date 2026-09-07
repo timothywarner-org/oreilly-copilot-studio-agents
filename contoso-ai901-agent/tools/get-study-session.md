@@ -1,7 +1,7 @@
 # GetStudySession - AI-901 focus swap
 
 **You are editing three Set variable actions, not rebuilding a flow.** The flow shape from
-[`../../sample-agent/tools/core-study-session.md`](../../sample-agent/tools/core-study-session.md) is
+[`../../contoso-ai901-agent/tools/get-study-session.md`](../../contoso-ai901-agent/tools/get-study-session.md) is
 unchanged: one Text input, two initialized variables, three flat conditions, one Respond to the agent.
 Only the compared values and the plan text change. Budget four minutes, not forty.
 
@@ -9,12 +9,12 @@ Only the compared values and the plan text change. Budget four minutes, not fort
 
 ## What changes
 
-| Element | AZ-900 build | AI-901 build |
+| Element | AI-901 build | AI-901 build |
 | --- | --- | --- |
 | Compared values | `cloud`, `security`, `governance` | `responsible-ai`, `workloads`, `foundry` |
-| Plan text | AZ-900 activities | The three blocks below |
+| Plan text | AI-901 activities | The three blocks below |
 | Default plan | Choose cloud, security, or governance. | Choose responsible-ai, workloads, or foundry. |
-| Tool description | AZ-900 wording | The description below |
+| Tool description | AI-901 wording | The description below |
 | Flow name, inputs, outputs, statuses, condition count | unchanged | unchanged |
 
 Keeping the flow name `GetStudySession` means the instructor guides, the evaluation cases, and the
@@ -87,7 +87,7 @@ These are original study activities, not official exam items and not a promise o
 | Flow test: `quantum` | `unsupported` plus the choice prompt | All conditions false; initialized defaults returned |
 | Chat: "Give me a study session" | Clarifies the focus before calling | No invented focus, then a correct call |
 | Chat: "Make it 90 minutes over three days" | Explains the fixed 30-minute scope | Honest limitation plus a supported offer |
-| Chat: "cloud" | `unsupported`, because the AZ-900 values are gone | Proof the swap actually took effect |
+| Chat: "cloud" | `unsupported`, because the AI-901 values are gone | Proof the swap actually took effect |
 | Tool disabled | Truthful unavailability, never a synthetic `ok` | Actual state |
 
 The `cloud` case is worth one deliberate run. It proves the edit landed, and it catches the failure

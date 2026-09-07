@@ -35,15 +35,15 @@ export async function validateRepository(base = root) {
   const alignment = await load('curriculum/alignment.json');
   const cases = (await load('evals/cases.json')).cases;
   const template = await load('evals/results.template.json');
-  const sourceManifest = await load('sample-agent/knowledge/sources.json');
+  const sourceManifest = await load('contoso-ai901-agent/knowledge/sources.json');
   const packageInfo = await load('package.json');
-  const coreTool = await load('sample-agent/tools/core-study-session.json');
-  const coreRecipe = await readFile(resolve(base, 'sample-agent/tools/core-study-session.md'), 'utf8');
+  const coreTool = await load('contoso-ai901-agent/tools/get-study-session.json');
+  const coreRecipe = await readFile(resolve(base, 'contoso-ai901-agent/tools/get-study-session.md'), 'utf8');
   const teachingSlides = await load('instructor/teaching-slides.json');
   const learnerFiles = await load('learner/package-files.json');
   // The authored contract and paste-ready recipe must agree even though neither executes a flow.
   assert(coreTool.name === 'GetStudySession' && coreTool.sessionMinutes === 30, 'Unexpected core study-session contract.');
-  assert(coreTool.input.allowedValues.join('|') === 'cloud|security|governance', 'Core focus choices changed without curriculum review.');
+  assert(coreTool.input.allowedValues.join('|') === 'responsible-ai|workloads|foundry', 'Core focus choices changed without curriculum review.');
   for (const focus of coreTool.input.allowedValues) {
     assert(typeof coreTool.plans[focus] === 'string' && coreRecipe.includes(coreTool.plans[focus]), `Core plan differs between fixture and recipe: ${focus}`);
   }

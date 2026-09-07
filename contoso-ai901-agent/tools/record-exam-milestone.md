@@ -19,6 +19,10 @@ believe it.
 
 ## Flow shape
 
+**Challenge boundary:** This flow handles self-reported bookings only. It does not verify passes,
+rank employees, submit AI Cert Challenge claims, reserve awards, or issue payment. Keep that boundary
+in the tool description as well as the [topic description](../topics/record-exam-milestone.md).
+
 ```text
 When an agent calls the flow
   -> validate: confirmed is true, examCode is AI-901, learnerKey is present

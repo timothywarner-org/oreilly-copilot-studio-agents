@@ -8,7 +8,7 @@
 | LO2: grounded assistant | [Build guide](../instructor/02-build-guide.md), original knowledge file, explicit practice topic | Supporting passage, wait point, unknown-answer behavior |
 | LO3: extension | [Extend guide](../instructor/03-extend-guide.md), simple study-session flow and extension comparisons | Actual bound tool output and a justified escalation decision |
 | LO4: operation | [Operate guide](../instructor/04-operate-guide.md), evaluations, evidence comparison, scoped publish walkthrough, pilot worksheet | Genuine evaluation, channel and operational evidence |
-| Progressive scenario | Same AZ-900 assistant in every guide | Four saved checkpoints from the same preparation build |
+| Progressive scenario | Same AI-901 assistant in every guide | Four saved checkpoints from the same preparation build |
 | Generative orchestration and triggers | Inception mental model and documented configuration, Extend comparison | Learner distinguishes conversation routing from event-triggered work |
 | Topic purposes | Build map covers overview, practice, study plan, fallback and search | Learner explains the purpose of each, authors one practice sequence |
 | Grounding scope, limits, order and citations | Build worked comparison and source inspection | Learner can explain selected source scope and reject an unsupported citation |
@@ -25,14 +25,14 @@
 | Publishing and channel preparation | Operate scoped Teams walkthrough and SharePoint/Microsoft 365 comparison | Instructor entitlement, selected audience, publication and channel test |
 | Security, DLP, boundaries and approval | Each tool/source decision plus Operate pilot review | Named controls and owner, no bypass of tenant policy |
 | Well-Architected concerns | Operate worked risk/control for each of the five concerns | Learner fills a control for each in the pilot worksheet |
-| VS Code/YAML awareness and follow-up | [Export inspection](../sample-agent/exports/README.md) | Genuine sanitized native export attached before learner distribution |
+| VS Code/YAML awareness and follow-up | [Export inspection](../contoso-ai901-agent/exports/README.md) | Genuine sanitized native export attached before learner distribution |
 | No-code audience participation | Instructor-led build, universal decision exercises, optional later labs | No tenant access required for participation |
 | Learner preparation and follow-up | [Start here](../START-HERE.md), learner workbook generator, independent practice | Producer confirms accessible package before event |
 | Four-hour schedule and exercises | [Run of show](../instructor/run-of-show.md), per-guide timeboxes | Timed rehearsal including exercise and question time |
 
 ## Remaining editorial decision
 
-The public opening identifies certification candidates as the audience while its audience section describes makers. Proposed correction for the producer to review: 'In this four-hour course, you'll learn Copilot Studio by building a study assistant for a beginner preparing for Azure Fundamentals.' No message has been sent and no public copy has been changed.
+The public opening identifies certification candidates as the audience while its audience section describes makers. Proposed correction for the producer to review: 'In this four-hour course, you'll learn Copilot Studio by building a study assistant for a beginner preparing for Azure AI Fundamentals.' No message has been sent and no public copy has been changed.
 
 ## Honest completion criteria
 

@@ -6,7 +6,7 @@
 
 **Audience anchor:** Contoso's internal training team is the maker; colleagues studying Azure fundamentals are the assistant's users. Keep every comparison tied to that job. Learners need to choose a suitable extension, not memorize a product catalog.
 
-**Before class:** Follow [the full flow recipe](../sample-agent/tools/core-study-session.md). Prepare one agent with the working tool and a second flow draft with just the cloud condition for explanation. Keep a real verified checkpoint ready. If no live checkpoint exists, use the recipe as a clearly labeled walkthrough and leave execution unverified. Do not present an authored fixture as captured output. Confirm standard harness, access, policies, and actual tests.
+**Before class:** Follow [the full flow recipe](../contoso-ai901-agent/tools/get-study-session.md). Prepare one agent with the working tool and a second flow draft with just the cloud condition for explanation. Keep a real verified checkpoint ready. If no live checkpoint exists, use the recipe as a clearly labeled walkthrough and leave execution unverified. Do not present an authored fixture as captured output. Confirm standard harness, access, policies, and actual tests.
 
 ## 0-5 minutes: retrieval before explanation
 
@@ -24,7 +24,7 @@
 
 **SAY:** "Tool names a capability the assistant can call. This capability is implemented by an agent flow. The condition and variable steps inside that flow are actions. Those are three views of the same small operation, not three separate systems."
 
-**DO:** Show [the contract](../sample-agent/tools/core-study-session.md). Open the prepared flow draft. Show the trigger focus, both String initializations, and one cloud Condition. Add or explain its two Set variable actions. Point to the one response after all conditions.
+**DO:** Show [the contract](../contoso-ai901-agent/tools/get-study-session.md). Open the prepared flow draft. Show the trigger focus, both String initializations, and one cloud Condition. Add or explain its two Set variable actions. Point to the one response after all conditions.
 
 **EXPECT:** Learners see unsupported as the initial state and ok only when a supported choice matches. Explain that variables must be initialized outside the conditions.
 
@@ -56,7 +56,7 @@
 
 **SAY:** "We have one small workflow. MCP would add a standard tool interface. A second agent would add another decision-maker. Neither automatically improves this study session."
 
-**DO:** Spend four minutes on the [taxonomy table](../sample-agent/tools/extension-decisions.md): flow and HTTP operate on a contract; MCP exposes tools/resources; child agents organize one solution; connected agents reuse separately maintained specialists. Identify A2A, Foundry, Fabric, and Microsoft 365 Agents SDK as distinct connection routes. Mention the documented preview labels without opening six setup wizards.
+**DO:** Spend four minutes on the [taxonomy table](../contoso-ai901-agent/tools/extension-decisions.md): flow and HTTP operate on a contract; MCP exposes tools/resources; child agents organize one solution; connected agents reuse separately maintained specialists. Identify A2A, Foundry, Fabric, and Microsoft 365 Agents SDK as distinct connection routes. Mention the documented preview labels without opening six setup wizards.
 
 Use two paired pictures instead of reading every row: **HTTP request to a known service / MCP server exposing described tools**, then **specialist inside this agent / separately maintained agent outside it**. Say: "If Contoso already has an approved course-catalog API, HTTP can call a defined operation. If a team publishes a governed catalog of tools for several assistants, MCP can expose those capabilities. If the work needs its own instructions and judgment, then consider another agent. Our fixed study session needs none of those additions."
 

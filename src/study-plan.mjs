@@ -4,7 +4,7 @@
  * The limits are synthetic teaching choices, not Microsoft exam requirements.
  */
 export const FOCUS_CODES = Object.freeze([
-  'cloud-concepts', 'azure-architecture-services', 'management-governance',
+  'ai-concepts', 'ai-workloads', 'foundry-solutions',
 ]);
 
 /** @typedef {{days:number, minutesPerDay:number, focus:string[]}} PlanInput */
@@ -55,7 +55,7 @@ export function createStudyPlan(input) {
       focus: input.focus[index % input.focus.length],
       minutes: input.minutesPerDay,
       allocation: { read, practice, review },
-      sourceIds: ['az900-guide'],
+      sourceIds: ['ai901-guide'],
       guidance: 'Read an official explanation, answer original practice questions, and review misconceptions.',
     })),
   };

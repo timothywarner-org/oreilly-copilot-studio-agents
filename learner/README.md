@@ -17,7 +17,7 @@ The destination must not exist. Choose a new destination for a revised build. Th
 
 ## Before distribution
 
-1. Follow [the export inspection procedure](../sample-agent/exports/README.md) to capture a genuine native topic. Inspect it for identities, secrets, private endpoints and dependency assumptions. This package does not invent an export.
+1. Follow [the export inspection procedure](../contoso-ai901-agent/exports/README.md) to capture a genuine native topic. Inspect it for identities, secrets, private endpoints and dependency assumptions. This package does not invent an export.
 2. Add the reviewed native capture to the package using your approved distribution workflow. Recheck the final archive and update its artifact inventory. Until then, the generator marks the promised native sample **MISSING** in PACKAGE-STATUS.md.
 3. Confirm the learner-resource URL with the producer and open it with attendee-equivalent access. The private GitHub URL is not the distribution route.
 4. Complete tenant rehearsal separately. The package is teaching material, not an importable complete agent or proof of a live deployment.

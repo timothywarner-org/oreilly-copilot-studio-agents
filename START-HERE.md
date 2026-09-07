@@ -1,7 +1,9 @@
 # Start here
 
-**Today’s build: an AZ-900 Cert-Prep Assistant in Microsoft Copilot Studio.**
-You are learning to build an agent, not taking an AZ-900 exam cram.
+**Today’s build: the Contoso AI Fundamentals Coach in Microsoft Copilot Studio.**
+The exam is **AI-901**, which replaced AI-900 when it retired on June 30, 2026, under the same
+certification name, *Microsoft Certified: Azure AI Fundamentals*.
+You are learning to build an agent, not taking a certification cram course.
 
 ## Participate without tenant access
 
@@ -22,9 +24,9 @@ VS Code and the repository’s Node.js checks are optional.
 
 ## The smallest complete build
 
-Use one original knowledge file, one shared-responsibility practice topic with a real wait point, and one **GetStudySession** tool. The tool accepts cloud, security, or governance and returns a fixed 30-minute activity. Broader integrations are explained through this example. The complete walkthroughs linked from each module support independent practice after class.
+Use one original knowledge file, one practice topic with a real wait point, and one **GetStudySession** tool that returns a fixed 30-minute activity from a single focus word: responsible-ai, workloads, or foundry. Those three labels are Contoso teaching shortcuts, not the official AI-901 skill-area names. Broader integrations are explained through this example. The complete walkthroughs linked from each module support independent practice after class.
 
-Observer exercises develop the same decisions, but independent authoring proficiency requires completing the maker lab later.
+The in-class exercises develop the same decisions the maker makes, but independent authoring proficiency requires working through the full recipes yourself afterward.
 
 ## Before the session
 
@@ -32,7 +34,7 @@ Observer exercises develop the same decisions, but independent authoring profici
 2. Watch the trial walkthrough; use the [trial source notes](sources/research-trial.md) when you are ready to set up access.
 3. Check the [environment notes](docs/environment-notes.md). A trial’s ability to build/test does
    not prove that you can publish an agent.
-4. Keep [the knowledge upload descriptions](sample-agent/knowledge/upload-metadata.md) ready.
+4. Keep [the knowledge upload descriptions](contoso-ai901-agent/knowledge/upload-metadata.md) ready.
 5. Save your work in a private local location. Do not submit identifiers, secrets, or personal records
    in an issue or in chat.
 

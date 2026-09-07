@@ -31,7 +31,7 @@
 - [ ] Record observed results independently from the expected-result rubric.
 - [ ] Re-run failing cases after changes; leave unavailable checks NOT RUN.
 - [ ] Save four known checkpoints privately, including a fallback for each module.
-- [ ] Capture a genuine sanitized native YAML topic using the [export guide](../sample-agent/exports/README.md); verify it is in the approved follow-up package.
+- [ ] Capture a genuine sanitized native YAML topic using the [export guide](../contoso-ai901-agent/exports/README.md); verify it is in the approved follow-up package.
 - [ ] Use the [learner package procedure](../learner/README.md), inspect its contents, and verify attendee access through the producer.
 - [ ] Make local `npm test` and `npm run validate` pass after edits.
 - [ ] Inspect the Git diff for private data and publisher-only assets before any push.

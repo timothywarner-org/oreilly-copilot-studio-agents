@@ -3,7 +3,7 @@
   "owner": "timothywarner-org",
   "private": true,
   "defaultBranch": "main",
-  "description": "Companion to Tim Warner's O'Reilly course: build an AZ-900 study assistant with Microsoft Copilot Studio through Inception, Build, Extend, and Operate.",
+  "description": "Companion to Tim Warner's O'Reilly course: build an AI-901 study assistant with Microsoft Copilot Studio through Inception, Build, Extend, and Operate.",
   "homepage": "https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/",
   "topics": [
     "copilot-studio",
@@ -12,7 +12,7 @@
     "power-platform",
     "power-automate",
     "azure",
-    "az-900",
+    "ai-901",
     "model-context-protocol",
     "agent-evaluation",
     "oreilly",

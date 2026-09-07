@@ -3,6 +3,28 @@
 **Authored 2026-09-06. Tenant execution: NOT RUN.** Nothing in this folder has been created, imported,
 published, or observed in Copilot Studio. Local repository validation checks file integrity only.
 
+## September 7 authoring update
+
+- Formal Markdown instructions now include distinct exam-scope and fictional challenge grounding.
+- Three Microsoft 365 Designer prompts provide a main agent avatar and matching companion artwork.
+- [Finished avatar and listing icons](assets/icons/README.md) now include the 192-pixel color PNG and
+  the 32-pixel white outline with verified alpha transparency. Artwork was generated with ImageGen
+  and finished with user-authorized ImageMagick. File checks passed; tenant upload and store validation
+  remain **NOT RUN**.
+- `knowledge/ai901-objective-domain.md` was actually generated using **MarkItDown 0.1.2** from
+  Microsoft Learn. The complete Skills measured section contains two domains, seven groups, and
+  all objective bullets. [Conversion provenance](sources/ai901-objective-domain.provenance.json)
+  records source and output hashes. Source ingestion and retrieval remain **NOT RUN**.
+- `knowledge/contoso-ai-cert-challenge.md` is newly authored fictional policy: first 50 qualifying
+  Contoso employees receive **$100 USD each**, with human verification and one award per employee.
+- `evals/ai901-challenge.csv` contains **32 original cases** in Microsoft's documented template schema.
+  The native template control was inspected, but no downloaded template file was captured. Native
+  template file comparison, AI-901 import, and evaluation remain **NOT RUN**.
+
+This update fulfills the requested AI-901 scaffold work. The approved four objective strings in
+`course.json` and `sources/proposal-curriculum.md` remain the course commitment record and are
+unchanged. The AZ-900 kit was retired on September 7, 2026; this is now the only agent kit.
+
 ## The exam-number correction
 
 **AI-900 retired June 30, 2026.** The replacement exam is **AI-901: Microsoft Azure AI Fundamentals**,
@@ -41,11 +63,14 @@ Three ways to close this, in the order I would take them:
    grounding a study assistant, is identical. Costs 20 seconds and no approvals.
 2. **Editorial correction after delivery.** Ask O'Reilly to update the objective text and the
    registration page together, then update `course.json` and the proposal excerpt in one commit.
-3. **Keep AZ-900.** [`../sample-agent/`](../sample-agent/README.md) is intact and still builds. AZ-900
-   hasn't retired.
+3. ~~**Keep AZ-900.**~~ **No longer available.** The AZ-900 kit was retired on September 7, 2026 at
+   Tim's direction. This is the only agent kit, so option 1 or option 2 is the live choice.
 
 Don't silently edit LO2 in `course.json`. The validator would pass only if the proposal excerpt were
-edited too, which would conceal a difference the repository is designed to surface.
+edited too, and that excerpt is a verbatim quotation of the approved O'Reilly proposal. Rewriting a
+quotation to match delivery conceals the exact difference this repository is designed to surface.
+**Option 1 is the recommended close for the September 8 delivery**, because the registration page and
+the approved proposal both still say AZ-900 and neither can be changed before the session.
 
 ## What is authored versus what is unproven
 

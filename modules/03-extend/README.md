@@ -26,6 +26,6 @@ Start with [the lab](lab.md), complete [the worksheet](worksheet.md), and compar
 
 **Checkpoint:** Explain why a fluent sentence is insufficient proof of a tool call. Identify one request this agent must decline or refer to a person.
 
-**References:** [Core flow recipe](../../sample-agent/tools/core-study-session.md), [extension decisions](../../sample-agent/tools/extension-decisions.md), [verified documentation](../../sources/research-extend.md).
+**References:** [Core flow recipe](../../contoso-ai901-agent/tools/get-study-session.md), [extension decisions](../../contoso-ai901-agent/tools/extension-decisions.md), [verified documentation](../../sources/research-extend.md).
 
 **Continue:** [Operate](../04-operate/README.md)

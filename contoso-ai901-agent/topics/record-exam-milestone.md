@@ -23,7 +23,7 @@ boundary on its own - say that out loud rather than implying the topic makes the
 > Handles an employee reporting that they booked the Azure AI Fundamentals exam. Describes what will be
 > saved and posted, obtains explicit confirmation in the current turn, then calls RecordExamMilestone
 > and reports the actual returned status. Don't use this topic to answer study questions, and don't
-> use it to book an exam.
+> use it to book an exam. Do not use for pass reports, reward claims, winner ranking, or payments.
 
 ## Canvas shape
 

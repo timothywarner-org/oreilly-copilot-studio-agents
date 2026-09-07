@@ -1,9 +1,17 @@
 # Working agreement for coding assistants
 
 Work only on **Build AI Agents to Automate Your Workflows**, September 8, 2026.
-The four modules are Inception, Build, Extend, and Operate. The single scenario is the AZ-900 Cert-Prep Assistant.
+The four modules are Inception, Build, Extend, and Operate. One agent: the Contoso AI Fundamentals Coach
+for AI-901, in contoso-ai901-agent/. The validator binds to that kit by path. AI-900 retired June 30,
+2026, and the predecessor sample-agent/ AZ-900 kit was retired September 7, 2026.
+Delivery is instructor-led; attendees need no tenant.
 
-Read course.json, sources/proposal-curriculum.md, docs/course-delta.md, and docs/known-gaps.md before edits.
+The approved objectives are quoted verbatim and stay that way. LO2 names AZ-900 while the build is
+AI-901. Do not edit LO2 in course.json or sources/proposal-curriculum.md to close that gap; the excerpt
+is a quotation of the approved proposal. Record the difference, do not conceal it.
+
+Read course.json, sources/proposal-curriculum.md, docs/pedagogy-revision.md, docs/course-delta.md,
+and docs/known-gaps.md before edits.
 Preserve the exact four objectives. Distinguish source text, newly authored activities, product documentation,
 and actual tenant observations. Re-verify changing technical facts against Microsoft Learn.
 

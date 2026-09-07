@@ -1,0 +1,62 @@
+{
+  "checkedOn": "2026-09-07",
+  "files": [
+    {
+      "file": "agent-icon.png",
+      "width": 192,
+      "height": 192,
+      "bytes": 11684,
+      "sha256": "425e04698c236c91af70c17342b8cd350e34a7e132422d5d5ddf069079d70fa2",
+      "hasAlpha": false,
+      "transparentPixels": 0,
+      "visibleArtworkBounds": {
+        "left": 38,
+        "top": 44,
+        "right": 153,
+        "bottom": 147
+      },
+      "enclosedTransparentRegions": null,
+      "status": "PASS"
+    },
+    {
+      "file": "color.png",
+      "width": 192,
+      "height": 192,
+      "bytes": 11684,
+      "sha256": "425e04698c236c91af70c17342b8cd350e34a7e132422d5d5ddf069079d70fa2",
+      "hasAlpha": false,
+      "transparentPixels": 0,
+      "visibleArtworkBounds": {
+        "left": 38,
+        "top": 44,
+        "right": 153,
+        "bottom": 147
+      },
+      "enclosedTransparentRegions": null,
+      "status": "PASS"
+    },
+    {
+      "file": "outline.png",
+      "width": 32,
+      "height": 32,
+      "bytes": 1156,
+      "sha256": "d993af946441dc147fa1a6e6db8671b8a52016455707aa6417623f375c09d7d0",
+      "hasAlpha": true,
+      "transparentPixels": 438,
+      "visibleArtworkBounds": {
+        "left": 0,
+        "top": 1,
+        "right": 31,
+        "bottom": 29
+      },
+      "enclosedTransparentRegions": 7,
+      "status": "PASS"
+    }
+  ],
+  "tenantUpload": "NOT RUN",
+  "storeValidation": "NOT RUN",
+  "solidColorContrast": {
+    "whiteOnNavy": 15.72,
+    "amberOnNavy": 8.64
+  }
+}

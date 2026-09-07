@@ -19,7 +19,7 @@
     {
       "id": "record-exam-milestone",
       "displayName": "Record Exam Milestone",
-      "modelDescription": "Handles an employee reporting that they booked the Azure AI Fundamentals exam. Describes both effects, obtains explicit confirmation in the current turn, then calls RecordExamMilestone and reports the actual returned status. Do not use this topic to answer study questions or to book an exam.",
+      "modelDescription": "Handles an employee reporting that they booked the Azure AI Fundamentals exam. Describes both effects, obtains explicit confirmation in the current turn, then calls RecordExamMilestone and reports the actual returned status. Do not use this topic to answer study questions or to book an exam. Do not use for pass reports, reward claims, winner ranking, or payments.",
       "examplePrompts": [
         "I booked my AI-901 exam.",
         "I scheduled my Azure AI Fundamentals exam for next month.",
@@ -62,6 +62,18 @@
       ],
       "expectedPath": "clear limitation, no invented action",
       "recipe": "instructions.md"
+    },
+    {
+      "id": "contoso-ai-cert-challenge",
+      "displayName": "handled by knowledge plus instructions",
+      "modelDescription": "No authored topic. Explain the fictional AI Cert Challenge from its configured policy. Do not invoke RecordExamMilestone for passes or reward requests. Refer verification and unavailable live award information to Contoso Learning and Development.",
+      "examplePrompts": [
+        "How does the Contoso AI Cert Challenge work?",
+        "I passed AI-901. Am I in the first 50?",
+        "How many awards are left?"
+      ],
+      "expectedPath": "policy-grounded answer; no invented rank, claim, contact, or payment",
+      "recipe": "knowledge/contoso-ai-cert-challenge.md"
     }
   ],
   "designNotes": [

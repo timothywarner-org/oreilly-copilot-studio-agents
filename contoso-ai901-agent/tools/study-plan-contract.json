@@ -26,9 +26,9 @@
       "uniqueItems": true,
       "items": {
         "enum": [
-          "cloud-concepts",
-          "azure-architecture-services",
-          "management-governance"
+          "ai-concepts",
+          "ai-workloads",
+          "foundry-solutions"
         ]
       }
     }

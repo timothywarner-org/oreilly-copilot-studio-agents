@@ -4,7 +4,7 @@
 
 **Format:** Instructor-led demonstrations and short universal exercises. No learner authoring or trial activation is required during class. **Duration:** 50 teaching minutes, including exercise and Q&A, followed by a 10-minute break. **Evidence status:** Documented procedures and expected results. No tenant execution is implied.
 
-**Before class:** Rehearse in the approved nonproduction environment. Open [instructions](../sample-agent/instructions.md), [concept file](../sample-agent/knowledge/azure-concepts.txt), [worksheet](../modules/01-inception/worksheet.md), and [sources](../sources/research-build.md). Have a saved shell and Module 2 checkpoint ready as recovery, created during rehearsal. Record their actual names privately. If none exists, say so; a guide describing a checkpoint does not create it.
+**Before class:** Rehearse in the approved nonproduction environment. Open [instructions](../contoso-ai901-agent/instructions.md), [concept file](../contoso-ai901-agent/knowledge/ai901-concepts.txt), [worksheet](../modules/01-inception/worksheet.md), and [sources](../sources/research-build.md). Have a saved shell and Module 2 checkpoint ready as recovery, created during rehearsal. Record their actual names privately. If none exists, say so; a guide describing a checkpoint does not create it.
 
 ## 0-4: Start with a learner problem
 
@@ -95,10 +95,10 @@ The docs do not specify one universal sequence after Next, so narrate only contr
 **DO:** Use the documented **standard harness** route. Current docs distinguish it from **New experience**. Recheck the actual tenant in rehearsal.
 
 1. Sign in to [Copilot Studio](https://copilotstudio.microsoft.com/). If **New experience** is enabled, turn it off and dismiss its feedback panel with **Submit** as documented. Select the approved environment.
-2. On **Agents**, choose **Create blank agent**, name it **AZ-900 Cert-Prep Assistant**, and select **Create**. Do not provision an environment just to bypass permissions.
-3. On **Overview**, in **Instruction**, select **Edit**. Paste the reviewed [sample instructions](../sample-agent/instructions.md), then **Save**. Identify purpose, grounding, teaching, tools, handoff, and boundaries without reading every line.
+2. On **Agents**, choose **Create blank agent**, name it **Contoso AI Fundamentals Coach**, and select **Create**. Do not provision an environment just to bypass permissions.
+3. On **Overview**, in **Instruction**, select **Edit**. Paste the reviewed [sample instructions](../contoso-ai901-agent/instructions.md), then **Save**. Identify purpose, grounding, teaching, tools, handoff, and boundaries without reading every line.
 4. Inspect **Settings > Generative AI > Orchestration > Use generative AI orchestration for your agent's responses?** Set **Yes** if permitted. New standard-harness agents currently default to generative orchestration; verify instead of toggling blindly.
-5. Open the test panel. In a fresh conversation enter “Can you guarantee that I will pass AZ-900?” Capture the response. Expect no guarantee and an offer of study support. Test “Please register me for the exam.” It must not claim a completed booking.
+5. Open the test panel. In a fresh conversation enter “Can you guarantee that I will pass AI-901?” Capture the response. Expect no guarantee and an offer of study support. Test “Please register me for the exam.” It must not claim a completed booking.
 6. Record the shell's actual name, saved state, and how to reopen it for the next checkpoint. This guide is not an exported agent.
 
 **EXPECT:** A saved shell with bounded instructions. A refusal is a narrow test result, not proof of comprehensive safety.

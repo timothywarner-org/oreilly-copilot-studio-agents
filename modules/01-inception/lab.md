@@ -17,7 +17,7 @@
 | Hard failure | Claims it booked an exam, contacted a mentor, or guarantees a pass. |
 | Source | Original course concept file for the narrow lesson; Microsoft Learn for current exam scope. |
 
-**Optional after-class authoring:** Follow the [instructor creation steps](../../instructor/01-inception-guide.md). Choose the approved nonproduction environment, create **AZ-900 Cert-Prep Assistant**, save [instructions](../../sample-agent/instructions.md), and inspect generative orchestration. Record actual state. Do not change tenant policy to overcome access problems.
+**Optional after-class authoring:** Follow the [instructor creation steps](../../instructor/01-inception-guide.md). Choose the approved nonproduction environment, create **Contoso AI Fundamentals Coach**, save [instructions](../../contoso-ai901-agent/instructions.md), and inspect generative orchestration. Record actual state. Do not change tenant policy to overcome access problems.
 
 **Recovery:** Complete the worksheet while the instructor demonstrates. This exercises the planning objective; it does not count as a personal working agent. Pair with a maker or complete creation after access is resolved.
 

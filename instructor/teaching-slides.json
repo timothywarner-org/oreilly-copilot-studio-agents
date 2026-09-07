@@ -13,7 +13,7 @@
         "Microsoft Copilot Studio",
         "Tim Warner | September 8, 2026"
       ],
-      "notes": "Today you are the maker. We are building an AZ-900 study assistant for a Contoso colleague learning Azure fundamentals. We will improve that same assistant throughout the class. First it has a clear job. Then it uses a reference, holds a teaching conversation, calls a bounded tool, and earns a pilot decision. The Azure subject keeps our examples consistent. The design skills transfer to your own training, help desk, and internal knowledge work. No learner coding is required.",
+      "notes": "Today you are the maker. We are building an AI-901 study assistant for a Contoso colleague learning Azure fundamentals. We will improve that same assistant throughout the class. First it has a clear job. Then it uses a reference, holds a teaching conversation, calls a bounded tool, and earns a pilot decision. The Azure subject keeps our examples consistent. The design skills transfer to your own training, help desk, and internal knowledge work. No learner coding is required.",
       "sources": [],
       "objectiveIds": [
         "LO1"
@@ -705,11 +705,11 @@
       "kind": "table",
       "lines": [
         "Prepared set | Question it answers",
-        "AZ900-live-three\nCompare meaning: E04, E05, E08 | Does the response match the expected meaning?",
-        "AZ900-tool-one\nTool use: E08 only | Did it use the actual GetStudySession capability?",
+        "AI901-live-three\nCompare meaning: E04, E05, E08 | Does the response match the expected meaning?",
+        "AI901-tool-one\nTool use: E08 only | Did it use the actual GetStudySession capability?",
         "Separate manual conversation | Did the topic wait, then give the correct feedback?"
       ],
-      "notes": "Start with prepared native sets to protect time for interpreting results. AZ900-live-three uses Compare meaning for E04, E05, and E08, each with an expected response. AZ900-tool-one uses Tool use only for E08 and selects the actual GetStudySession capability. Remove the default General quality method when configuring these deliberately focused sets. Methods are configured on the set. Leaving expected tools blank on the other two cases would produce Invalid results for that method, not a clean skip. The eighty-percent meaning threshold is an initial course choice, not a Microsoft recommendation. Single-response grading does not simulate answering the quiz; the wait and feedback still need a manual multi-turn test.",
+      "notes": "Start with prepared native sets to protect time for interpreting results. AI901-live-three uses Compare meaning for E04, E05, and E08, each with an expected response. AI901-tool-one uses Tool use only for E08 and selects the actual GetStudySession capability. Remove the default General quality method when configuring these deliberately focused sets. Methods are configured on the set. Leaving expected tools blank on the other two cases would produce Invalid results for that method, not a clean skip. The eighty-percent meaning threshold is an initial course choice, not a Microsoft recommendation. Single-response grading does not simulate answering the quiz; the wait and feedback still need a manual multi-turn test.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create"
@@ -723,11 +723,11 @@
       ],
       "rows": [
         [
-          "AZ900-live-three\nCompare meaning: E04, E05, E08",
+          "AI901-live-three\nCompare meaning: E04, E05, E08",
           "Does the response match the expected meaning?"
         ],
         [
-          "AZ900-tool-one\nTool use: E08 only",
+          "AI901-tool-one\nTool use: E08 only",
           "Did it use the actual GetStudySession capability?"
         ],
         [

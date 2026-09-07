@@ -28,6 +28,20 @@
       "path": "contoso-ai901-agent/knowledge/evidence-register.json",
       "authority": "Reviewed course evidence packets",
       "purpose": "Input to the practice-question prompt and the trusted source mapping used for citations"
+    },
+    {
+      "id": "ai901-objective-domain",
+      "kind": "local-file",
+      "path": "contoso-ai901-agent/knowledge/ai901-objective-domain.md",
+      "authority": "Microsoft Learn snapshot converted with MarkItDown",
+      "purpose": "Complete dated exam audience profile, domains, weights, and objective bullets; upload and retrieval NOT RUN"
+    },
+    {
+      "id": "contoso-ai-cert-challenge",
+      "kind": "local-file",
+      "path": "contoso-ai901-agent/knowledge/contoso-ai-cert-challenge.md",
+      "authority": "Fictional demonstration policy",
+      "purpose": "First 50 qualifying employees receive 100 USD each; eligibility and verification boundaries; no live winner or payment data"
     }
   ],
   "note": "This manifest plans what a maker uploads or configures. It is not a Copilot Studio import format, and listing a source here is not evidence that retrieval works."

@@ -11,10 +11,10 @@
 > See [remaining checks](docs/known-gaps.md). Node.js and GitHub tools are optional instructor tooling,
 > not prerequisites for the no-code class.
 
-Build the **AZ-900 Cert-Prep Assistant** in **Microsoft Copilot Studio**.
+Build the **Contoso AI Fundamentals Coach** in **Microsoft Copilot Studio**.
 Start with a clear job and safe boundaries. Add trusted knowledge. Give it a bounded tool.
 Then test it and decide whether it is ready for a limited pilot.
-AZ-900 is the assistant’s subject matter; this repository teaches agent building.
+AI-901 is the assistant’s subject matter; this repository teaches agent building.
 
 ## Your route through the course
 
@@ -25,8 +25,11 @@ AZ-900 is the assistant’s subject matter; this repository teaches agent buildi
 | [03 · Extend](modules/03-extend/README.md) | Add a study-plan action; distinguish flows, MCP, and agent delegation. | A bounded tool contract and a deliberate escalation path. |
 | [04 · Operate](modules/04-operate/README.md) | Evaluate, observe, govern, and prepare publication. | Evidence and a go/no-go pilot decision. |
 
-Each module contains a learner lab and worksheet, with worked answers and a timed instructor guide. You can participate through a **maker route**
-with tenant access or an **observer route** using the same prompts and acceptance criteria.
+Each module contains a learner lab and worksheet, with worked answers and a timed instructor guide.
+**The instructor builds; everyone participates.** No account, tenant, or build time is required during the
+session, and the prediction, tracing, and decision exercises are the same for every attendee. Module 1
+demonstrates trial signup. The full authoring recipes support independent practice afterward. See the
+[pedagogy revision](docs/pedagogy-revision.md) for the delivery format that governs this.
 
 ## The four promised outcomes
 
@@ -35,9 +38,30 @@ with tenant access or an **observer route** using the same prompts and acceptanc
 - **LO3** — Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
 - **LO4** — Evaluate, publish, observe, and govern the agent using analytics, agent evaluations, Power Platform Well-Architected guidance, and security principles.
 
+These four strings are quoted verbatim from the approved proposal and are not edited here. **LO2 names
+AZ-900 while the delivered build is AI-901**, for the reason explained under [the agent kit](#the-agent-kit).
+
 The [alignment map](docs/acceptance-map.md) connects each outcome to a demo, a learner artifact,
 and evaluation cases. The [curriculum delta](docs/course-delta.md) explains what changed from
 *How to Create AI Agents Like a Pro* without dragging its old scope into this class.
+
+## The agent kit
+
+[`contoso-ai901-agent/`](contoso-ai901-agent/README.md) is the single agent kit: brief, instructions,
+knowledge with recorded provenance, topic map, practice-question topic, milestone workflow, tool
+contracts, runbook, talk track, icons, and evaluation sets. It is **paste-ready design input for a build
+performed by hand in the portal**, not an importable Copilot Studio solution.
+
+**AI-900 retired June 30, 2026.** AI-901 replaced it under the same certification name, *Microsoft
+Certified: Azure AI Fundamentals*. The predecessor AZ-900 kit was retired on September 7, 2026 and its
+still-useful pieces moved into the AI-901 kit.
+
+> **One wording difference, deliberately preserved.** The approved O’Reilly proposal and the published
+> registration page both name AZ-900 in objective LO2, so [`course.json`](course.json) and the
+> [proposal excerpt](sources/proposal-curriculum.md) keep that wording verbatim. The delivered build is
+> AI-901. Editing a quotation of the approved proposal to match delivery would hide the difference
+> instead of resolving it. See [STATUS.md](contoso-ai901-agent/STATUS.md) for the two live options and
+> [remaining checks](docs/known-gaps.md) for the gate.
 
 ## Teaching and distribution
 
@@ -66,12 +90,14 @@ create cloud resources, or impersonate a working agent flow.
 
 ```text
 modules/                 Four modules: README, lab, worksheet
-sample-agent/            Instructions, topic map, knowledge, and tool specification
+contoso-ai901-agent/     The agent kit: brief, instructions, knowledge, topics, tools, runbook, evals
 practice/                Two-phase self-study and retrieval practice
-instructor/              Run of show, rehearsal, answer guidance, preflight
+instructor/              Run of show, slide manuscript, rehearsal, answer guidance, preflight
+docs/                    Teaching design, coverage maps, delta register, remaining gates
 curriculum/              Machine-readable outcome-to-evidence mapping
 sources/                 Curriculum-only proposal excerpt and source provenance
 evals/                   Agent test scenarios and unexecuted result template
+learner/                 Distribution allowlist and packaging procedure
 src/                     Optional deterministic study-plan reference function
 scripts/                 Local validation, demo runner, and private-origin publisher
 tests/                   Offline tests for repository tooling and reference function

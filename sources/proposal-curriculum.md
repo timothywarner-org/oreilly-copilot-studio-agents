@@ -7,6 +7,15 @@ The original curriculum wording and timing notation are preserved below; trailin
 family scheduling information, and administrative sections are deliberately excluded.
 This is **an excerpt**, not a replacement for the original proposal.
 
+> **Do not edit the quoted text below.** It names **AZ-900** throughout, including in objective LO2.
+> The delivered build is **AI-901**, because AI-900 retired on June 30, 2026 and AI-901 replaced it under
+> the same certification name. This file is a verbatim record of what O'Reilly approved, so it is left
+> exactly as approved and the difference is recorded instead. See
+> [source discrepancies](../docs/course-delta.md#source-discrepancies) and
+> [remaining checks](../docs/known-gaps.md). `scripts/validate-repo.mjs` asserts that every objective
+> string in `course.json` still appears verbatim below, so editing either one alone fails the build and
+> editing both together would conceal the difference.
+
 ---
 
 ### Course Registration Page Information

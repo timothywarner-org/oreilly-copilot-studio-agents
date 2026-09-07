@@ -13,7 +13,7 @@
     "durationMinutes": 240,
     "timeAuthority": "Accepted calendar invitation and producer email reviewed in this conversation"
   },
-  "scenario": "AZ-900 Cert-Prep Assistant",
+  "scenario": "Contoso AI Fundamentals Coach",
   "courseUrl": "https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/",
   "proposalUrl": "https://docs.google.com/document/d/1FbWRkrqNZOhhlR71ru2cRMhenH3UQs-3k3T8zkqOI58/edit",
   "sourceCheckedOn": "2026-09-05",
@@ -39,7 +39,7 @@
     {
       "id": "01-inception",
       "name": "Inception",
-      "title": "Design the AZ-900 Agent",
+      "title": "Design the AI-901 Agent",
       "learningObjectiveIds": [
         "LO1"
       ],

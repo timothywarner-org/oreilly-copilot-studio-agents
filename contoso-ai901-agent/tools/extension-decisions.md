@@ -25,7 +25,7 @@
 | Connected Copilot Studio agent | A separately maintained agent in the environment | Another team owns a reusable capability and separate lifecycle | Future mentor-service example, not a human transfer |
 | A2A | Protocol-based connection to another agent | Another agent exposes a compatible endpoint | Recognition-level concept, not a new lab |
 | Microsoft Foundry agent connection | Reuse an agent built in Foundry | A team already owns an appropriate specialist | Discuss dependency and test boundary |
-| Fabric data agent connection | Delegate questions to a data specialist | Governed organizational analytics are required | Not needed for public AZ-900 study topics |
+| Fabric data agent connection | Delegate questions to a data specialist | Governed organizational analytics are required | Not needed for public AI-901 study topics |
 | Microsoft 365 Agents SDK connection | Reuse a programmatically built agent | A developer-owned agent is already available | No SDK installation or coding in the learner route |
 
 **Version-sensitive facts:** Microsoft's add-other-agents overview currently labels the Foundry, Fabric, and Microsoft 365 Agents SDK connections preview. Child agents are not independently deployed services. Connected-agent solutions add orchestration hops and testing/governance work. Check current docs before naming a feature's availability. [Source](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-add-other-agents)

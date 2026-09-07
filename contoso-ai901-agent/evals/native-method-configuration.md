@@ -15,6 +15,12 @@ two-column shape. They haven't been compared against a template downloaded from 
 
 ## Import the single-response set
 
+For the completed objective-domain and reward scenario, use the **32-case**
+[`ai901-challenge.csv`](ai901-challenge.csv) and its
+[`template, coverage, and scoring guide`](ai901-challenge-guide.md). The original five-case set below
+remains the short live demonstration. The expanded set adds company grounding and missing-information
+checks without changing the native two-column schema.
+
 1. Open the agent's **Evaluation** page.
 2. Select **New evaluation → Single response**.
 3. Download the CSV template under **Data source**.

@@ -4,7 +4,7 @@
 
 **Duration:** 50 teaching minutes, then a 10-minute break. **Status:** Documentation-grounded build instructions; live results remain **NOT RUN** until rehearsed. **Format:** Instructor-led demonstration with universal prediction and decision exercises. No learner account or builder time is required. **Core:** one file and one practice topic. Azure subject matter is deliberately narrow so learners can concentrate on agent behavior.
 
-**Before class:** Open the saved shell, [learner lab](../modules/02-build/lab.md), [concept file](../sample-agent/knowledge/azure-concepts.txt), [worksheet](../modules/02-build/worksheet.md), and [sources](../sources/research-build.md). Rehearse the full topic and source processing in advance. Keep a completed topic available to inspect if live authoring exceeds 12 minutes. Prepare the small input demonstration described below; disable it after the comparison. Do not invent a recording or ready agent if preparation has not happened.
+**Before class:** Open the saved shell, [learner lab](../modules/02-build/lab.md), [concept file](../contoso-ai901-agent/knowledge/ai901-concepts.txt), [worksheet](../modules/02-build/worksheet.md), and [sources](../sources/research-build.md). Rehearse the full topic and source processing in advance. Keep a completed topic available to inspect if live authoring exceeds 12 minutes. Prepare the small input demonstration described below; disable it after the comparison. Do not invent a recording or ready agent if preparation has not happened.
 
 ## 0-4: Recall the model from the previous block
 
@@ -22,12 +22,12 @@
 
 **DO:**
 
-1. Show the local [concept file](../sample-agent/knowledge/azure-concepts.txt). Identify the IaaS paragraph, the fictional rule, and the source trail.
+1. Show the local [concept file](../contoso-ai901-agent/knowledge/ai901-concepts.txt). Identify the IaaS paragraph, the fictional rule, and the source trail.
 2. Open **Knowledge > Add knowledge**. Upload the TXT file by browsing or drag and drop. Use name **Contoso Azure concepts** and description “Original course reference for shared responsibility and the three narrow study focuses; not current exam administration or a Microsoft publication.” Select **Add to agent**.
 3. Wait for processing. Inspect the source's actual readiness state. Dataverse search is required for file knowledge; admin access and storage are preflight dependencies.
 4. In **Settings > Generative AI**, set **Allow ungrounded responses** off and **Use information from the web** off for this controlled demo. The **Web Search** control on Overview refers to the broad-web setting. Do not turn off or weaken content moderation to obtain an answer.
 5. In a fresh test ask: “Who patches the guest operating system of Contoso's Azure virtual machine?” Inspect the output, citation, and supporting paragraph.
-6. In a new test ask: “What is my exact AZ-900 exam appointment time?” Compare its evidence and response.
+6. In a new test ask: “What is my exact AI-901 exam appointment time?” Compare its evidence and response.
 
 **EXPECT:** The first response attributes guest-OS responsibility to Contoso and has support in the file. The second cannot establish an appointment. Cite the retrieved course file as such; a Microsoft URL printed inside it does not mean that webpage was retrieved.
 
@@ -53,9 +53,9 @@ Open node **Properties**, inspect **Knowledge sources > Search only selected sou
 
 **Limits to explain, not memorize:** Microsoft currently documents 25 public websites in generative mode and four public URLs in classic mode. More than 25 knowledge sources cause selection by descriptions; uploaded files are excluded from that 25-source selection limit. Uploaded knowledge currently supports TXT, up to 512 MB per file and up to 500 files, subject to environment storage. These are ceilings, not curriculum targets. Our one short file is far below them. Source type, mode, indexing, and permissions matter more than collecting URLs.
 
-**Official guide extension:** Open the [current AZ-900 guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900) in the browser and show the three actual domain names. The course's cloud/security/governance labels are practice categories, not those official domains. For an instructor-prepared web-source demonstration, use **Add knowledge > Public websites**, enter **https://learn.microsoft.com/en-us/credentials** under **Public website link**, select **Add**, set a scope description, then **Add to agent**. This prefix deliberately includes more than AZ-900. Current docs limit a public source URL to two path levels, so do not tell learners to paste the longer guide URL as a supported source configuration. If the tenant requests an ownership confirmation you cannot truthfully supply, stop the web-source addition and use the guide as a browser reference.
+**Official guide extension:** Open the [current AI-901 guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) in the browser and show the three actual domain names. The course's cloud/security/governance labels are practice categories, not those official domains. For an instructor-prepared web-source demonstration, use **Add knowledge > Public websites**, enter **https://learn.microsoft.com/en-us/credentials** under **Public website link**, select **Add**, set a scope description, then **Add to agent**. This prefix deliberately includes more than AI-901. Current docs limit a public source URL to two path levels, so do not tell learners to paste the longer guide URL as a supported source configuration. If the tenant requests an ownership confirmation you cannot truthfully supply, stop the web-source addition and use the guide as a browser reference.
 
-**EXPECT:** Learners can distinguish a link for manual reading from a configured retrieval scope. For the prepared extension, ask “What are the AZ-900 exam domains?” and confirm the returned source is the actual guide, not a different credential page. Do not claim success without checking.
+**EXPECT:** Learners can distinguish a link for manual reading from a configured retrieval scope. For the prepared extension, ask “What are the AI-901 exam domains?” and confirm the returned source is the actual guide, not a different credential page. Do not claim success without checking.
 
 **IF IT FAILS:** Public sources rely on Bing indexing and may not return the exact guide. Keep the local core, show the guide directly, and mark website retrieval unverified. Do not silently broaden to all web content. The exact page remains useful for manual verification.
 

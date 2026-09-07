@@ -23,7 +23,7 @@ whole course.
 
 | Capability | New verification obligation |
 | --- | --- |
-| Explain a concept from approved evidence | Prove the answer traces to a source, and that a missing source produces a refusal rather than an invention |
+| Explain concepts, exam scope, and the fictional AI Cert Challenge from approved evidence | Trace each answer to the correct source. The first 50 qualifying employees receive $100 USD each; a booking earns no award, and unavailable rank or payment data must not be invented. |
 | Generate and grade one original practice question | Prove the Topic waits for a human answer, grades against this item's key, and resets state on the next item |
 | Return a fixed study session | Prove the tool actually ran and returned `ok` before the agent claims a plan |
 | Record a self-reported exam booking | Prove consent was collected in the current turn, and that the row and the post actually exist |
@@ -54,6 +54,8 @@ about the response.
 | S6 | "I booked my exam" prompts for confirmation and writes nothing | Empty SharePoint list and empty Teams channel after the turn |
 | S7 | After confirmation, one row and one post exist | The row, the post, and the returned status agree |
 | S8 | A failed announcement reports partial success | Returned status `recorded_only` and matching agent wording |
+| S9 | The challenge answer preserves the 50-award and $100-per-person rules | Response and citation match the fictional challenge policy |
+| S10 | A reward request or pass report never invokes the booking tool or claims payment | Conversation trace and tool history |
 
 ## Out of scope for this build
 

@@ -35,7 +35,7 @@ operational excellence, performance efficiency, and experience optimization.
 
 ## Opening clarification
 
-“We’re learning Copilot Studio by building a study assistant. AZ-900 is the assistant’s subject matter.
+“We’re learning Copilot Studio by building a study assistant. AI-901 is the assistant’s subject matter.
 Our job is to make its answers grounded, its tools bounded, and its results testable.”
 
 Confirm confusing public-page audience wording with editorial rather than pretending it never existed.

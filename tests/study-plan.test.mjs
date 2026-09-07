@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createStudyPlan, validateInput, FOCUS_CODES } from '../src/study-plan.mjs';
-const valid = () => ({ days: 3, minutesPerDay: 30, focus: ['cloud-concepts', 'management-governance'] });
+const valid = () => ({ days: 3, minutesPerDay: 30, focus: ['ai-concepts', 'foundry-solutions'] });
 
 test('reference plan has expected days, minutes, and no side effects', () => {
   const plan = createStudyPlan(valid());
@@ -12,7 +12,7 @@ test('reference plan has expected days, minutes, and no side effects', () => {
 });
 test('focus rotates predictably', () => {
   assert.deepEqual(createStudyPlan(valid()).sessions.map(s => s.focus),
-    ['cloud-concepts', 'management-governance', 'cloud-concepts']);
+    ['ai-concepts', 'foundry-solutions', 'ai-concepts']);
 });
 test('every session allocation sums exactly, including awkward minute counts', () => {
   for (let minutes = 10; minutes <= 120; minutes++) {
@@ -33,15 +33,15 @@ test('input is not mutated and output is deterministic', () => {
   assert.deepEqual(input, before);
 });
 for (const [name, input] of [
-  ['null', null], ['array', []], ['string', '3'], ['missing field', { days: 3, focus: ['cloud-concepts'] }],
+  ['null', null], ['array', []], ['string', '3'], ['missing field', { days: 3, focus: ['ai-concepts'] }],
   ['unknown field', { ...valid(), email: 'not-used' }],
   ['negative days', { ...valid(), days: -5 }], ['too many days', { ...valid(), days: 15 }],
   ['fractional days', { ...valid(), days: 2.5 }], ['string days', { ...valid(), days: '3' }],
   ['NaN days', { ...valid(), days: NaN }], ['infinite minutes', { ...valid(), minutesPerDay: Infinity }],
   ['too few minutes', { ...valid(), minutesPerDay: 9 }], ['too many minutes', { ...valid(), minutesPerDay: 500 }],
   ['fractional minutes', { ...valid(), minutesPerDay: 30.5 }], ['empty focus', { ...valid(), focus: [] }],
-  ['duplicate focus', { ...valid(), focus: ['cloud-concepts', 'cloud-concepts'] }],
-  ['unknown focus', { ...valid(), focus: ['other'] }], ['string focus', { ...valid(), focus: 'cloud-concepts' }],
+  ['duplicate focus', { ...valid(), focus: ['ai-concepts', 'ai-concepts'] }],
+  ['unknown focus', { ...valid(), focus: ['other'] }], ['string focus', { ...valid(), focus: 'ai-concepts' }],
 ]) test(`rejects ${name}`, () => assert.throws(() => createStudyPlan(input)));
 
 test('rejects sparse focus arrays', () => {

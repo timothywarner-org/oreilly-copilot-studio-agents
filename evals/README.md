@@ -7,14 +7,14 @@ function and repository consistency. They cannot establish Copilot Studio behavi
 [The result template](results.template.json) starts with every case **NOT RUN**.
 This is a portable review format, not a native Copilot Studio import schema.
 
-For the documented native single-response route, [native-live-three.csv](native-live-three.csv) uses Microsoft's `Question` and `Expected response` columns. It contains authored reference responses for E04, E05 and E08 and has **not been imported or run in the tenant**. Compare the actual downloaded template before import. Create `AZ900-live-three` with **Compare meaning only**, using the authored 80% threshold. Create a separate `AZ900-tool-one` from [native-tool-one.csv](native-tool-one.csv), with **Tool use only** and the actual GetStudySession capability selected in the native UI. Remove General quality if added by default. The CSV does not carry capability metadata. Missing per-case Tool use expectations produce Invalid, so do not add that method to the three-case set and leave E04/E05 blank. [Method configuration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview#tool-use).
+For the documented native single-response route, [native-live-three.csv](native-live-three.csv) uses Microsoft's `Question` and `Expected response` columns. It contains authored reference responses for E04, E05 and E08 and has **not been imported or run in the tenant**. Compare the actual downloaded template before import. Create `AI901-live-three` with **Compare meaning only**, using the authored 80% threshold. Create a separate `AI901-tool-one` from [native-tool-one.csv](native-tool-one.csv), with **Tool use only** and the actual GetStudySession capability selected in the native UI. Remove General quality if added by default. The CSV does not carry capability metadata. Missing per-case Tool use expectations produce Invalid, so do not add that method to the three-case set and leave E04/E05 blank. [Method configuration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview#tool-use).
 
 Inspect E05's topic trace, waiting and feedback manually; semantic similarity to a reference question does not establish a correct conversation. Inspect E08 parameters and output even when Tool use passes. References are grading aids, not observed results. [Documented CSV format](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create).
 
 | Prepared set | Cases | Sole method | Additional native configuration |
 | --- | --- | --- | --- |
-| AZ900-live-three | E04, E05, E08 | Compare meaning, authored 80% threshold | Review expected answer for all three |
-| AZ900-tool-one | E08 | Tool use | Select real GetStudySession capability for E08 |
+| AI901-live-three | E04, E05, E08 | Compare meaning, authored 80% threshold | Review expected answer for all three |
+| AI901-tool-one | E08 | Tool use | Select real GetStudySession capability for E08 |
 
 Rehearse both sets, then rerun only the one-case set live while reviewing a genuine prepared same-set semantic comparison. Evaluations run sequentially. Report each set separately; do not combine their method pass rates into a claim that all twelve scenarios passed. A repeated E08 in two sets is still one scenario with two checks.
 

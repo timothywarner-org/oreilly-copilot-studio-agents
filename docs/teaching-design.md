@@ -2,7 +2,7 @@
 
 **Audience:** First-time Copilot Studio makers and technical professionals. **Format:** Instructor-led demonstrations with short universal prediction, explanation and decision exercises. Learners are not required to have a Copilot Studio account or build during class.
 
-Contoso trainers need a consistent internal Azure-onboarding activity. The assistant helps employees understand a concept, attempt a question and choose a study session. The audience designs the assistant; the employee is its user. This is not an AZ-900 preparation class.
+Contoso trainers need a consistent internal Azure-onboarding activity. The assistant helps employees understand a concept, attempt a question and choose a study session. The audience designs the assistant; the employee is its user. This is not a certification preparation class, for AI-901 or anything else.
 
 ## Progressive example and exact outcomes
 

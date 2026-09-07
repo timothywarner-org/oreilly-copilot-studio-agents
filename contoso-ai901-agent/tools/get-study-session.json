@@ -27,5 +27,5 @@
     "status": "unsupported",
     "plan": "Choose responsible-ai, workloads, or foundry."
   },
-  "relationshipToAz900Fixture": "This is the AI-901 sibling of sample-agent/tools/core-study-session.json. The AZ-900 fixture is unchanged and is still the one the repository validator binds to."
+  "validatorBinding": "scripts/validate-repo.mjs asserts this contract: the GetStudySession name, the 30-minute session, these three focus values, and that every plan string above also appears verbatim in get-study-session.md."
 }

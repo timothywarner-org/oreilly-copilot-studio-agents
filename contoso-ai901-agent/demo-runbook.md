@@ -29,6 +29,15 @@ Nothing on this list is worth an audience's attention, and every item on it can 
 **Recovery rule:** one deliberate retry of a failed live operation, then move to the rehearsed
 checkpoint or the labeled prepared example. Never spend a teaching block debugging authentication.
 
+**September 7 assets:** Use the [Designer prompts](prompts/designer-agent-icons.md) for the avatar,
+paste the complete [formal Markdown instructions](instructions.md), and upload the
+[AI-901 objective domain](knowledge/ai901-objective-domain.md) and
+[fictional AI Cert Challenge](knowledge/contoso-ai-cert-challenge.md) with their
+[source descriptions](knowledge/upload-metadata.md). The
+[32-case evaluation](evals/ai901-challenge-guide.md) covers both sources. In the knowledge beat,
+contrast “How does the $100 challenge work?” with “How many awards are left?” The first is in the
+policy; the second requires live data this coach does not have. Timings below have not been remeasured.
+
 ## Hour One - Inception, 9:00 to 9:50
 
 **Exit evidence:** a real shell with real instructions and one demonstrated boundary.
@@ -44,7 +53,7 @@ checkpoint or the labeled prepared example. Never spend a teaching block debuggi
 | 5 | Q&A | - |
 
 **Say the exam-number correction once, at minute 4.** AI-900 retired June 30, 2026; the current exam is
-AI-901; the certification name didn't change. Then say the published objective LO2 names AZ-900 and
+AI-901; the certification name didn't change. Then say the published objective LO2 names AI-901 and
 that the design skill is identical. Twenty seconds, and nobody emails you about it afterward. Sourcing
 is in [`STATUS.md`](STATUS.md).
 
@@ -91,7 +100,7 @@ state, answer validation, or the evidence boundary.
 | 4 | Answer, clarify, call a tool, or reach a human. Four different decisions. | - |
 | 4 | `GetStudySession` invoked once. Fixed scope, inspected status. | [`tools/get-study-session.md`](tools/get-study-session.md) |
 | 19 | **The milestone workflow.** Show the empty list and empty channel first. Add the two effect actions. Build the consent topic. Run it. | [`tools/record-exam-milestone.md`](tools/record-exam-milestone.md), [`topics/record-exam-milestone.md`](topics/record-exam-milestone.md) |
-| 8 | Extension patterns compared: MCP, HTTP tools, connected agents, A2A, Foundry, human handoff. | [`../sample-agent/tools/extension-decisions.md`](../sample-agent/tools/extension-decisions.md) |
+| 8 | Extension patterns compared: MCP, HTTP tools, connected agents, A2A, Foundry, human handoff. | [`../contoso-ai901-agent/tools/extension-decisions.md`](../contoso-ai901-agent/tools/extension-decisions.md) |
 | 5 | Duplicates, partial failure, and privacy. | [`tools/milestone-result.contract.json`](tools/milestone-result.contract.json) |
 | 5 | Learner decision exercise. | worksheet |
 | 5 | Q&A | - |

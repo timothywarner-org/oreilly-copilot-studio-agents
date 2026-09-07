@@ -2,7 +2,9 @@
 
 **35 slides. All four advertised learning objectives are mapped below.** This is coverage of the teaching materials, not a claim that a live tenant or every learner has passed an assessment.
 
-The instructor builds one AZ-900 study assistant for Contoso’s internal training. Attendees need no account for the scheduled prediction and decision exercises. Trial setup is demonstrated; independent building remains optional follow-up.
+The instructor builds one study assistant for Contoso’s internal training. Attendees need no account for the scheduled prediction and decision exercises. Trial setup is demonstrated; independent building remains optional follow-up.
+
+**Closed September 7, 2026: the deck now matches the build.** The manuscript was converted from AZ-900 to AI-901 alongside the rest of the repository, and the evaluation set names moved with it. The single remaining AZ-900 string in the manuscript is the **quoted text of objective LO2**, which is preserved verbatim because the approved proposal and the published registration page both still carry that wording. See [remaining checks](known-gaps.md) for how that difference is closed on the day.
 
 | Objective | Slides | Instructor demonstration and explanation | Universal learner activity |
 | --- | --- | --- | --- |

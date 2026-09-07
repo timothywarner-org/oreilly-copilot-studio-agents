@@ -29,7 +29,7 @@ now, and the certification name didn't change at all, so anybody who earned it t
 exactly the credential you'd earn today. Our Contoso agent coaches people toward AI-901.
 
 [SAY] Now you might be looking at the course description and thinking, hang on, Tim, the
-objective on that page says AZ-900. You're right, and I'm leaving it right where it is, because
+objective on that page says AI-901. You're right, and I'm leaving it right where it is, because
 it's the published objective and I don't get to quietly rewrite it mid-session. The design skill
 is identical either way. Grounding a study assistant in approved evidence works the same whether
 the subject is cloud fundamentals or AI fundamentals, and I'd rather build against an exam
