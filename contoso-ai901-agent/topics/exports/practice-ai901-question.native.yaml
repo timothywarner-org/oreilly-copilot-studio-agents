@@ -1,0 +1,158 @@
+# Exported from the saved tenant topic on 2026-09-07.
+# Inspection only: the prompt identity is redacted, so this is not an import package.
+kind: AdaptiveDialog
+modelDescription: Guides an employee through one original AI-901 practice question at a time, waits for their choice, grades against the saved key, and cites the reviewed source. Use for quiz me, test my AI knowledge, or give me a practice question.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - quiz me
+      - give me an AI-901 practice question
+      - test my AI knowledge
+  actions:
+    - kind: Question
+      id: Question_Z55zmB
+      alwaysPrompt: true
+      variable: init:Topic.Domain
+      prompt: Which study area would you like to practice?
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: Responsible AI
+              displayName: Responsible AI
+            - id: AI workloads
+              displayName: AI workloads
+            - id: Microsoft Foundry
+              displayName: Microsoft Foundry
+
+    - kind: SetVariable
+      id: set_focus
+      variable: init:Topic.Focus
+      value: "=Switch(Text(Topic.Domain), \"Responsible AI\", \"responsible-ai\", \"AI workloads\", \"workloads\", \"foundry\")"
+    - kind: SetVariable
+      id: set_EvidenceContext
+      variable: init:Topic.EvidenceContext
+      value: "=Switch(Text(Topic.Domain), \"Responsible AI\", \"Microsoft's Responsible AI Standard rests on six principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Fairness means an AI system treats similar cases similarly and does not systematically disadvantage a group. Reliability and safety means the system performs predictably across the conditions it will really meet, handles unexpected input, and fails safely. Privacy and security means the system uses only data it is authorized to use and protects what it handles. Inclusiveness means the system works for the full range of people it serves, including differing abilities, languages, and levels of technical proficiency. Transparency means people can understand what the system does, what its limits are, and how its output was produced. Accountability means a named person or team is answerable for the system's behavior and its outcomes.\", \"AI workloads\", \"AI-901 expects you to tell common text analysis techniques apart. Keyword extraction identifies the main terms a document is about. Entity detection, also called entity recognition, identifies the specific named things in the text, such as a person, an organization, a location, or a date. Sentiment analysis estimates the attitude or opinion expressed in the text, commonly as positive, negative, neutral, or mixed. Summarization produces a shorter version of the text that preserves its meaning. Each technique answers a different question about the same document, so the choice follows from what the business actually needs to know.\", \"Foundry Agent Service offers two agent types. A prompt agent is declarative: you define instructions, choose a model, and attach tools, and Foundry runs the agent for you with no application code to maintain and no containers to scale or monitor. You can author a prompt agent in the Foundry portal or define it programmatically with the SDK or REST API. A hosted agent is code-based: you bring your own agent code or framework, ship it as a container image or source archive, and Foundry runs it with a managed endpoint, automatic scaling, a dedicated Microsoft Entra identity, and end-to-end observability. Prompt agents suit a fast start and production agents that need no custom orchestration. Hosted agents suit agents that call into your own code.\")"
+    - kind: SetVariable
+      id: set_AllowedSourceIds
+      variable: init:Topic.AllowedSourceIds
+      value: "=Switch(Text(Topic.Domain), \"Responsible AI\", \"rai-six-principles\", \"AI workloads\", \"workload-text-analysis-techniques\", \"foundry-prompt-vs-hosted-agent\")"
+    - kind: SetVariable
+      id: set_SourceTitle
+      variable: init:Topic.SourceTitle
+      value: "=Switch(Text(Topic.Domain), \"Responsible AI\", \"What is Responsible AI?\", \"AI workloads\", \"Study guide for Exam AI-901: Microsoft Azure AI Fundamentals\", \"Agents in Microsoft Foundry\")"
+    - kind: SetVariable
+      id: set_SourceUrl
+      variable: init:Topic.SourceUrl
+      value: "=Switch(Text(Topic.Domain), \"Responsible AI\", \"https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai\", \"AI workloads\", \"https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901\", \"https://learn.microsoft.com/azure/foundry/agents/overview\")"
+    - kind: SetVariable
+      id: initialize_previous
+      variable: init:Topic.PreviousQuestion
+      value: "No previous question."
+    - kind: SetVariable
+      id: clear_current_item
+      variable: Topic.GeneratedItem
+      value: "=Blank()"
+    - kind: SetVariable
+      id: clear_current_answer
+      variable: Topic.UserChoice
+      value: "=Blank()"
+    - kind: InvokeAIBuilderModelAction
+      id: invokeAIBuilderModelAction_gUi1HB
+      input:
+        binding:
+          allowedSourceIds: =Topic.AllowedSourceIds
+          evidenceContext: =Topic.EvidenceContext
+          previousQuestion: =Topic.PreviousQuestion
+          domain: =Topic.Focus
+      output:
+        binding:
+          predictionOutput: Topic.GeneratedItem
+      aIModelId: <PROMPT_ID_REDACTED>
+    - kind: ConditionGroup
+      id: validate_item
+      conditions:
+        - id: reject_invalid
+          condition: "=!(Topic.GeneratedItem.structuredOutput.status = \"ready\" && Topic.GeneratedItem.structuredOutput.sourceId = Topic.AllowedSourceIds && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.question)) && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.choiceA)) && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.choiceB)) && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.choiceC)) && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.explanation)) && !IsBlank(Trim(Topic.GeneratedItem.structuredOutput.sourceId)) && Or(Topic.GeneratedItem.structuredOutput.correctChoice = \"A\", Topic.GeneratedItem.structuredOutput.correctChoice = \"B\", Topic.GeneratedItem.structuredOutput.correctChoice = \"C\") && Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceA)) <> Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceB)) && Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceA)) <> Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceC)) && Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceB)) <> Lower(Trim(Topic.GeneratedItem.structuredOutput.choiceC)) && !IsMatch(Topic.GeneratedItem.structuredOutput.choiceA, \"(?i)(correct|incorrect|answer)\\s*[:=]\", MatchOptions.Contains) && !IsMatch(Topic.GeneratedItem.structuredOutput.choiceB, \"(?i)(correct|incorrect|answer)\\s*[:=]\", MatchOptions.Contains) && !IsMatch(Topic.GeneratedItem.structuredOutput.choiceC, \"(?i)(correct|incorrect|answer)\\s*[:=]\", MatchOptions.Contains) && !(Lower(Switch(Topic.GeneratedItem.structuredOutput.correctChoice, \"A\", Topic.GeneratedItem.structuredOutput.choiceA, \"B\", Topic.GeneratedItem.structuredOutput.choiceB, Topic.GeneratedItem.structuredOutput.choiceC)) in Lower(Topic.GeneratedItem.structuredOutput.question)))"
+          actions:
+            - kind: SendActivity
+              id: explain_invalid
+              activity: I could not produce a supported question this time. I have not presented or graded an item. You can request another practice question or choose another study area.
+            - kind: EndDialog
+              id: end_invalid
+    - kind: Question
+      id: Question_G7zWMA
+      alwaysPrompt: true
+      variable: init:Topic.UserChoice
+      prompt: |-
+        {Topic.GeneratedItem.structuredOutput.question}
+
+        A. {Topic.GeneratedItem.structuredOutput.choiceA}
+        B. {Topic.GeneratedItem.structuredOutput.choiceB}
+        C. {Topic.GeneratedItem.structuredOutput.choiceC}
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: A
+              displayName: A
+            - id: B
+              displayName: B
+            - id: C
+              displayName: C
+    - kind: ConditionGroup
+      id: grade_current_answer
+      conditions:
+        - id: answer_correct
+          condition: =Text(Topic.UserChoice) = Topic.GeneratedItem.structuredOutput.correctChoice
+          actions:
+            - kind: SendActivity
+              id: feedback_correct
+              activity: Correct. {Topic.GeneratedItem.structuredOutput.explanation}
+      elseActions:
+        - kind: SendActivity
+          id: feedback_incorrect
+          activity: The supported answer is {Topic.GeneratedItem.structuredOutput.correctChoice}. {Topic.GeneratedItem.structuredOutput.explanation}
+    - kind: SendActivity
+      id: cite_reviewed_source
+      activity: "Source: [{Topic.SourceTitle}]({Topic.SourceUrl}). This is an original practice item, not a real exam question."
+    - kind: SetVariable
+      id: save_previous
+      variable: Topic.PreviousQuestion
+      value: "=Topic.GeneratedItem.structuredOutput.question"
+    - kind: SetVariable
+      id: clear_after_feedback
+      variable: Topic.GeneratedItem
+      value: "=Blank()"
+    - kind: SetVariable
+      id: clear_answer_after_feedback
+      variable: Topic.UserChoice
+      value: "=Blank()"
+    - kind: Question
+      id: Question_DnWxoh
+      alwaysPrompt: true
+      variable: init:Topic.AnotherPractice
+      prompt: Would you like another practice question in this study area?
+      entity: BooleanPrebuiltEntity
+    - kind: ConditionGroup
+      id: repeat_or_finish
+      conditions:
+        - id: repeat_requested
+          condition: =Topic.AnotherPractice = true
+          actions:
+            - kind: GotoAction
+              id: generate_next_question
+              actionId: clear_current_item
+      elseActions:
+        - kind: SendActivity
+          id: finish_practice
+          activity: Practice finished. I can explain a concept, suggest a study session, or help with certification signup.
+    - kind: EndDialog
+      id: end_practice_topic
+inputType: {}
+outputType: {}
+

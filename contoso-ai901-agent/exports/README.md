@@ -1,6 +1,6 @@
 # Inspect genuine Copilot Studio topic YAML
 
-**Status: native artifact NOT CAPTURED.** This directory contains instructions, not an exported agent. Do not rename an authored specification to `.yaml` or present it as a working export. The promised follow-up artifact is a genuine, sanitized topic capture from the rehearsed course agent. Capturing it is a **learner-distribution gate**.
+**Status: native practice topic captured September 7, 2026.** Open the [sanitized saved topic](../topics/exports/practice-ai901-question.native.yaml) and its [provenance and limits](../topics/exports/README.md). This is an inspection artifact, not an exported agent or portable solution. The procedure below remains the capture and review guide; learner distribution still requires the course owner's review.
 
 ## No-code inspection route
 

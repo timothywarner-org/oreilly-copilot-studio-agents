@@ -1,7 +1,9 @@
 # Status, sourcing, and open gates
 
-**Authored 2026-09-06. Tenant execution: NOT RUN.** Nothing in this folder has been created, imported,
-published, or observed in Copilot Studio. Local repository validation checks file integrity only.
+**Updated 2026-09-07. Tenant smoke tests performed.** The coach, knowledge, practice topic, study
+flow, signup list, and Teams notification now exist and have live evidence. Follow the
+[dated demo route and evidence](tenant-rehearsal-2026-09-07.md) for September 8. Full native evaluation,
+second-user channel access, and timed delivery remain unverified. Local validation checks integrity only.
 
 ## September 7 authoring update
 
@@ -9,12 +11,13 @@ published, or observed in Copilot Studio. Local repository validation checks fil
 - Three Microsoft 365 Designer prompts provide a main agent avatar and matching companion artwork.
 - [Finished avatar and listing icons](assets/icons/README.md) now include the 192-pixel color PNG and
   the 32-pixel white outline with verified alpha transparency. Artwork was generated with ImageGen
-  and finished with user-authorized ImageMagick. File checks passed; tenant upload and store validation
-  remain **NOT RUN**.
+  and finished with user-authorized ImageMagick. File checks passed and the agent icon was uploaded;
+  store validation remains **NOT RUN**.
 - `knowledge/ai901-objective-domain.md` was actually generated using **MarkItDown 0.1.2** from
   Microsoft Learn. The complete Skills measured section contains two domains, seven groups, and
   all objective bullets. [Conversion provenance](sources/ai901-objective-domain.provenance.json)
-  records source and output hashes. Source ingestion and retrieval remain **NOT RUN**.
+  records source and output hashes. Source ingestion now reports **Ready**; retrieval evidence is
+  scoped in the dated rehearsal record.
 - `knowledge/contoso-ai-cert-challenge.md` is newly authored fictional policy: first 50 qualifying
   Contoso employees receive **$100 USD each**, with human verification and one award per employee.
 - `evals/ai901-challenge.csv` contains **32 original cases** in Microsoft's documented template schema.
@@ -77,12 +80,12 @@ the approved proposal both still say AZ-900 and neither can be changed before th
 | Item | State |
 | --- | --- |
 | Instructions, brief, topic map, knowledge, evidence register | Authored, reviewed, character-count checked |
-| Prompt text and logical output contract | Authored; native output-format binding NOT RUN |
-| Practice-question Topic recipe | Authored from documentation; canvas behavior NOT RUN |
-| GetStudySession AI-901 plan text | Authored; flow edit NOT RUN |
-| RecordExamMilestone flow, list, channel | Authored design; SharePoint list and Teams channel NOT CREATED |
+| Prompt text and logical output contract | Saved native JSON format bound as `predictionOutput.structuredOutput` |
+| Practice-question Topic recipe | Checker passed; four live items, grading, citation, wait point, and loop observed |
+| GetStudySession AI-901 plan text | Flow published and bound; supported, unsupported, and missing focus tested |
+| RecordExamMilestone flow, list, channel | Original design retained; simplified Certification Signups route deployed and tested instead |
 | Native evaluation CSVs | Authored to the documented two-column shape; template comparison and import NOT RUN |
-| Generated-item quality | Can't be established without inspecting real samples against the evidence |
+| Generated-item quality | Four samples inspected; broader quality review remains open, including answer-position variety |
 
 ## Product claims that need tenant confirmation before you teach them
 

@@ -1,5 +1,9 @@
 # Compact instructions - the build-it-live variant
 
+**September 8:** Use [the full deployed instructions](instructions.md) for the rehearsed coach.
+These progressive blocks retain the earlier booking design; the actual class flow now records
+synthetic certification signups, as described in the [tenant rehearsal](tenant-rehearsal-2026-09-07.md).
+
 **Use this when you want the audience to watch instructions grow.** Paste the seed block, demonstrate
 one capability, then add the matching paragraph in front of them. Each added paragraph should change
 observable behavior in the test pane, which is the whole point of the exercise.

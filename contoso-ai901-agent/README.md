@@ -1,16 +1,17 @@
 # Contoso AI Fundamentals Coach - live-build authoring kit
 
 **This is a design and authoring kit, not an importable Copilot Studio solution.** Every file here is
-paste-ready input for a build you perform by hand in the portal during class. Nothing in this folder
-has been executed in a tenant. Status language stays textual: **PASS**, **FAIL**, **BLOCKED**, **NOT RUN**.
+paste-ready input for a build you perform by hand in the portal during class. The instructor's
+[September 7 rehearsal](tenant-rehearsal-2026-09-07.md) records actual tenant observations and the
+simplified signup route for September 8. Status language stays textual: **PASS**, **FAIL**, **BLOCKED**, **NOT RUN**.
 
 ## The scenario in one paragraph
 
 Contoso is putting 400 employees through **Microsoft Certified: Azure AI Fundamentals**. The current
 exam for that certification is **AI-901**. Contoso's enablement team builds one agent that explains an
 AI-901 concept from approved evidence, generates and grades one original practice question at a time,
-returns a fixed study session, and records a self-reported exam booking to SharePoint and Teams after
-the employee confirms it. Course attendees aren't Contoso employees. Attendees are learning to
+returns a fixed study session, and records a synthetic certification signup in SharePoint after
+confirmation, with a separate Teams announcement. Course attendees aren't Contoso employees. Attendees are learning to
 **design** this agent; Contoso employees are the people who would use it.
 
 ## Why AI-901 and not AI-900
@@ -25,7 +26,7 @@ published course objective LO2.
 
 | Asset | Ready to use |
 | --- | --- |
-| Agent identity | **Contoso AI Fundamentals Coach**. Description: Helps Contoso employees study for AI-901 using approved knowledge, original practice questions, and fixed study sessions. Explains the fictional AI Cert Challenge and records self-reported exam bookings after confirmation. |
+| Agent identity | **Contoso AI Fundamentals Coach**. Helps learners explain AI-901 ideas, practice an original question, role-play a workplace decision, and choose a fixed study session. Explains the fictional challenge and records a synthetic signup after confirmation. |
 | Formal Markdown instructions | Paste the complete contents of [`instructions.md`](instructions.md) into the agent instructions. The entire file is below the 8,000-character limit; headings and lists are part of the instructions. |
 | Designer prompts | [`Three matching icon prompts`](prompts/designer-agent-icons.md), with the book-and-nodes design as the main avatar. |
 | Finished icons | [`Avatar and Teams/Microsoft 365 listing icons`](assets/icons/README.md): 192-pixel avatar/color PNGs and a 32-pixel white transparent outline, with verified requirements and file checks. |
@@ -34,7 +35,7 @@ published course objective LO2.
 | Evaluation | [`AI-901 and challenge CSV`](evals/ai901-challenge.csv) and [`import, coverage, and scoring notes`](evals/ai901-challenge-guide.md). |
 
 Use [`knowledge/upload-metadata.md`](knowledge/upload-metadata.md) for source descriptions and retrieval
-checks. The challenge is a grounded policy conversation. The booking workflow does not verify passes,
+checks. The challenge is a grounded policy conversation. The signup workflow does not book exams, verify passes,
 rank winners, submit reward claims, or pay employees.
 
 ### Existing progressive build
@@ -48,7 +49,7 @@ Build in this order. Each row is a checkpoint you can stop at with something tha
 | 3 | Add knowledge, verify retrieval | [`knowledge/`](knowledge/upload-metadata.md) |
 | 4 | Author the practice-question Topic | [`topics/practice-ai901-question.md`](topics/practice-ai901-question.md), [`prompts/generate-practice-question.md`](prompts/generate-practice-question.md) |
 | 5 | Swap the study-session flow to AI-901 | [`tools/get-study-session.md`](tools/get-study-session.md) |
-| 6 | Add the confirmed milestone workflow | [`topics/record-exam-milestone.md`](topics/record-exam-milestone.md), [`tools/record-exam-milestone.md`](tools/record-exam-milestone.md) |
+| 6 | Follow the confirmed signup route for September 8 | [Actual deployed route](tenant-rehearsal-2026-09-07.md); the milestone recipes remain the earlier design reference |
 | 7 | Import and run the evaluation set | [`evals/native-method-configuration.md`](evals/native-method-configuration.md) |
 
 The click-by-click sequence with timings, pause points, and fallbacks is

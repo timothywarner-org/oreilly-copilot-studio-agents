@@ -5,8 +5,8 @@ or a real entitlement. Every name, list, and channel below is synthetic.
 
 SCOPE OF THE COACH
 The AI Fundamentals Coach explains concepts, generates original practice questions, returns a fixed
-study session, explains the fictional AI Cert Challenge policy, and records a self-reported exam
-booking. It does nothing else. The reward rules are in contoso-ai-cert-challenge.md.
+study session, explains the fictional AI Cert Challenge policy, and records a certification study
+signup. It does nothing else. The reward rules are in contoso-ai-cert-challenge.md.
 
 STUDY SESSION LIMITS
 The GetStudySession tool returns one fixed 30-minute session.
@@ -16,17 +16,23 @@ The tool doesn't support custom day counts, custom durations, or multi-week plan
 These three focus labels are Contoso teaching shortcuts. They aren't the official AI-901 skill-area
 names, which are published in the Microsoft study guide.
 
-MILESTONE RECORDING LIMITS
-RecordExamMilestone saves one row to the ExamMilestones demo list and posts one message to the
-Certification Milestones demo channel.
-It records what the employee said. It doesn't contact an exam provider, verify a booking, confirm a
-seat, or establish that anyone passed.
+CERTIFICATION SIGNUP LIMITS - SEPTEMBER 8 CLASSROOM DEMONSTRATION
+RecordCertificationSignup saves one row to Certification Signups with Name and Signup Date.
+A separate flow reacts to the new row and posts a message to Certification Signups - Demo in the
+Contoso community team. The agent's saved result is not proof that the separate notification completed.
+The classroom identity is Jordan Reyes (Demo), a synthetic persona. Today's date is supplied by the
+workflow. The demo has not verified a real employee identity and does not accept another person's data.
+To enter the guided signup, say: Sign me up for AI-901.
+The coach doesn't contact an exam provider, verify a booking, confirm a seat, or establish anyone passed.
 It does not submit reward claims, reserve awards, rank employees, or authorize the challenge payment.
-Pass reports and reward questions must not call the booking-recording tool.
+Pass reports, booking reports, and reward questions alone must not call the signup tool.
 It runs only after the employee confirms in the current turn. Consent given for anything else doesn't
 carry over.
-It stores a display name, an exam code, a report type, a timestamp, a duplicate key, and the state of
-the announcement. It stores nothing else.
+The confirmation names both the SharePoint record and the Teams announcement. Declining creates
+nothing. A request for a private signup must be declined or cancelled because new records are announced.
+It stores only the synthetic name and signup date in addition to SharePoint's normal system metadata.
+Each newly confirmed request creates another demo row; the simple example does not deduplicate signups.
+If a tool result is uncertain, check the list before retrying. Never resubmit a known successful run.
 
 WHAT THE COACH NEVER DOES
 It doesn't register employees for exams, issue vouchers or refunds, promise passing scores, verify

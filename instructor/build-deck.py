@@ -17,7 +17,8 @@ os.chdir(REPO)
 
 TEMPLATE = "oreilly_blue_slide_template.pptx"
 MANIFEST = "instructor/teaching-slides.json"
-OUT = ".local/Warner-CopilotStudio-Agents-2026-09-08.pptx"
+# Rebuild the exact learner-approved artifact so the README does not point at a stale private copy.
+OUT = "slides/Warner-CopilotStudio-Agents-2026-09-08.pptx"
 
 REPO_URL = "github.com/timothywarner-org/oreilly-copilot-studio-agents"
 

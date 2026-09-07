@@ -6,6 +6,8 @@
 
 [Start here](START-HERE.md) · [The agent kit](contoso-ai901-agent/README.md) · [Every link, verified](sources/link-register.md) · [Course page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/) · [TechTrainerTim](https://techtrainertim.com)
 
+**Class slides:** [Download the September 8 PowerPoint deck](slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) (44 slides).
+
 ## What you build
 
 The **Contoso AI Fundamentals Coach**, a Microsoft Copilot Studio agent for a fictional company putting
@@ -16,10 +18,10 @@ The coach does four things and refuses everything else:
 1. **Explains** an AI-901 concept from approved evidence, with a citation you can trace.
 2. **Quizzes** you with one original practice question at a time, then waits for your answer before grading it.
 3. **Returns** a fixed 30-minute study session for one focus: `responsible-ai`, `workloads`, or `foundry`.
-4. **Records** a self-reported exam booking to SharePoint and Teams, but only after you confirm it.
+4. **Records** a synthetic certification signup in SharePoint after confirmation, then a separate flow announces it in Teams.
 
 That fourth one is where the interesting judgment lives. The agent writes to a real system, so it has to
-ask first, and it must never claim a booking happened when it did not.
+get fresh confirmation first, and it must distinguish the saved signup from the separate Teams notification.
 
 AI-901 is the subject matter. **Agent building is the skill.** You can swap the exam for your own domain
 and the four layers do not change.
@@ -57,8 +59,9 @@ testing but not publishing. No coding, no paid API key, no Python, no GitHub Cop
 | [`evals/`](evals/README.md) | Twelve scenarios for checking your own agent |
 
 The kit is **paste-ready design input for a build you perform by hand in the portal**. It is not an
-importable solution file, and nothing in it has been run in a tenant, so treat every expected result as
-something to verify rather than something already proven.
+importable solution file. The instructor's [September 7 tenant rehearsal](contoso-ai901-agent/tenant-rehearsal-2026-09-07.md)
+records actual tests of the coach, knowledge, practice topic, study session, and signup-to-Teams flow.
+Expected results elsewhere remain things to verify; the rehearsal does not establish learner access.
 
 ## The one wording difference
 

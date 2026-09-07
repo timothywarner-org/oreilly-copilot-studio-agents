@@ -16,6 +16,8 @@ node_modules
 *.zip
 # Keep recordings and publisher-only binaries outside Git.
 *.pptx
+# Tim approved this course deck for learner sharing. Keep templates and private builds excluded.
+!/slides/Warner-CopilotStudio-Agents-2026-09-08.pptx
 *.mp4
 *.mov
 .DS_Store

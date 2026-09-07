@@ -4,7 +4,10 @@ This is a private working course companion. **No open-source or public redistrib
 by this scaffold.** The package is marked `UNLICENSED`; that is intentional, not a missing MIT file.
 
 Publisher contracts, original proposals containing personal information, presenter URLs, recordings,
-slides, and private correspondence must remain outside Git. The tracked proposal file is a
+publisher-only slide templates, and private correspondence must remain outside Git. Tim approved the
+September 8 learner deck in `slides/` for inclusion and learner sharing on September 7, 2026. This
+specific exception does not grant a general redistribution license or change repository visibility.
+The tracked proposal file is a
 curriculum-only excerpt with provenance. A private repository is not a reason to collect unnecessary data.
 
 Third-party products and publishers are identified for educational context. This repo does not claim

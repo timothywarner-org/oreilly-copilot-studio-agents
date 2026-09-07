@@ -15,6 +15,12 @@ The existing local repository has been preserved and published privately to GitH
 
 ## Tenant and delivery gates
 
+**September 7 live update:** The coach was created and published. Knowledge ingestion, practice,
+GetStudySession, and the simplified signup-to-Teams route have actual tenant smoke-test evidence.
+The [dated rehearsal record](../contoso-ai901-agent/tenant-rehearsal-2026-09-07.md) is authoritative
+for completed checks and the September 8 demo route. The following gates remain broader than those
+smoke tests and must not be inferred complete.
+
 - Actual environment, authoring experience, roles, licenses, credits, models and policy configuration.
 - Real shell creation, source retrieval, topic wait point and fallback behavior.
 - Real GetStudySession flow, agent binding, all supported inputs, unsupported input, missing input and tool unavailability behavior.
@@ -31,11 +37,11 @@ The existing local repository has been preserved and published privately to GitH
   [STATUS.md](../contoso-ai901-agent/STATUS.md): narrate the difference in Hour One, which costs about
   20 seconds and needs no approval, or request an editorial correction from O'Reilly after delivery.
   Silently editing the objective is not an option.
-- **AI-901 kit, every claim.** Instructions, topics, prompt output binding, the AI-901 GetStudySession
-  plan text, the RecordExamMilestone flow, its SharePoint list and Teams channel, and the native
-  evaluation CSVs are authored and NOT RUN. The SharePoint list and Teams channel have not been created.
+- **AI-901 evaluation and quality.** Native evaluation CSVs have not been imported or run. Four
+  generated practice samples do not close the full item-quality review. The original RecordExamMilestone
+  design was not deployed; the user-requested Certification Signups route was deployed and tested.
 - **AI-901 objective snapshot.** The Microsoft Learn Skills measured conversion is dated and hashed, but
-  its upload and retrieval in a tenant are NOT RUN. Recheck the live study guide before teaching the
+  its upload now reports Ready. Recheck the live study guide before teaching the
   weights as current.
 - **Learner package contents.** `learner/package-files.json` now points at the AI-901 kit and every entry
   resolves, but the generated package has not been rebuilt and inspected since the conversion. Run the
@@ -49,4 +55,4 @@ Use [the rehearsal record](../instructor/rehearsal-record.md) to close gates wit
 
 ## Materials and binary outputs
 
-The PowerPoint companion and generated learner ZIP are delivered separately from Git under the repository's binary/distribution rules. The editable slide manuscript and package generator are versioned. Creating the package does not send it to attendees, change visibility, or establish publisher distribution approval. Complete [the preflight](../instructor/preflight.md) before delivery.
+Tim approved the [44-slide September 8 PowerPoint](../slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) for inclusion in Git and learner sharing on September 7. The exact file has a narrow ignore-rule exception; the source template, private builds, and generated learner ZIP remain excluded. The editable manuscript and package generator are versioned. Preparing these files does not send them to attendees or change repository visibility. Complete [the preflight](../instructor/preflight.md) before delivery.

@@ -3,8 +3,10 @@
 **Build four things, prove four things.** Each hour adds one capability and one way to check it. If you
 are behind, cut the explanation and keep the proof; the proof is the course.
 
-**Authored 2026-09-06. Nothing here has been rehearsed in a tenant. Every timing is an estimate until
-you run it once with a clock.**
+**September 8 delivery: follow the [September 7 tenant demo route](tenant-rehearsal-2026-09-07.md).**
+The coach and simplified signup workflow have now been smoke-tested in the instructor tenant.
+The original milestone build below is retained as a design reference; use Certification Signups and
+the separate new-item notification flow for this delivery. Every block timing remains an estimate.
 
 **The spoken lines live in [`demo-runbook-talk-track.md`](demo-runbook-talk-track.md).** This file is
 the operator sequence; that one is the talk track, in SAY / DO / PAUSE format.
@@ -53,7 +55,7 @@ policy; the second requires live data this coach does not have. Timings below ha
 | 5 | Q&A | - |
 
 **Say the exam-number correction once, at minute 4.** AI-900 retired June 30, 2026; the current exam is
-AI-901; the certification name didn't change. Then say the published objective LO2 names AI-901 and
+AI-901; the certification name didn't change. Then say the published objective LO2 names AZ-900 and
 that the design skill is identical. Twenty seconds, and nobody emails you about it afterward. Sourcing
 is in [`STATUS.md`](STATUS.md).
 

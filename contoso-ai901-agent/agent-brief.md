@@ -1,5 +1,10 @@
 # Agent brief: Contoso AI Fundamentals Coach
 
+**September 8 delivery update:** The [rehearsed coach](tenant-rehearsal-2026-09-07.md) includes
+workplace role-play and a confirmation-first certification signup using synthetic data. The earlier
+booking milestone design below is retained as design history. Use [instructions.md](instructions.md)
+and the dated rehearsal for the actual deployed behavior.
+
 **LO1 artifact.** Fill this in before creating the shell. An agent you can't describe in one page is an
 agent you can't test.
 
