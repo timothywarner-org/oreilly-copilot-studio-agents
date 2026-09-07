@@ -12,6 +12,7 @@
     "test": "node --test",
     "validate": "node scripts/validate-repo.mjs",
     "demo:plan": "node scripts/run-study-plan.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "eval:template": "node scripts/create-eval-record.mjs"
   }
 }

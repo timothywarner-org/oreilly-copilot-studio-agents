@@ -2,7 +2,7 @@
   "title": "Build AI Agents to Automate Your Workflows",
   "purpose": "Instructor-led O’Reilly template companion with trial onboarding, editable teaching diagrams, cited notes, and universal decision exercises.",
   "templateSource": "User-supplied oreilly_blue_slide_template.pptx",
-  "sourceCheckedOn": "2026-09-06",
+  "sourceCheckedOn": "2026-09-07",
   "slides": [
     {
       "id": "S01",
@@ -13,7 +13,7 @@
         "Microsoft Copilot Studio",
         "Tim Warner | September 8, 2026"
       ],
-      "notes": "Today you are the maker. We are building an AI-901 study assistant for a Contoso colleague learning Azure fundamentals. We will improve that same assistant throughout the class. First it has a clear job. Then it uses a reference, holds a teaching conversation, calls a bounded tool, and earns a pilot decision. The Azure subject keeps our examples consistent. The design skills transfer to your own training, help desk, and internal knowledge work. No learner coding is required.",
+      "notes": "Hello there, and welcome to Build AI Agents to Automate Your Workflows. Tim Warner here, and over the next four hours I'm gonna teach you to build a Copilot Studio agent that earns its keep. We're building the Contoso AI Fundamentals Coach, an agent that helps a colleague prepare for Azure AI Fundamentals, which is exam AI-901. We'll grow that same agent all morning. First it gets a clear job, then a trusted source, then a conversation that actually waits for an answer, then a bounded tool, and finally a pilot decision you can defend. The exam is just our subject matter. The design skill transfers straight to your help desk, your onboarding, and your internal knowledge work, and you won't write a line of code to get there.",
       "sources": [],
       "objectiveIds": [
         "LO1"
@@ -30,7 +30,7 @@
         "Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.",
         "Evaluate, publish, observe, and govern the agent using analytics, agent evaluations, Power Platform Well-Architected guidance, and security principles."
       ],
-      "notes": "These are the advertised outcomes. I will build the same assistant through the four modules and show the evidence for each change. Everyone can take part in short prediction, diagnosis, and decision exercises without tenant access. If your account is ready, you may explore along with the demonstration. We will show how to start a trial, but account approval is not a prerequisite for participating today. The supplied lab steps support independent practice after class. Watching the build develops understanding; independent authoring is a follow-up practice task.",
+      "notes": "These four outcomes are what you signed up for, so let's be straight about how we'll hit them. I'll build one agent across four segments and show you the evidence behind every change, not just the happy-path chat. You don't need a tenant to take part, because every exercise is a prediction, a diagnosis, or a design decision you can make on paper. One housekeeping note on outcome two: it says AZ-900 because that's the wording approved before AI-900 retired this past June. AI-901 replaced it under the same certification name, so AI-901 is what we're building. Same skill, current exam. If your account's ready, follow along, and the full recipes are in the repo for later.",
       "sources": [],
       "objectiveIds": [
         "LO1",
@@ -46,10 +46,10 @@
       "kind": "illustration",
       "lines": [
         "You: design the assistant",
-        "Contoso colleague: learn Azure",
+        "Contoso colleague: learn Azure AI",
         "Shared need: useful practice with a source"
       ],
-      "notes": "Contoso is a fictional internal training scenario. Our user has twenty or thirty minutes to study and needs help with unfamiliar cloud concepts. Our maker is responsible for the quality of that experience. The assistant explains a narrow concept, asks an original practice question, waits, and gives feedback. It can retrieve an authored study session. It cannot book an exam, know a personal appointment, or promise a pass. The illustration is conceptual, not a product screenshot or an actual customer.",
+      "notes": "Contoso's a fictional company and this is a fictional enablement program, so nothing here is a real customer. Our user has twenty or thirty minutes to study and keeps tripping over unfamiliar AI concepts. You're the maker, which means the quality of that experience sits with you. The agent explains one narrow concept, asks an original practice question, waits for the answer, and then gives feedback. It can hand back a reviewed study session. It can't book an exam, it doesn't know anyone's personal calendar, and it won't promise a passing score. Hold onto that last part, because most of today's interesting decisions sit right on that boundary.",
       "sources": [],
       "objectiveIds": [
         "LO1"
@@ -68,7 +68,7 @@
         "Topic: authored conversation",
         "Tool: a defined operation"
       ],
-      "notes": "Read the diagram from the user message toward the capabilities. A channel carries the conversation. A trigger starts work. With generative orchestration, descriptions help the agent select knowledge, topics, and tools; it may select more than one. Knowledge contributes reference material. Topics hold authored dialogue. Tools execute defined capabilities. Instructions guide behavior but do not grant data access or guarantee correctness. A conversational trigger and an event trigger are different entry points. This workshop uses the user-message route. The diagram is a simplified conceptual map of the standard harness, not a guaranteed execution sequence.",
+      "notes": "Read this diagram from the user's message toward the capabilities. A channel carries the conversation in, and a trigger starts the work. With generative orchestration turned on, the agent reads your descriptions and picks what to use: knowledge, topics, tools, or several at once. Knowledge contributes reference material, topics hold the dialogue you authored, and tools run a defined operation. Instructions steer behavior, but here's the part people skip past: instructions don't grant data access and they don't guarantee a correct answer. A conversational trigger and an event trigger are different front doors, and today we're using the conversational one. Treat this as a conceptual map, not a guaranteed execution order.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
@@ -88,7 +88,7 @@
         "Follow the account-specific sign-up prompts",
         "Open the available authoring environment"
       ],
-      "notes": "Demonstrate the official trial route from the current Microsoft Learn Get access article. The linked sign-up address is https://go.microsoft.com/fwlink/?LinkId=2107702. Enter a work or school email, select Next, and follow the prompts for that account. Do not invent a universal screen sequence: tenant configuration and existing entitlement change what appears. Use an instructor-controlled account for the demonstration. Learners can watch the full route without creating accounts during class. If the account is already licensed, explain the observed route rather than pretending it is a new trial.",
+      "notes": "Let me show you the official trial route, straight from the current Get access article on Microsoft Learn. You enter a work or school email, select Next, and follow whatever prompts that account gets. Now I won't pretend there's one universal screen sequence here, because tenant configuration and existing entitlement change what appears. I'm using an instructor-controlled account for this, and you can watch the whole route without creating anything today. And if the account's already licensed, I'll say so and explain what we're actually looking at rather than dressing it up as a fresh trial. That kind of honesty about your own demo environment is worth more than a polished lie.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions"
       ],
@@ -130,7 +130,7 @@
           "Watch the entitled instructor publish demo."
         ]
       ],
-      "notes": "A trial can support authoring and testing, but it cannot publish agents. A personal email or organizational self-service restriction may prevent signup. Show the documented administrator route as a follow-up, not a policy change to perform during class. Trial license and trial environment expiry are different. Inspect the actual expiry notices; do not promise a sixty-day initial period from memory. Save course work through the documented environment process before expiry. The teaching design does not depend on every attendee completing signup today.",
+      "notes": "Here's the honest shape of trial access. You can author and you can test, but you can't publish. A personal email address or an organizational self-service restriction can stop sign-up cold, and the fix is the documented administrator route, not a policy you change on the fly during a class. Watch the two expiry clocks as well, because the trial license and the trial environment aren't the same thing. Read the actual notices in your own tenant instead of trusting a sixty-day number you half-remember. Save your work through the documented process before anything expires. Nothing today depends on you finishing sign-up.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing",
@@ -148,12 +148,12 @@
       "kind": "table",
       "lines": [
         "Brief element | Contoso example",
-        "Persona and job | A cloud beginner needs supported explanations and practice.",
-        "Instructions | Use the course reference. State when it does not support an answer.",
+        "Persona and job | An AI beginner needs supported explanations and practice.",
+        "Instructions | Use the course reference. Say when it doesn’t support an answer.",
         "Boundary | No exam booking, private policy claims, or pass guarantees.",
         "Success metric | Zero invented policy answers in the recorded boundary test set."
       ],
-      "notes": "Read the user and job together. The brief should make a test possible. Ask the class what evidence would distinguish a helpful answer from a confident invention. Our zero-invented-policy target applies to the cases we actually run; it is not a guarantee about every future response. Save the brief before opening authoring controls. A small topic and tool inventory makes it easier to understand which capability was selected.",
+      "notes": "Read the persona and the job together, because a brief you can't test is just a wish. Ask yourself what evidence would separate a genuinely helpful answer from a confident invention, and write that down as your metric. Ours is zero invented policy answers across the boundary cases we actually run. Notice the hedge in that sentence, because it covers the cases we run and it isn't a guarantee about every future response. Save the brief before you open a single authoring control. A small topic and tool inventory pays you back later, because when something odd happens you can tell which capability got selected.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions"
       ],
@@ -196,7 +196,7 @@
         "Fallback | Honest limitation and mentor referral",
         "Search | Knowledge retrieval with source inspection"
       ],
-      "notes": "A purpose on a topic map does not require a separate authored topic. Overview and search can use grounded answers. Practice needs a controlled dialogue because we must wait for new learner thinking. Study planning uses the tool introduced in Extend. Fallback explains what the agent could not do and offers a truthful next step. We explicitly author the practice sequence and inspect the fallback path. Descriptions must distinguish these purposes so orchestration has useful choices.",
+      "notes": "A purpose on your topic map doesn't automatically need its own authored topic, and that's worth internalizing early. Overview and search can both ride on grounded answers. Practice is different, because we need the agent to stop and wait for new thinking from the learner, and that takes a controlled dialogue. Study planning goes to the tool we build in segment three. Fallback explains what the agent couldn't do and offers a next step that's actually true. We'll author the practice sequence explicitly and inspect the fallback path. Write descriptions that genuinely distinguish these purposes, because that's exactly what orchestration reads when it chooses.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-create-edit-topics",
@@ -242,7 +242,7 @@
         "Test: “What is my exact exam appointment?”",
         "Your decision: one topic, one instruction, one metric"
       ],
-      "notes": "Use the Inception guide to create a blank agent in the documented standard experience. Review the actual orchestration setting and approved model. Save the instructions, then run the appointment prompt in a fresh conversation. The source cannot know this personal fact. Inspect the response rather than assuming the instruction worked. This is an instructor demonstration. Learners write one instruction, one topic purpose, and one metric without needing an account. Trial setup and account approval never consume the whole segment.",
+      "notes": "Now we're cooking with gas. I'll create a blank agent in the documented standard experience, check the orchestration setting and the approved model, and save the instructions. Then I'll run the exam appointment prompt in a fresh conversation. Watch what happens, because the source can't know a personal fact like that, and this is our first honest boundary test. Inspect the response rather than assuming the instruction did its job. That's the habit I want you carrying out of this room. While I demo, you write one instruction, one topic purpose, and one metric. No account needed, and we aren't spending this whole segment on sign-up screens.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-first-bot",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions",
@@ -262,7 +262,7 @@
         "Return at 10:00 AM Central",
         "Build: the source and the conversation"
       ],
-      "notes": "Pause the teaching clock for the scheduled ten-minute break.",
+      "notes": "Take the scheduled ten minutes. The teaching clock stops here.",
       "sources": [],
       "objectiveIds": []
     },
@@ -277,12 +277,12 @@
         "Generate an answer",
         "Inspect answer and source"
       ],
-      "notes": "Grounding supplies evidence from a reference at response time. Use the original Contoso Azure concepts file so we can inspect a small, known source. The file is course-authored teaching material grounded in Microsoft Learn, not a Microsoft publication or a complete exam syllabus. Ask who patches the guest operating system on a Contoso Azure virtual machine. Compare the generated answer with the supporting passage. An attached citation is something to inspect; it is not an accuracy certificate. Test the unsupported appointment question separately. The diagram explains retrieval conceptually, not a promise that every answer follows this path.",
+      "notes": "Grounding means the agent pulls evidence from a reference at response time instead of leaning on whatever the model already absorbed. We'll use the small Contoso AI concepts file so we can inspect a source we actually know. That file's course-authored teaching material grounded in Microsoft Learn, and it isn't a Microsoft publication or a complete exam syllabus. I'll ask which responsible AI principle covers telling somebody they're talking to a bot, then compare the generated answer against the passage behind it. A citation's something you inspect, not an accuracy certificate. We'll test the unsupported appointment question separately. This diagram explains retrieval conceptually, and it isn't a promise that every answer takes this path.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-node",
-        "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility"
+        "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901"
       ],
       "objectiveIds": [
         "LO2"
@@ -301,7 +301,7 @@
         "Source order | No “first uploaded source wins” rule",
         "Limits and citations | Check source readiness, scope, and the supporting passage"
       ],
-      "notes": "Agent-level knowledge is available broadly. A generative answers node can use an explicit selected-source scope; inspect its Search only selected sources setting. Do not teach upload order as source priority. Names and descriptions help selection. For this controlled build, turn off broad web search and ungrounded responses, then test. These settings have limitations and do not guarantee every claim is correct. The instructor guide records current size and source-count limits with the relevant docs. One small text file is a teaching choice that reduces setup and processing time, not a product limit.",
+      "notes": "Agent-level knowledge is available broadly across the conversation. A generative answers node can narrow to a selected source scope, and you'll want to inspect its Search only selected sources setting rather than guessing at it. Don't teach upload order as source priority, because there's no first-uploaded-wins rule in there. Names and descriptions are what drive selection. For this controlled build I'm turning off broad web search and ungrounded responses, and then testing. Those settings have limits and they don't guarantee every claim is correct. The guide records current size and source-count limits with the docs. One small text file is a teaching choice that keeps setup quick, not a product ceiling.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-node",
@@ -345,7 +345,7 @@
         "Incorrect choice: explain misconception",
         "Unmatched twice: offer recovery"
       ],
-      "notes": "A question mark in a Message node does not make the agent wait. Use a Question node with native multiple-choice options and a saved response variable. Configure Ask every time because a practice answer must come from the learner now, rather than from an earlier conversation. The correct branch and incorrect branches must explain different things. An unmatched answer needs an honest recovery. Test the first turn to see that the answer key is withheld, then reply to verify feedback. Our authored lesson is a controlled message; the separate source test demonstrates generative retrieval.",
+      "notes": "Here's a trap worth naming out loud. A question mark inside a Message node doesn't make the agent wait for anything at all. You need a Question node with real multiple-choice options and a saved response variable. Set it to ask every time, because a practice answer has to come from the learner right now, not from something they said earlier in the conversation. The correct branch and the incorrect branches should explain genuinely different things. An unmatched answer needs an honest recovery. I'll test the first turn to prove the answer key stays hidden, then reply to check the feedback.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-ask-a-question",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-create-edit-topics"
@@ -362,12 +362,12 @@
       "kind": "table",
       "lines": [
         "Situation | Use",
-        "“Give me a cloud study session” | Dynamically fill the tool/topic input from context",
-        "Assistant asks: “Who patches the guest OS?” | Question node; wait for the learner’s choice",
+        "“Give me a responsible-ai study session” | Dynamically fill the tool/topic input from context",
+        "Assistant asks: “Which principle covers transparency?” | Question node; wait for the learner’s choice",
         "A required value is missing | Prompt for it; do not guess",
-        "An answer does not match | One reprompt, then a truthful recovery"
+        "An answer doesn’t match | One reprompt, then a truthful recovery"
       ],
-      "notes": "Automatic input filling is useful when the conversation already tells us the desired study focus. It is the wrong substitute for a new quiz response. The proposal uses the term AutomaticTaskInput. The current documented authoring behavior is Dynamically fill with the best option, with a separate Should prompt user control. We teach those documented controls without asserting that the proposal term is a current UI label or fabricating its YAML. Show the distinction on an input and on a Question node, then return to the instructor demonstration.",
+      "notes": "Automatic input filling earns its place when the conversation already tells us which focus the learner wants. It's the wrong tool for collecting a fresh quiz answer, and that distinction matters more than it looks. The proposal uses the term AutomaticTaskInput. What's documented in the authoring experience today is Dynamically fill with the best option, with a separate Should prompt user control. So we'll teach the documented controls, and I won't claim the proposal term is a current interface label or invent YAML for it. I'll show you the difference on a tool input and on a Question node, then get back to the build.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-managing-topic-inputs-outputs",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-ask-a-question"
@@ -408,7 +408,7 @@
         "Predict the next turn before I run it",
         "Identify the wait point and explain one wrong-answer branch"
       ],
-      "notes": "The instructor authors and tests the practice topic while learners predict its behavior. Pause before the first test: should the assistant reveal the answer now? Use the seven-minute universal exercise in the Build guide. Learners sketch or annotate the node sequence and explain the feedback for an incorrect choice. No tenant account is required. Show the actual wait, feedback, and unmatched-answer recovery, then compare those observations with predictions. The full lab remains available for optional independent practice after class. Do not report design work as proof of independent authoring.",
+      "notes": "I'll author and test the practice topic while you predict what it does. Before I run the first test, ask yourself whether the assistant should reveal the answer at that point, and hold your answer. Use the seven-minute exercise from the Build guide, sketch or annotate the node sequence, and write the feedback you'd give for one wrong choice. No tenant account required. Then we'll watch the actual wait, the actual feedback, and the recovery on an unmatched answer, and compare all of that against what you predicted. The full lab's there for independent practice later, and designing on paper isn't the same as authoring it.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-create-edit-topics",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-ask-a-question"
@@ -424,11 +424,11 @@
       "title": "A useful failure response",
       "kind": "comparison",
       "lines": [
-        "Unsupported: “I do not have your exam appointment.”",
+        "Unsupported: “I don’t have your exam appointment.”",
         "Recovery: “Check your booking confirmation.”",
-        "Human boundary: “I cannot contact a mentor from here.”"
+        "Human boundary: “I can’t contact a mentor from here.”"
       ],
-      "notes": "A failure response should identify the missing support and give a next step that actually exists. Inspect both the authored topic’s recovery and the system fallback route. Instructions alone do not change a system fallback message. A topic named Escalate does not prove anyone was contacted. Use the fallback and escalation instructions in the guide to avoid promising a transfer. Debrief the demonstration results: source passage, wait point, branch-specific feedback, and the observed limitation. Ask which of those we would lose if we only watched a polished final chat.",
+      "notes": "A good failure response names what's missing and gives a next step that genuinely exists. We'll inspect both the authored topic's recovery and the system fallback route, because instructions alone won't change a system fallback message. And a topic named Escalate doesn't prove a single human was contacted. Use the fallback and escalation guidance so you don't promise a transfer you can't deliver. Then we'll debrief what we saw: the source passage, the wait point, the branch-specific feedback, and the limitation. Ask yourself which of those you'd have missed if you'd only watched a polished final chat transcript.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-fallback-topic",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-generic-handoff"
@@ -446,7 +446,7 @@
         "Return at 11:00 AM Central",
         "Extend: one useful tool"
       ],
-      "notes": "Pause the teaching clock for the scheduled ten-minute break.",
+      "notes": "Take the scheduled ten minutes. The teaching clock stops here.",
       "sources": [],
       "objectiveIds": []
     },
@@ -457,12 +457,12 @@
       "kind": "table",
       "lines": [
         "User request | Appropriate next step",
-        "Explain shared responsibility | Answer using knowledge",
+        "Explain a responsible AI principle | Answer using knowledge",
         "Give me a study session; focus unspecified | Clarify the focus",
-        "Give me the cloud study session | Call GetStudySession",
+        "Give me the responsible-ai study session | Call GetStudySession",
         "Book my exam or decide an accommodation | Refer to an authorized human or service"
       ],
-      "notes": "The right response depends on the job. Use these requests to distinguish generating a supported answer from collecting information or running an operation. Our tool retrieves a fixed, reviewed session so we can see an unambiguous capability boundary. It does not write to an external system. Ask why a booking request belongs outside this assistant’s authority. Keep the tool demonstration about input, execution, and evidence rather than adding a connector to make it look impressive.",
+      "notes": "The right next step depends entirely on the job in front of the agent. Use these four requests to separate generating a supported answer from collecting information and from running an operation. Our tool returns a fixed, reviewed session, which gives us an unambiguous capability boundary to look at, and it doesn't write to any external system. Now ask yourself why a booking request belongs outside this agent's authority, because that's the real lesson on this slide. I'd rather keep the tool demo focused on input, execution, and evidence than bolt on a connector just to make the thing look impressive.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
       ],
@@ -502,7 +502,7 @@
         "GetStudySession native agent flow",
         "Outputs: status and plan, both Text"
       ],
-      "notes": "The input is one Text value: cloud, security, or governance. These are course focus codes, not the official exam domain names. The outputs are status and plan, both Text. A valid focus returns ok and a reviewed thirty-minute session. An unsupported nonempty focus value such as quantum returns unsupported and a choice reminder. Runtime failure is different from an unsupported value. The flow never books, mails, or updates a record. This is a real tool pattern once the native flow is built and bound; the authored JSON fixture alone is not a deployed flow.",
+      "notes": "The input's one Text value: responsible-ai, workloads, or foundry. Those are Contoso teaching shortcuts, and I want to be precise here, because they aren't the official AI-901 skill area names. The outputs are status and plan, both Text. A supported focus returns ok plus a reviewed thirty-minute session. An unsupported value like quantum returns unsupported and a reminder of the choices. A runtime failure's a different animal from an unsupported value, and we'll test those separately. The flow never books, mails, or updates a record. This becomes a real tool pattern once the flow's built and bound, because the fixture on its own isn't a deployed flow.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-use-flow"
@@ -520,12 +520,12 @@
       "lines": [
         "Agent calls flow",
         "Initialize status and plan",
-        "If cloud",
-        "If security",
-        "If governance",
+        "If responsible-ai",
+        "If workloads",
+        "If foundry",
         "Respond once"
       ],
-      "notes": "A tool is the capability the agent can call. The agent flow implements that capability, and the designer’s actions are steps inside it. Follow the native recipe: When an agent calls the flow, initialize String variables for status and plan at the top level, evaluate three conditions, and respond once after the branches. Keep the default unsupported response unless a supported focus matches. The native response is synchronous and must meet the documented timeout. We do not need loops, arrays, or a hosted API to teach this first boundary.",
+      "notes": "Let's get the vocabulary straight, because this trips people up constantly. The tool is the capability the agent can call. The agent flow implements that capability, and the designer's actions are steps inside it. Follow the native recipe: when an agent calls the flow, initialize String variables for status and plan at the top level, evaluate three conditions, and respond exactly once after the branches. Keep the default unsupported response unless a supported focus matches. That native response is synchronous, so it has to meet the documented timeout. We don't need loops, arrays, or a hosted API to teach this first boundary.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flow-designer",
@@ -543,11 +543,11 @@
       "title": "The evidence of a tool call",
       "kind": "comparison",
       "lines": [
-        "Expected input: focus = cloud",
+        "Expected input: focus = responsible-ai",
         "Expected output: status = ok; plan describes 30 minutes",
         "No execution record? The response alone is insufficient."
       ],
-      "notes": "Use the actual prepared native flow and agent binding from the Extend guide. Run the direct flow test, then request the cloud session through the agent. Inspect the actual input and returned status and plan in the available activity view. Count the plan allocation: ten minutes reading, ten explaining, five recall, and five checking. Test unsupported input and tool unavailability as separate conditions. These slide values describe the expected contract, not results we observed while writing the course. If using a rehearsal recording, identify it as recorded before playing it.",
+      "notes": "This is my favorite few minutes of the whole morning. I'll run the direct flow test first, then request the responsible-ai session through the agent. Then we inspect the actual input and the returned status and plan in the activity view. Count the allocation with me: ten minutes reading, ten minutes working an example, five minutes recalling without notes, and five minutes checking against Microsoft Learn. We'll test unsupported input and tool unavailability as two separate conditions. These slide values describe the expected contract, and they aren't results we observed while writing the course. If I play a rehearsal recording, I'll tell you it's a recording first.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-use-flow",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-review-activity"
@@ -568,7 +568,7 @@
         "Both | Identity, permitted data, errors, and approval",
         "This workshop | One native agent flow; other mechanisms are comparisons"
       ],
-      "notes": "HTTP lets a tool call a defined web operation. MCP provides a protocol for exposing discoverable tools and resources through a server. The reviewed Copilot Studio MCP integration requires generative orchestration. Neither supplies permission merely by being connected. For Contoso, a future approved learning catalog might offer one HTTP operation or an MCP server with several described tools. We do not build either integration in this first tool lesson. The learner needs to explain which boundary it introduces and which identity calls it. Keep authentication, endpoint restrictions, and data policy in the decision.",
+      "notes": "An HTTP tool calls one defined web operation. Model Context Protocol gives you a way to expose discoverable tools and resources through a server, and the reviewed Copilot Studio integration for it requires generative orchestration. Neither mechanism grants permission just by being connected, and that's the sentence I'd underline twice. For Contoso, a future approved learning catalog might expose one web operation, or a server with several described tools. We aren't building either integration in this first tool lesson. What you need to explain is which boundary each one introduces and which identity does the calling. Keep authentication, endpoint restrictions, and data policy inside that decision.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
@@ -611,7 +611,7 @@
         "Connected agent: separately managed",
         "A2A: a protocol for agent communication"
       ],
-      "notes": "Keep our small study assistant as one agent. Add specialization only when another agent has a distinct job or owner. A child agent is organized within a parent. A connected agent can be managed separately. A2A describes an interoperability protocol rather than a third ownership model. Current Microsoft guidance also lists connections involving Microsoft Foundry, Fabric, and Microsoft 365 Agents SDK. Their prerequisites and availability differ. They are extension awareness here, not working course integrations. Ask learners what new responsibility would justify another agent and how they would test the handoff.",
+      "notes": "Now you might be thinking, hang on Tim, everybody's shipping multi-agent systems right now, so why are we staying with one? Because you add specialization when another agent has a genuinely distinct job or a different owner, not because multi-agent sounds impressive on a slide. A child agent's organized inside a parent. A connected agent can be managed separately. Agent-to-agent describes an interoperability protocol rather than a third ownership model. Current Microsoft guidance also lists connections involving Microsoft Foundry, Fabric, and the Microsoft 365 Agents SDK, and their prerequisites differ. Those are extension awareness today, not working course integrations. So what new responsibility would justify a second agent?",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-add-other-agents"
       ],
@@ -632,7 +632,7 @@
         "“You are connected to a person” | A supported handoff and accepted transfer",
         "“The tool can access this data” | The intended identity and policy allow that access"
       ],
-      "notes": "Do not confuse a friendly sentence with a completed business operation. A referral tells the user where to go. Submitting a request requires a real, authorized connector and evidence of successful submission. A live transfer requires a supported integration and an accepted handoff. Our course agent only offers a mentor referral. The same distinction applies to authentication: instructions cannot grant permissions. Check the execution identity, connector policy, and allowed data before adding tools or external models. Use synthetic training content for the exercise.",
+      "notes": "Don't confuse a friendly sentence with a completed business operation. That's the whole slide, honestly. A referral tells the user where to go. Submitting a request requires a real authorized connector and a returned receipt proving it went through. A live transfer requires a supported integration and an accepted handoff on the other end. Our course agent only offers a mentor referral, and it says so plainly. The same logic applies to authentication, because instructions can't grant permissions. Check the execution identity, the connector policy, and the allowed data before you add a tool or an external model, and use synthetic content for the exercise.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-generic-handoff",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention",
@@ -675,7 +675,7 @@
         "Distinguish an unsupported focus from an unavailable tool",
         "Name one request that needs a human"
       ],
-      "notes": "Give everyone three minutes to reason through the same Contoso contract. No account or flow attachment is required. Ask for the input, two output fields, and an unsupported request. The instructor then uses the prepared agent and native flow to inspect real execution evidence and revisit failures. Predictions stay labeled as predictions until observed. The independent tool lab remains optional after class.",
+      "notes": "Three minutes, everybody, on the same Contoso contract. No account and no flow attachment needed. Give me the input, the two output fields, and one request the tool should refuse as unsupported. Then I'll use the prepared agent and flow to inspect real execution evidence, and we'll revisit the failures together. Keep your predictions labeled as predictions until we've actually observed something, because that discipline is most of what separates a working agent from a demo that fooled everybody. The independent tool lab stays available after class for anyone who wants to build it themselves.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-generic-handoff"
@@ -694,7 +694,7 @@
         "Return at noon Central",
         "Operate: evidence before a pilot"
       ],
-      "notes": "Pause the teaching clock for the scheduled ten-minute break.",
+      "notes": "Take the scheduled ten minutes. The teaching clock stops here.",
       "sources": [],
       "objectiveIds": []
     },
@@ -709,7 +709,7 @@
         "AI901-tool-one\nTool use: E08 only | Did it use the actual GetStudySession capability?",
         "Separate manual conversation | Did the topic wait, then give the correct feedback?"
       ],
-      "notes": "Start with prepared native sets to protect time for interpreting results. AI901-live-three uses Compare meaning for E04, E05, and E08, each with an expected response. AI901-tool-one uses Tool use only for E08 and selects the actual GetStudySession capability. Remove the default General quality method when configuring these deliberately focused sets. Methods are configured on the set. Leaving expected tools blank on the other two cases would produce Invalid results for that method, not a clean skip. The eighty-percent meaning threshold is an initial course choice, not a Microsoft recommendation. Single-response grading does not simulate answering the quiz; the wait and feedback still need a manual multi-turn test.",
+      "notes": "We start from prepared native sets so we spend our time interpreting results instead of typing test cases. AI901-live-three uses Compare meaning across E04, E05, and E08, each with an expected response. AI901-tool-one uses Tool use only for E08 and selects the actual GetStudySession capability. Remove the default General quality method when you're building deliberately focused sets like these. Methods get configured on the set, so leaving expected tools blank on the other two cases produces Invalid results for that method rather than a clean skip. The eighty-percent meaning threshold's our course choice, not a Microsoft recommendation. And single-response grading never simulates answering the quiz.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create"
@@ -749,7 +749,7 @@
         "Compare individual cases",
         "Inspect source and tool trace"
       ],
-      "notes": "Run the same prepared set before and after one change. Open a failed case, read the expected and actual response, then inspect the activity map for the supporting knowledge or tool call. A generated grading rationale can be wrong, so verify the underlying evidence. Compare the same set, not different questions with convenient scores. If changing the agent model, record the approved configuration and rerun the same cases. Primary orchestration and individual prompt-model settings are distinct. Export genuine results using the documented control; never substitute the authored expectations for an executed report.",
+      "notes": "Run the same prepared set before your change and after it. One change, not five. Open a failed case, read the expected response against the actual one, then inspect the activity map for the knowledge passage or the tool call behind it. A generated grading rationale can be wrong, so verify the underlying evidence rather than trusting the score on its face. Compare the same set, not different questions that happen to produce a friendlier number. If you change the agent model, record the approved configuration and rerun the same cases. Export genuine results with the documented control, and never pass authored expectations off as an executed report.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-results",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-review-activity",
@@ -766,15 +766,15 @@
       "title": "Usage signals need interpretation",
       "kind": "table",
       "lines": [
-        "Signal | What it does and does not tell us",
+        "Signal | What it does and doesn’t tell us",
         "10 sessions: 9 did not escalate | 90% containment proxy",
         "6 resolved; 3 abandoned; 1 escalated | 60% resolution; 30% abandonment",
         "4 survey responses | The survey describes those 4 respondents",
         "High containment and wrong answers | Inspect outcomes, transcripts, and source evidence together"
       ],
-      "notes": "This is synthetic discussion data, not tenant telemetry. In the guide’s ten-session example, nine sessions did not escalate, but only six resolved. Three were abandoned and one escalated. A ninety-percent containment proxy therefore coexists with sixty-percent resolution. The survey describes its four respondents, not every user. Show a genuine prepared channel analytics sample separately. Test-panel traffic is excluded from Monitor, and channel data can arrive with a delay. Inspect confirmed and implied resolution, abandonment, transcripts, user feedback, and response time together. Our classroom containment proxy is not a claimed native metric name.",
+      "notes": "Everything on this slide is synthetic discussion data rather than tenant telemetry, and I'll say that again before we leave it. In the guide's ten-session example, nine sessions didn't escalate, but only six actually resolved. Three were abandoned and one escalated. So a ninety-percent containment proxy sits right next to a sixty-percent resolution rate, and that gap is the entire lesson. The survey describes its four respondents, not your user base. Test-panel traffic's excluded from Monitor, and channel data can arrive late. Read resolution, abandonment, transcripts, feedback, and response time together, because any one of them alone will mislead you.",
       "sources": [
-        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-summary",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-overview",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness"
       ],
       "objectiveIds": [
@@ -817,7 +817,7 @@
         "Performance Efficiency | Measure response time and unnecessary tool work.",
         "Experience Optimization | Wait for the learner; give useful feedback and a next step."
       ],
-      "notes": "Use the Power Platform framework rather than reciting five labels. Reliability means useful recovery when a tool is unavailable. Security means an approved identity and permitted data. Operational excellence means repeatable tests and an owner who can respond. Performance efficiency means measuring the response and tool behavior instead of assuming a longer answer is better. Experience optimization means the learner sees useful feedback, understands a limitation, and can reach a real next step. These are course examples of the framework, not a Microsoft certification of our agent.",
+      "notes": "Use the Power Platform framework as a thinking tool rather than reciting five labels back at people. Reliability means a useful recovery when the tool's unavailable. Security means an approved identity and permitted data. Operational excellence means repeatable tests and an owner who can actually respond when something breaks. Performance efficiency means measuring response time and unnecessary tool work instead of assuming a longer answer's a better one. Experience optimization means the learner gets useful feedback, understands the limitation, and can reach a real next step. These are course examples of the framework applied, not a Microsoft certification of our agent.",
       "sources": [
         "https://learn.microsoft.com/en-us/power-platform/well-architected/what-is-power-well-architected"
       ],
@@ -862,7 +862,7 @@
         "Scoped channel and access",
         "Fresh session with actual user"
       ],
-      "notes": "Publishing makes the configured version available to connected channels; it does not by itself establish who can use it. Use an entitled instructor environment, a prepared scoped Teams channel, and a fresh conversation. Demonstrate one publish operation and two short checks, with a second-user access check prepared separately. Do not ask trial-only learners to publish: current licensing guidance permits trial creation and testing but not publication. Development, test, and production separation, data policy, and an approved audience remain part of rollout planning. An installation link is not evidence that access was granted.",
+      "notes": "Publishing makes the configured version available to connected channels. It doesn't by itself establish who can use the thing, and that distinction catches people out constantly. I'll use an entitled instructor environment, a prepared scoped Teams channel, and a fresh conversation, then run one publish operation and two short checks, with the second-user access check prepared separately. I won't ask trial-only learners to publish, because current licensing guidance permits creation and testing but not publication. Environment separation, data policy, and an approved audience all belong in rollout planning. An installation link isn't evidence that anyone was actually granted access.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-fundamentals-publish-channels",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams",
@@ -886,7 +886,7 @@
         "Microsoft 365 Copilot: comparison | Channel configuration and approved audience",
         "Every channel | Actual user access, source permissions, and behavior"
       ],
-      "notes": "Teams is the live course channel. SharePoint and Microsoft 365 Copilot are scoped comparisons. Each route has its own setup, permissions, and availability. For SharePoint, the maker needs the documented site access and deployment prerequisites. For Microsoft 365 Copilot, inspect the channel configuration and approved audience rather than assuming the Teams configuration enables every surface. Test fresh conversation behavior and the actual intended user. Never use a public channel as a workaround for a blocked private pilot.",
+      "notes": "Teams is our live channel today. SharePoint and Microsoft 365 Copilot are scoped comparisons, and each route carries its own setup, permissions, and availability. For SharePoint the maker needs the documented site access and deployment prerequisites. For Microsoft 365 Copilot, inspect the channel configuration and the approved audience rather than assuming your Teams setup lights up every surface. Test the fresh conversation behavior with the actual intended user. And here's a hard line from me: never use a public channel as a workaround for a private pilot that got blocked. That isn't a shortcut, that's a governance incident waiting to happen.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-sharepoint",
@@ -928,7 +928,7 @@
         "Choose its users, owner, data boundary, and stop condition",
         "Cite one result and label its evidence source"
       ],
-      "notes": "Protect seven minutes for the Operate worksheet. A useful decision could be a small internal training pilot with approved content and a named owner. Learners should identify what would stop the pilot, not only what would start it. Use the synthetic case if real observations are unavailable, and label the evidence accordingly. A worksheet is evidence of reasoning; it is not evidence that publishing or evaluation executed. Invite one learner to challenge another pilot’s boundary using the five concerns.",
+      "notes": "Protect seven minutes for the Operate worksheet. A good candidate might be a small internal enablement pilot with approved content and a named owner. I want you to name what would stop the pilot, not just what would start it, because that's the part everybody skips. Use the synthetic case if you don't have real observations, and label the evidence for exactly what it is. A worksheet's evidence of your reasoning, and it isn't evidence that publishing or evaluation executed. Then I'd like one of you to challenge somebody else's pilot boundary using the five concerns.",
       "sources": [
         "https://learn.microsoft.com/en-us/power-platform/well-architected/what-is-power-well-architected",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention"
@@ -945,12 +945,12 @@
       "kind": "table",
       "lines": [
         "Course component | Workplace transfer",
-        "Azure reference | Approved internal knowledge",
+        "AI-901 reference | Approved internal knowledge",
         "Practice topic | A controlled training or triage interaction",
         "Study-session tool | One bounded lookup or operation",
         "Pilot decision | Named audience, owner, evidence, and stop condition"
       ],
-      "notes": "Transfer the architecture rather than copying the Azure subject. A help-desk agent could ground answers in approved support articles, use a topic for triage, and call an approved lookup. An onboarding assistant might ground in approved guidance and refer a sensitive case to a person. Each new scenario needs its own access and evaluation cases. For follow-up, inspect a genuine topic capture in the native code editor or VS Code. YAML represents authored structure; it is not a magic portable deployment. The export guide explains the procedure. The actual sanitized capture must come from the teaching tenant before it is distributed.",
+      "notes": "Transfer the architecture, not the exam subject. A help-desk agent could ground in approved support articles, use a topic for triage, and call one approved lookup. An onboarding assistant could ground in approved guidance and refer a sensitive case to a person. Every new scenario needs its own access review and its own evaluation cases. For follow-up, inspect a genuine topic capture in the native code editor or in VS Code. That YAML represents authored structure, and it isn't a magic portable deployment. The export guide walks the procedure, and the sanitized capture has to come from the teaching tenant before anybody distributes it.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topics-code-editor",
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
@@ -993,7 +993,7 @@
         "Extend: a tool contract and a human boundary",
         "Operate: test evidence and a defensible pilot decision"
       ],
-      "notes": "Return to the four advertised outcomes and invite learners to explain the evidence shown. Their brief, topic prediction, tool decision, and pilot decision are useful learning artifacts even without tenant access. The supplied steps let them repeat the build when a trial or approved environment is available. A blocked operation remains unrun; a prediction does not count as a successful tenant test. Use the remaining wrap-up time for questions and one follow-up practice commitment.",
+      "notes": "Let's bring it home with the four outcomes. You planned a brief with a testable boundary. You grounded answers in a real source and built a topic that genuinely waits. You gave the agent a bounded tool and drew a human boundary around it. And you produced test evidence plus a pilot decision you can defend in a room full of stakeholders. Your brief, your prediction, your tool decision, and your pilot decision are real artifacts even without a tenant. A blocked operation stays unrun, and a prediction never counts as a passing test. I hope you found this session helpful, and I'll see you next time.",
       "sources": [
         "https://learn.microsoft.com/en-us/microsoft-copilot-studio/"
       ],
@@ -1004,5 +1004,6 @@
         "LO4"
       ]
     }
-  ]
+  ],
+  "voicePass": "Speaker notes drafted in Tim Warner spoken register and linted with tim-warner-voice voice_lint.py on 2026-09-07."
 }
