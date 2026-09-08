@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "name": "GetStudySession",
+  "kind": "authored-test-fixture-not-native-flow",
+  "examTarget": "AI-901",
+  "input": {
+    "name": "focus",
+    "type": "Text",
+    "allowedValues": [
+      "responsible-ai",
+      "workloads",
+      "foundry"
+    ]
+  },
+  "outputs": {
+    "status": "Text",
+    "plan": "Text"
+  },
+  "sessionMinutes": 30,
+  "plans": {
+    "responsible-ai": "Responsible AI study session, 30 minutes. Minutes 0-10: Read the responsible AI section of the current AI-901 study guide and name all six principles without looking. Minutes 10-20: For a Contoso hiring-model example, write one concrete failure for fairness and one for accountability, and explain why they are different failures. Minutes 20-25: Without notes, explain the difference between transparency and accountability in two sentences. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor.",
+    "workloads": "AI workloads study session, 30 minutes. Minutes 0-10: Read the AI workloads section of the current AI-901 study guide and list the workload shapes it names. Minutes 10-20: Sort five Contoso requests into workload shapes, including scanned expense receipts, a call-centre transcript, and a product photo, and say which service family each one points to. Minutes 20-25: Without notes, tell keyword extraction, entity detection, sentiment analysis, and summarization apart in one sentence each. Minutes 25-30: Check your answers against Microsoft Learn and write one question for your mentor.",
+    "foundry": "Microsoft Foundry study session, 30 minutes. Minutes 0-10: Read the Foundry section of the current AI-901 study guide and the Foundry agents overview. Minutes 10-20: Open the Foundry portal and inspect one prompt agent's instructions, model, and attached tools without changing anything. Minutes 20-25: Without notes, explain when a Contoso team should build a hosted agent rather than a prompt agent. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor."
+  },
+  "supportedStatus": "ok",
+  "unsupported": {
+    "status": "unsupported",
+    "plan": "Choose responsible-ai, workloads, or foundry."
+  }
+}

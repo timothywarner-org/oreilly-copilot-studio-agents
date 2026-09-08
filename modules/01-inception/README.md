@@ -1,35 +1,16 @@
-# 01 · Inception: Design the AZ-900 Agent
+# 01 · Inception: define one useful job
 
-**Make the job and the failure boundary explicit before building.**
+**LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
 
-**Outcome LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
+Plan the coach before configuring it. Distinguish yourself, the maker, from the fictional Contoso employee who uses the agent.
 
-**Schedule:** 60 minutes including a 10-minute break.
-Instruction, demonstration, learner work, and Q&A stay inside the teaching block.
+**During class:** Write one instruction, one topic description, and one observable success criterion. No account or coding is required. The instructor performs the tenant operations.
 
-## What this module covers
+**Time:** 50 minutes, followed by a 10-minute break.
 
-Instructions, knowledge, topics, tools, triggers, channels, orchestration, persona, guardrails, and measurable success.
+1. Read [the exercise](lab.md).
+2. Complete [the worksheet](worksheet.md) before checking the worked answer.
+3. Label predictions **PREDICTED**, demonstration evidence **OBSERVED DEMO**, and unperformed tests **NOT RUN**.
+4. Use the optional practice steps after class in your own approved environment.
 
-## Demonstration and learner work
-
-**Instructor demonstration:** Create the agent shell, draft instructions, enable or verify generative orchestration, and sketch the topic map.
-
-**Proposal’s mini-exercise:** Write one instruction, one success metric, and one topic for the AZ-900 assistant.
-
-Open [the lab](lab.md), then complete [the worksheet](worksheet.md).
-The maker and observer routes have the same learning outcome.
-
-## Evidence before moving on
-
-You can name the user, job, allowed actions, unsupported actions, and a testable failure condition without relying on the portal UI.
-
-**Reflection:** Why is “be accurate” not an adequate acceptance criterion?
-
-## References
-
-- [Approved curriculum](../../sources/proposal-curriculum.md)
-- [Environment notes](../../docs/environment-notes.md)
-- https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-first-bot
-
-**Continue:** [Build](../02-build/README.md)
+[Microsoft references](../../sources/README.md) · [Continue](../02-build/README.md)

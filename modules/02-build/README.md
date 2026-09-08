@@ -1,35 +1,16 @@
-# 02 · Build: Topics, Triggers, Knowledge, and Grounded Answers
+# 02 · Build: evidence, variables, and a real wait point
 
-**Make an answer traceable and an uncertain answer honest.**
+**LO2:** Build a grounded AI-901 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
-**Outcome LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+Ground a concept answer, then inspect RAI Single Question Demo. It presents four choices and uses CorrectAnswer, StudentAnswer, and IsCorrect to select feedback.
 
-**Schedule:** 60 minutes including a 10-minute break.
-Instruction, demonstration, learner work, and Q&A stay inside the teaching block.
+**During class:** Predict the variables and branch for A and B. Rewrite the corrective feedback so it explains the misconception. No account or coding is required. The instructor performs the tenant operations.
 
-## What this module covers
+**Time:** 50 minutes, followed by a 10-minute break.
 
-Agent-level versus topic-level grounding; overview, practice, study-plan, fallback, and search topics; topic inputs; AutomaticTaskInput awareness; citation expectations.
+1. Read [the exercise](lab.md).
+2. Complete [the worksheet](worksheet.md) before checking the worked answer.
+3. Label predictions **PREDICTED**, demonstration evidence **OBSERVED DEMO**, and unperformed tests **NOT RUN**.
+4. Use the optional practice steps after class in your own approved environment.
 
-## Demonstration and learner work
-
-**Instructor demonstration:** Test grounded responses, improve fallback behavior, and compare explicit input questions with automatically supplied topic inputs.
-
-**Proposal’s mini-exercise:** Write a topic that teaches, checks understanding, and hands off cleanly.
-
-Open [the lab](lab.md), then complete [the worksheet](worksheet.md).
-The maker and observer routes have the same learning outcome.
-
-## Evidence before moving on
-
-Your topic has a real wait point, a check of understanding, a traceable source, and a truthful uncertainty/handoff branch.
-
-**Reflection:** What distinguishes a relevant source from a source that actually supports this answer?
-
-## References
-
-- [Approved curriculum](../../sources/proposal-curriculum.md)
-- [Environment notes](../../docs/environment-notes.md)
-- https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio
-
-**Continue:** [Extend](../03-extend/README.md)
+[Microsoft references](../../sources/README.md) · [Continue](../03-extend/README.md)

@@ -1,35 +1,16 @@
-# 03 · Extend: Actions, MCP, and Subagent Patterns
+# 03 · Extend: a tool call and an event
 
-**Give the agent one bounded capability, not unrestricted autonomy.**
+**LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
 
-**Outcome LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
+GetStudySession returns a fixed 30-minute plan for responsible-ai, workloads, or foundry. A separate example saves a confirmed signup and uses a SharePoint event to notify Teams.
 
-**Schedule:** 60 minutes including a 10-minute break.
-Instruction, demonstration, learner work, and Q&A stay inside the teaching block.
+**During class:** Name the tool contract, the consent boundary, and the evidence for each external effect. No account or coding is required. The instructor performs the tenant operations.
 
-## What this module covers
+**Time:** 50 minutes, followed by a 10-minute break.
 
-Actions, agent flows, HTTP tools, MCP, child/connected agents, A2A/Foundry/Fabric/M365 SDK concepts, authentication, DLP, external-model approval, and least privilege.
+1. Read [the exercise](lab.md).
+2. Complete [the worksheet](worksheet.md) before checking the worked answer.
+3. Label predictions **PREDICTED**, demonstration evidence **OBSERVED DEMO**, and unperformed tests **NOT RUN**.
+4. Use the optional practice steps after class in your own approved environment.
 
-## Demonstration and learner work
-
-**Instructor demonstration:** Extend the assistant with a study-plan action pattern and inspect a real tool result or explicitly labelled local fallback.
-
-**Proposal’s mini-exercise:** Choose one tool the agent should call and one situation it must escalate.
-
-Open [the lab](lab.md), then complete [the worksheet](worksheet.md).
-The maker and observer routes have the same learning outcome.
-
-## Evidence before moving on
-
-You can distinguish a narrative answer, a validated tool result, a blocked action, and a real human handoff.
-
-**Reflection:** Why does adding MCP not remove the need to inspect permissions and tool scope?
-
-## References
-
-- [Approved curriculum](../../sources/proposal-curriculum.md)
-- [Environment notes](../../docs/environment-notes.md)
-- https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp
-
-**Continue:** [Operate](../04-operate/README.md)
+[Worked example](worked-example.md) · [Microsoft references](../../sources/README.md) · [Continue](../04-operate/README.md)

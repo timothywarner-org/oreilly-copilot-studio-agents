@@ -1,31 +1,47 @@
-# Operate lab
+# Operate exercise: would you release it?
 
-**Target:** LO4. **Artifact:** [worksheet.md](worksheet.md).
+**Seven-minute decision, no account required.** Use the [worksheet](worksheet.md). Label every result
+as observed, a prediction, a manual test, or a synthetic exercise.
 
-These steps operationalize the approved activity. They are newly authored guidance, not proof that the
-workflow has been run in your tenant. Never bypass tenant policy to complete an exercise.
+## Predict and inspect
 
-## Steps
+Start with the [five-case reference set](../../contoso-ai901-agent/evals/native-core-five.csv): grounded
+principles, a Foundry distinction, refusal of real exam items, a practice opener, and signup confirmation.
+The [evaluation guide](../../contoso-ai901-agent/evals/README.md) explains the separate methods and sets.
 
-1. Read the 12 evaluation scenarios. Copy the result template to a private local working location and leave every case NOT RUN until executed.
-2. For the maker route, implement the cases in the current supported native evaluation experience or execute them manually with recorded evidence. The repository JSON is not a native import promise.
-3. Run the cases against the actual configured agent. Record observed responses, inspected sources, and failures separately from expected behavior.
-4. Use native activity/analytics/transcript views where available. Label historical or sanitized evidence accurately; do not assume test-panel traffic is equivalent to production-channel analytics.
-5. Review permissions, data policy, environment isolation, data boundaries, selected model, and publishing entitlement. Identify the intended channel and real audience.
-6. Apply the five Well-Architected concerns to this assistant. Record one risk or concrete control for each in the worksheet.
-7. Choose GO, CONDITIONAL, or NO-GO for a small pilot. State the evidence, unexecuted checks, owner, rollback route, and one safe next step.
+1. Write what each response must contain and what it must avoid.
+2. Compare the actual response with its reference and source. Record PASS, FAIL, ERROR, or NOT RUN.
+3. For tool/topic routing, inspect the expected capability and actual activity. A matching sentence
+   does not prove GetStudySession ran or that a writing flow waited for consent.
+4. Test the RAI topic's answer and feedback interactively. A single-response score cannot test the
+   full conversation. Test signup cancellation separately and inspect for no new row or post.
 
-## Checkpoint
+## Optional native evaluation practice
 
-A reader can distinguish actual results, remaining risks, and the reason for the pilot decision. No production-readiness claim is inferred from the scaffold.
+Follow [Microsoft's single-response evaluation procedure](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create).
+Compare the native template with the supplied CSV before importing. Review reference answers,
+methods, expected capabilities, test identity, and connections before running.
 
-## Recovery
+Use **Compare meaning** for answer comparison and a separate **Tool use** set for expected capabilities.
+Our 80% comparison threshold is an authored teaching choice. Inspect failures and arguments manually.
+Compare the same cases before and after one change, keeping each set and method's denominator visible.
 
-Without working tenant access, complete the worksheet using a diagram and predicted behavior.
-Label predicted responses **PREDICTED**. Leave execution results **NOT RUN**.
-Do not publish personal data or screenshots containing identities or secrets.
+See [evaluation results](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-results)
+and [activity review](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-review-activity).
 
-## Optional stretch
+## Make the pilot decision
 
-Change one assumption in your worksheet, then explain which downstream module or evaluation case must change.
-Do not add a new platform, production connector, or unrelated scenario.
+1. Read the [synthetic operational example](worked-example.md). Calculate its rates and identify the
+   unfulfilled promise. The figures are invented learning data, not measurements of the course agent.
+2. Choose **GO**, **CONDITIONAL**, or **NO-GO**. For CONDITIONAL, users wait until the named conditions are met.
+3. Record audience, owner, data boundary, access checks, stop condition, and recovery plan.
+4. Name a concrete control for each [Power Platform Well-Architected concern](https://learn.microsoft.com/en-us/power-platform/well-architected/).
+5. Name the missing evidence that could change your decision.
+
+**Publication check:** Saving changes and publishing them are separate operations. Inspect the actual
+published version and test a new channel conversation using an intended user identity. A maker's test
+does not establish another person's access. Trials cannot publish; use the [access guide](../../learner/access.md)
+and [Microsoft publication guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-fundamentals-publish-channels).
+
+**Success:** Your decision distinguishes response quality, successful effects, and usable access.
+Never infer production readiness from a single successful demo.
