@@ -15,7 +15,7 @@ beginDialog:
       id: Question_Z55zmB
       alwaysPrompt: true
       variable: init:Topic.Domain
-      prompt: Which study area would you like to practice?
+      prompt: "Which study area would you like to practice: responsible AI, AI workloads, or Microsoft Foundry?"
       entity:
         kind: EmbeddedEntity
         definition:
@@ -155,4 +155,3 @@ beginDialog:
       id: end_practice_topic
 inputType: {}
 outputType: {}
-

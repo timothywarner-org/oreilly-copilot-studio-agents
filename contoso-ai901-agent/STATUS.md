@@ -2,8 +2,10 @@
 
 **Updated 2026-09-07. Tenant smoke tests performed.** The coach, knowledge, practice topic, study
 flow, signup list, and Teams notification now exist and have live evidence. Follow the
-[dated demo route and evidence](tenant-rehearsal-2026-09-07.md) for September 8. Full native evaluation,
-second-user channel access, and timed delivery remain unverified. Local validation checks integrity only.
+[dated demo route and evidence](tenant-rehearsal-2026-09-07.md) for September 8. Native evaluations
+completed with failures: Core Five **2/5**, Knowledge and Challenge **8/32**, Routing **2/3**.
+One preclass run is waiting for September 8 at **6:00 AM Central**. Second-user channel access and
+timed delivery remain unverified. Local validation checks integrity only.
 
 ## September 7 authoring update
 
@@ -11,8 +13,8 @@ second-user channel access, and timed delivery remain unverified. Local validati
 - Three Microsoft 365 Designer prompts provide a main agent avatar and matching companion artwork.
 - [Finished avatar and listing icons](assets/icons/README.md) now include the 192-pixel color PNG and
   the 32-pixel white outline with verified alpha transparency. Artwork was generated with ImageGen
-  and finished with user-authorized ImageMagick. File checks passed and the agent icon was uploaded;
-  store validation remains **NOT RUN**.
+  and finished with user-authorized ImageMagick. Stored avatar and channel icons match the kit after
+  publication; installed appearance and store validation remain **NOT RUN**.
 - `knowledge/ai901-objective-domain.md` was actually generated using **MarkItDown 0.1.2** from
   Microsoft Learn. The complete Skills measured section contains two domains, seven groups, and
   all objective bullets. [Conversion provenance](sources/ai901-objective-domain.provenance.json)
@@ -22,7 +24,8 @@ second-user channel access, and timed delivery remain unverified. Local validati
   Contoso employees receive **$100 USD each**, with human verification and one award per employee.
 - `evals/ai901-challenge.csv` contains **32 original cases** in Microsoft's documented template schema.
   The native template control was inspected, but no downloaded template file was captured. Native
-  template file comparison, AI-901 import, and evaluation remain **NOT RUN**.
+  template file comparison remains **NOT RUN**. All three evaluation sets were imported and run;
+  scores, changes, and the one-time schedule are recorded in the dated rehearsal.
 
 This update fulfills the requested AI-901 scaffold work. The approved four objective strings in
 `course.json` and `sources/proposal-curriculum.md` remain the course commitment record and are
@@ -84,7 +87,7 @@ the approved proposal both still say AZ-900 and neither can be changed before th
 | Practice-question Topic recipe | Checker passed; four live items, grading, citation, wait point, and loop observed |
 | GetStudySession AI-901 plan text | Flow published and bound; supported, unsupported, and missing focus tested |
 | RecordExamMilestone flow, list, channel | Original design retained; simplified Certification Signups route deployed and tested instead |
-| Native evaluation CSVs | Authored to the documented two-column shape; template comparison and import NOT RUN |
+| Native evaluation CSVs | All three sets imported and run; failed grades retained; downloaded-template comparison NOT RUN |
 | Generated-item quality | Four samples inspected; broader quality review remains open, including answer-position variety |
 
 ## Product claims that need tenant confirmation before you teach them

@@ -5,7 +5,9 @@
 unchanged: one Text input, two initialized variables, three flat conditions, one Respond to the agent.
 Only the compared values and the plan text change. Budget four minutes, not forty.
 
-**Authored design. Documentation checked 2026-09-06. Tenant execution: NOT RUN.**
+**Design recipe with tenant evidence added September 7.** The three supported focuses, missing
+focus, and unsupported focus were tested. See the [dated rehearsal](../tenant-rehearsal-2026-09-07.md)
+for results and the remaining scope-clarification issue. The procedure below is a build reference.
 
 ## What changes
 
@@ -55,9 +57,14 @@ expected-output fixture, not an import format.
 
 ## Tool description to paste
 
-> Retrieve an authored 30-minute AI-901 study session for responsible-ai, workloads, or foundry. Use
-> only when an employee wants one of these fixed sessions. Collect the focus first. This tool can't
-> customize the duration, build a multi-day plan, register for exams, or contact people.
+> Create one fixed 30-minute AI-901 study session. Supported focus values: responsible-ai, workloads,
+> foundry. Use this tool for a study session or plan. It cannot create a seven-day plan or a 90-minute
+> session. Explain that limit when a request exceeds it, then offer one supported 30-minute session.
+> Ask the learner to choose a focus if it is missing.
+
+This description was saved in the native tool and published September 7. A fresh manual check named
+the 30-minute session, but still did not explicitly decline a seven-day request. Retain that remaining
+issue in the evaluation record; the description alone does not prove the desired behavior.
 
 Keep **Fill using = Dynamically fill with AI** for `focus`, and set its description to the trigger
 description from step 2. Automatic filling is convenient. It isn't validation and it isn't authorization.

@@ -76,5 +76,8 @@ Microsoft distinguishes channel listing branding from some direct-install avatar
 installations or admin-approved listings may require reinstalling or resubmitting updated details.
 See [customize the appearance for Teams and Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams#customize-the-appearance-of-an-agent-for-teams-and-microsoft-365-copilot).
 
-These are documentation-based directions. Tenant upload, displayed appearance, packaging validation,
-and store/admin approval have not been performed.
+**Tenant evidence, September 7:** The avatar and Teams/Microsoft 365 channel art were configured.
+After final publication, all three stored assets matched the approved kit bytes. The native channel
+details editor regenerated icon assets when saved, so the approved files were reapplied and checked
+after the last listing change. Recheck artwork after editing listing details. Installed appearance,
+packaging validation, and store/admin approval remain **NOT RUN**.

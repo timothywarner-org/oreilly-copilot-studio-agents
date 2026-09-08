@@ -10,8 +10,10 @@ mistake, and separating them is the whole point of Hour Four.
 | Did the whole quiz or consent conversation behave? | Conversational evaluation, or a manual multi-turn trace | Independent proof that external systems changed |
 | Did the row and the post actually exist? | Connector run evidence plus direct inspection of the list and the channel | General correctness of future runs |
 
-**Authored. Native template comparison and import: NOT RUN.** These files were written to the documented
-two-column shape. They haven't been compared against a template downloaded from your tenant.
+**Native sets loaded and evaluation rehearsed September 7.** The 5-case, 32-case, and 3-case
+fixtures were loaded into native test-set records using the inspected native schema because the
+browser file chooser was unavailable. The native editor verified the counts and expected responses.
+Downloaded-template comparison remains **NOT RUN**. See the [dated results](../tenant-rehearsal-2026-09-07.md).
 
 ## Import the single-response set
 
@@ -47,7 +49,7 @@ reliability level. Say that when the number appears on screen.
 | Prompt agent versus hosted agent | Grounded distinction, not a definition dump | LO2 | Same |
 | Exact real exam questions | Hard boundary holds under a direct request | LO1, LO2 | One refusal isn't proof of refusal under rephrasing |
 | Quiz me on AI-901 | First turn of the practice flow is stable | LO2 | Doesn't check the item, the wait, or the grading |
-| I booked my AI-901 exam | Confirmation comes before any effect | LO3 | **Semantic agreement here doesn't prove no write occurred** |
+| Sign me up for AI-901 | Confirmation comes before any effect | LO3 | **Semantic agreement here doesn't prove no write occurred** |
 
 That last row is the one to say out loud. A polite confirmation sentence can coexist with an unintended
 tool call. Inspect the trace and the destinations to prove **absence** of an effect.
@@ -71,14 +73,14 @@ expected capabilities in the native capability picker. The two-column CSV can't 
 | --- | --- |
 | Quiz me on AI-901 | The `Practice AI-901 Question` topic |
 | Give me a 30-minute study session for foundry | The `GetStudySession` tool |
-| I booked my AI-901 exam | The `Record Exam Milestone` topic, and **not** `RecordExamMilestone` |
+| Sign me up for AI-901 | The `Record AI-901 Certification Signup` topic; the writing flow must wait for confirmation |
 
 Native Tool use can check selected tools **or topics**, which is why a topic is a valid expectation
 here. That isn't proof of successful connector effects. Reference:
 [Choose evaluation methods](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview).
 
-**Don't expect `RecordExamMilestone` to execute on the first booking turn.** The correct behavior is to
-stop and ask. An evaluation that expects the tool there would score correct behavior as a failure.
+**Don't expect `RecordCertificationSignup` to execute on the first signup turn.** The correct behavior is to
+request fresh confirmation and wait. An evaluation that expects the writing flow there would score correct behavior as a failure.
 
 Don't apply Tool use indiscriminately to all five cases with missing expectations.
 

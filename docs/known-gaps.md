@@ -21,12 +21,14 @@ The [dated rehearsal record](../contoso-ai901-agent/tenant-rehearsal-2026-09-07.
 for completed checks and the September 8 demo route. The following gates remain broader than those
 smoke tests and must not be inferred complete.
 
-- Actual environment, authoring experience, roles, licenses, credits, models and policy configuration.
-- Real shell creation, source retrieval, topic wait point and fallback behavior.
-- Real GetStudySession flow, agent binding, all supported inputs, unsupported input, missing input and tool unavailability behavior.
-- Native evaluation runs and same-case comparison, plus manual multi-turn checks.
+- Roles, licenses, and remaining credits sufficient for delivery; model and authoring experience were observed.
+- Fault-injected fallback and tool-unavailability behavior. Shell creation, retrieval, practice wait
+  point, all supported study inputs, unsupported input, and missing input have smoke-test evidence.
+- Human review of failed native evaluation cases and the unresolved signup routing grade. Native
+  runs and a same-case opener comparison completed; broader multi-turn coverage remains open.
 - Genuine operational evidence from channel use, scoped publishing and second-user access.
-- A real sanitized native YAML artifact for the promised follow-up inspection. The guide is provided; an export is not fabricated.
+- Owner review of the captured native practice-topic artifact for follow-up distribution. Its sanitized
+  export and provenance now exist in the kit's `topics/exports/` directory.
 - Producer-approved learner distribution and verified attendee access. A private GitHub URL alone does not satisfy this.
 - Timed rehearsal of all blocks and genuine recorded recovery material.
 - Editorial correction of the registration-page audience mismatch.
@@ -37,8 +39,10 @@ smoke tests and must not be inferred complete.
   [STATUS.md](../contoso-ai901-agent/STATUS.md): narrate the difference in Hour One, which costs about
   20 seconds and needs no approval, or request an editorial correction from O'Reilly after delivery.
   Silently editing the objective is not an option.
-- **AI-901 evaluation and quality.** Native evaluation CSVs have not been imported or run. Four
-  generated practice samples do not close the full item-quality review. The original RecordExamMilestone
+- **AI-901 evaluation and quality.** Native results were Core Five **2/5**, Knowledge and Challenge
+  **8/32**, and Routing **2/3**. The failed grades remain visible. A single preclass run is waiting for
+  September 8 at **6:00 AM Central**; its outcome is not yet known. Four generated practice samples
+  do not close the full item-quality review. The original RecordExamMilestone
   design was not deployed; the user-requested Certification Signups route was deployed and tested.
 - **AI-901 objective snapshot.** The Microsoft Learn Skills measured conversion is dated and hashed, but
   its upload now reports Ready. Recheck the live study guide before teaching the

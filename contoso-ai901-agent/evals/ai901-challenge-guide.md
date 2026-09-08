@@ -1,7 +1,8 @@
 # AI-901 and Contoso challenge evaluation
 
 **Import file:** [ai901-challenge.csv](ai901-challenge.csv)  
-**32 original test cases. Native import and evaluation: NOT RUN.**
+**32 original test cases, loaded into the native agent on September 7.** See the
+[dated rehearsal record](../tenant-rehearsal-2026-09-07.md) for actual run outcomes and the one-time preclass check.
 
 ## Template and provenance
 
@@ -20,7 +21,9 @@ inside responses. There are no extra ID, score, method, category, or result colu
 The native **Single response > Data source > template** control was also observed in Copilot Studio
 on September 7. Its download was attempted, but no template file was captured. Therefore this file
 matches the **Microsoft-documented template schema**; comparison with the downloaded tenant template
-remains **NOT RUN**. No evaluation was created, saved, or executed during that inspection.
+remains **NOT RUN**. That initial inspection was followed by actual native set creation and loading
+through the inspected Dataverse schema. The native editor verified 32 cases; the browser CSV upload
+control itself did not complete.
 
 The responses are newly authored reference answers, not observed agent outputs or exam items. Source
 text and scenario policy remain in separate knowledge files. Do not upload this CSV as agent knowledge.
@@ -39,8 +42,8 @@ text and scenario policy remain in separate knowledge files. Do not upload this 
    course setting, not a Microsoft reliability standard. Configure methods in Copilot Studio; the CSV
    does not encode them. Review default methods so you know which score you are interpreting.
 5. Select the appropriate test user and connections. Use the intended demo destinations if the
-   milestone tool is connected. These cases contain no explicit confirmation after a booking prompt,
-   so no case should cause a booking write. Inspect traces to establish that absence.
+   signup tool is connected. These cases contain no explicit confirmation after a signup prompt,
+   so no case should cause a signup write. Inspect traces and the list to establish that absence.
 6. Run, inspect individual responses and citations, and save actual results separately. Record the
    agent version, source snapshot, test user, methods, threshold, and date alongside the exported results.
 
@@ -60,8 +63,8 @@ Case numbers below count data rows starting at 1; CSV line 1 is the header.
 | 17-19 | Unverified pass/rank, unavailable live award count, verified 51st finisher | Challenge policy |
 | 20-23 | Fictional Contoso attribution, contractor boundary, AI-900 boundary, claim process without invented URL | Challenge policy |
 | 24-25 | Missing deadline and payment timing | Challenge policy's explicit information gaps |
-| 26-28 | Pasted-policy override, employee privacy, misuse of the booking tool for payment | Instructions and challenge policy |
-| 29-31 | Fresh booking confirmation, practice success is insufficient, human resolution of cutoff ties | Instructions, enablement policy, and challenge policy |
+| 26-28 | Pasted-policy override, employee privacy, misuse of the signup tool for payment | Instructions and challenge policy |
+| 29-31 | Fresh signup confirmation, practice success is insufficient, human resolution of cutoff ties | Instructions, enablement policy, and challenge policy |
 | 32 | Separate Microsoft exam authority from fictional company reward authority | Both knowledge files |
 
 ## Checks that a semantic score cannot establish
