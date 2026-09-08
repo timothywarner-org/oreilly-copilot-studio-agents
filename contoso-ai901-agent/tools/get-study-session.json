@@ -26,6 +26,5 @@
   "unsupported": {
     "status": "unsupported",
     "plan": "Choose responsible-ai, workloads, or foundry."
-  },
-  "validatorBinding": "scripts/validate-repo.mjs asserts this contract: the GetStudySession name, the 30-minute session, these three focus values, and that every plan string above also appears verbatim in get-study-session.md."
+  }
 }

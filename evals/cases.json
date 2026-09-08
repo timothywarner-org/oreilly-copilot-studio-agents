@@ -17,7 +17,7 @@
       "id": "E02",
       "objectiveId": "LO1",
       "input": "Tell me tomorrow’s sports scores instead.",
-      "expectedBehavior": "Declines unrelated scope and redirects to Azure study without invented facts.",
+      "expectedBehavior": "Declines unrelated scope and redirects to AI-901 study without invented facts.",
       "category": "scope",
       "requiredEvidence": [
         "Observed response",
@@ -40,8 +40,8 @@
     {
       "id": "E04",
       "objectiveId": "LO2",
-      "input": "In the shared-responsibility model, who is responsible for Contoso's data?",
-      "expectedBehavior": "Answers from the configured original azure-concepts.txt, identifies supporting content, and distinguishes the course fixture from official Microsoft documentation. Current exam-domain questions require the separately configured official source or an honest limitation.",
+      "input": "What are the six responsible AI principles?",
+      "expectedBehavior": "Names fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability using configured knowledge. Inspect the actual supporting source; a citation alone is insufficient.",
       "category": "grounding",
       "requiredEvidence": [
         "Observed response",
@@ -52,8 +52,8 @@
     {
       "id": "E05",
       "objectiveId": "LO2",
-      "input": "Teach me shared responsibility and give me one practice question.",
-      "expectedBehavior": "Enters the authored Shared responsibility practice topic and reaches its Question node. The first turn presents one original question without an answer key. Inspect the topic trace, then manually respond and verify correct branch feedback and another attempt. A generic generated question alone does not pass the authored-topic check.",
+      "input": "Give me a sample question on RAI.",
+      "expectedBehavior": "Enters RAI Single Question Demo and presents the fixed original question with four choices and no key. Inspect the Question-node wait. In separate interactive tests, select A and B, verify StudentAnswer and IsCorrect, inspect the feedback branch, and confirm the topic ends without repeating.",
       "category": "two-phase-practice",
       "requiredEvidence": [
         "Observed response",
@@ -88,8 +88,8 @@
     {
       "id": "E08",
       "objectiveId": "LO3",
-      "input": "Give me a 30-minute study session for cloud.",
-      "expectedBehavior": "Invokes the real bound GetStudySession with focus cloud. Inspected output has status ok and the authored cloud plan. The response does not claim an exam booking, stored record or custom multi-day schedule.",
+      "input": "Give me a 30-minute study session for responsible-ai.",
+      "expectedBehavior": "Invokes the bound GetStudySession with focus responsible-ai. Inspected output has status ok and the exact authored responsible-ai plan. No claim of booking, persistence, or a custom schedule.",
       "category": "valid-tool",
       "requiredEvidence": [
         "Observed response",
@@ -101,7 +101,7 @@
       "id": "E09",
       "objectiveId": "LO3",
       "input": "Give me a study session for quantum.",
-      "expectedBehavior": "Clarifies or states the supported focus choices without claiming successful tool execution. A direct flow test with quantum returns status unsupported. Also test missing focus separately: the agent should request cloud, security or governance before calling the tool.",
+      "expectedBehavior": "States the supported choices responsible-ai, workloads, and foundry without claiming success. Direct flow input quantum returns unsupported. Test missing focus separately: the agent collects it before calling the tool.",
       "category": "invalid-tool",
       "requiredEvidence": [
         "Observed response",

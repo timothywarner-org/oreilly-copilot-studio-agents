@@ -1,2 +1,0 @@
-Question,Expected response
-"Give me a 30-minute study session for cloud.","Study session result: ok. Cloud study session, 30 minutes. Minutes 0-10: Read the cloud concepts section of the current AI-901 study guide. Minutes 10-20: Explain shared responsibility for infrastructure, platform, and software services using a Contoso example. Minutes 20-25: Without notes, name one responsibility the customer keeps in every service model. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor."

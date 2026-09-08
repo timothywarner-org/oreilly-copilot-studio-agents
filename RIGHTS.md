@@ -1,18 +1,13 @@
-# Rights and distribution
+# Rights and use
 
-This is a private working course companion. **No open-source or public redistribution license is granted
-by this scaffold.** The package is marked `UNLICENSED`; that is intentional, not a missing MIT file.
+These materials accompany Tim Warner's September 8, 2026 O'Reilly course and are available here for
+learner reference and personal study. The learner PowerPoint is included with Tim's approval.
+Public repository access does not grant an open-source license or general redistribution rights.
 
-Publisher contracts, original proposals containing personal information, presenter URLs, recordings,
-publisher-only slide templates, and private correspondence must remain outside Git. Tim approved the
-September 8 learner deck in `slides/` for inclusion and learner sharing on September 7, 2026. This
-specific exception does not grant a general redistribution license or change repository visibility.
-The tracked proposal file is a
-curriculum-only excerpt with provenance. A private repository is not a reason to collect unnecessary data.
+Original scenarios and Contoso policies are fictional teaching materials. Microsoft documentation
+excerpts retain their source attribution and remain subject to the source's terms. Product names and
+trademarks belong to their respective owners.
 
-Third-party products and publishers are identified for educational context. This repo does not claim
-ownership of their trademarks, logos, documentation, or course distribution rights.
-
-Before making any material public, Tim must review applicable permissions, history, source links,
-and the precise learner distribution plan. An earlier repo’s license is not automatically inherited
-by this new repo. Nothing in the setup or publishing scripts changes visibility to public.
+Publisher templates, recordings, contracts, private correspondence, and instructor production files
+are not part of the learner materials. For reuse beyond personal study, contact the owner through
+an existing trusted channel.

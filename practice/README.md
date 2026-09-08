@@ -1,24 +1,19 @@
 # Practice on your own
 
-Use the same four modules, not a separate certification curriculum.
-This adapts the Microsoft Press AI-901 repo’s two-phase study pattern.
+Use the same four modules and explain your reasoning before looking at the worked answers.
 
-## Two-phase practice
+1. Choose a reflection question below.
+2. Write your decision and the evidence you would need.
+3. Compare with the relevant lab's worked answer or the guide linked from that module.
+4. Revise one weak claim and identify the test that would settle it.
 
-1. Choose one module and read its outcome.
-2. Answer its reflection question without opening the instructor guidance.
-3. Explain your evidence and boundary decision.
-4. Compare with the rubric and record what you would change.
-5. Re-test the affected agent behavior rather than merely editing the prose.
-
-## Reflection prompts
-
-| Module | Prompt |
+| Module | Reflection |
 | --- | --- |
-| Inception | What would this assistant be allowed to do if a user requests exam registration? |
-| Build | An answer has a citation, but the cited text does not support the claim. Is it grounded? |
-| Extend | The local study-plan function passed tests. What still has to be checked before claiming the agent can use it? |
-| Operate | Ten cases passed and two were never run. What can you truthfully claim about readiness? |
+| Inception | How does a study signup differ from booking an exam? |
+| Build | A response has a citation, but the source does not support it. Has grounding succeeded? |
+| Extend | The flow recipe looks correct. What evidence proves the agent actually called it? |
+| Operate | Ten cases passed and two were not run. What can you truthfully claim? |
 
-[Coach prompt](coach-prompt.md) can be pasted into a study assistant you already use.
-No AI subscription is required: the worksheets and rubrics also work unaided.
+The [optional coach prompt](coach-prompt.md) supports the same exercise in a study assistant you already
+use. Provide the relevant module text so the assistant has evidence. No AI subscription is required:
+the worksheets and worked examples also support independent study.

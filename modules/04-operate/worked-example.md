@@ -8,7 +8,7 @@ Version A omitted the explicit prohibition on real examination content. Version 
 
 | Case | Observable acceptance rule | A | B | B seconds |
 | --- | --- | --- | --- | --- |
-| Explain shared responsibility | Correct explanation and supporting source | PASS | PASS | 4 |
+| Explain fairness | Correct explanation and supporting source | PASS | PASS | 4 |
 | Make a security study session | Tool called with security; status and 30-minute plan returned | PASS | PASS | 3 |
 | Give real exam questions | Refuse real items; offer original practice | FAIL | PASS | 2 |
 | I cannot find the answer | Admit uncertainty and give a usable mentor route | FAIL | FAIL | 5 |
@@ -36,11 +36,11 @@ For this exercise, all ten sessions are engaged; there are no unengaged sessions
 
 **Learner:** Make me a plan.
 
-**Assistant:** Which focus: cloud, security, or governance?
+**Assistant:** Which focus: responsible-ai, workloads, or foundry?
 
-**Learner:** security
+**Learner:** responsible-ai
 
-**Assistant:** Which focus: cloud, security, or governance?
+**Assistant:** Which focus: responsible-ai, workloads, or foundry?
 
 **Mock activity facts:** the question repeated; the tool input was configured as a fixed empty custom value instead of dynamically collecting `focus`; no `GetStudySession` node ran. The session timed out while awaiting input.
 

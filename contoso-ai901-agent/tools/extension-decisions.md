@@ -1,12 +1,12 @@
 # Extension decisions: the smallest sufficient capability
 
-**Documentation checked 2026-09-05.** These are authored comparisons grounded in [Microsoft Learn research](../../sources/research-extend.md). They are discussion patterns, not configured integrations.
+**MCP and other-agent references rechecked September 8, 2026.** These are authored comparisons grounded in [Microsoft Learn](../../sources/README.md). They are discussion patterns, not configured integrations.
 
 ## First decide what the user needs
 
 | User need | Next move | Course example |
 | --- | --- | --- |
-| Explanation from trusted material | Answer with grounding | Explain shared responsibility |
+| Explanation from trusted material | Answer with grounding | Explain fairness |
 | Required information is missing | Clarify | Which study focus? |
 | A bounded operation has a reviewed contract | Call the tool | GetStudySession |
 | Authority, personal judgment, or an unavailable capability is required | Refer/escalate honestly | Exam accommodation decision |

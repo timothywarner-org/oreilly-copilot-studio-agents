@@ -1,51 +1,47 @@
-# Operate lab: Would you release it?
+# Operate exercise: would you release it?
 
-**Target:** LO4. **Submit:** a [pilot decision](worksheet.md), backed by observed evidence or explicitly labelled synthetic evidence. This is a no-code exercise. Procedures describe the **standard harness**; use the observer route if your tenant presents a different experience.
+**Seven-minute decision, no account required.** Use the [worksheet](worksheet.md). Label every result
+as observed, a prediction, a manual test, or a synthetic exercise.
 
-## 1. Predict, then observe
+## Predict and inspect
 
-During class, the instructor runs the checks below while everyone predicts and interprets the result. The execution steps also serve as optional independent practice after class.
+Start with the [five-case reference set](../../contoso-ai901-agent/evals/native-core-five.csv): grounded
+principles, a Foundry distinction, refusal of real exam items, a practice opener, and signup confirmation.
+The [evaluation guide](../../contoso-ai901-agent/evals/README.md) explains the separate methods and sets.
 
-Use the Module 3 checkpoint. Twelve cases belong in the instructor's full rehearsal. The live slice is three: E04 (grounded explanation), E08 (valid `cloud` study session), and E05 (original practice question that waits for the learner). Use the canonical E05 prompt: "Teach me shared responsibility and give me one practice question." The native first-turn score is only one check: inspect the authored topic and Question-node trace to confirm it presents a question and withholds the answer key. In a separate manual test, invoke the same topic and then answer its question in that conversation to test feedback. Missing-input behavior also needs a separate interactive conversation because single-response evaluation does not simulate the learner's reply.
+1. Write what each response must contain and what it must avoid.
+2. Compare the actual response with its reference and source. Record PASS, FAIL, ERROR, or NOT RUN.
+3. For tool/topic routing, inspect the expected capability and actual activity. A matching sentence
+   does not prove GetStudySession ran or that a writing flow waited for consent.
+4. Test the RAI topic's answer and feedback interactively. A single-response score cannot test the
+   full conversation. Test signup cancellation separately and inspect for no new row or post.
 
-1. Before each prompt, write what must happen. For a cloud session, expect the actual **GetStudySession** tool to receive `focus=cloud`, return `status` and `plan`, and produce a 30-minute session. A plausible plan without the expected tool call fails this test.
-2. Run those three prompts in new test conversations. Record the response and visible evidence. Inspect the cited source; count the plan minutes; verify the practice question stops before the answer.
-3. Mark each case **PASS**, **FAIL**, **ERROR**, or **NOT RUN**. An unavailable service is an error, not a passing refusal. A result with no trace is insufficient evidence of tool execution.
+## Optional native evaluation practice
 
-## 2. Observe or run native evaluation
+Follow [Microsoft's single-response evaluation procedure](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create).
+Compare the native template with the supplied CSV before importing. Review reference answers,
+methods, expected capabilities, test identity, and connections before running.
 
-The instructor demonstrates these steps. Makers with the matching surface may follow; everyone else records the demonstration evidence.
+Use **Compare meaning** for answer comparison and a separate **Tool use** set for expected capabilities.
+Our 80% comparison threshold is an authored teaching choice. Inspect failures and arguments manually.
+Compare the same cases before and after one change, keeping each set and method's denominator visible.
 
-1. Open the agent's **Evaluation** page. Select **New evaluation**, then **Single responses**. Choose **Import**, or **Or, write some questions yourself** if composing the three live prompts manually.
-2. For CSV import, download the tenant's template and compare it with [the prepared three-case CSV](../../evals/native-live-three.csv). The documented headers, in order, are `Question` and `Expected response`. Use one question per row and at most 1,000 characters per question. The repository scenario JSON is not that import format. The prepared CSV has authored expectations and is not an executed result. Review imported text before running.
-3. Name the set `AI901-live-three`. Use **Compare meaning only** and inspect every expected response. Remove the default **General quality** method if present. We use an 80% meaning threshold as an initial teaching choice, not a Microsoft recommendation; manually inspect correctness and citations even when the grader passes.
-4. Create a **separate** single-response set named `AI901-tool-one` using [the E08-only CSV](../../evals/native-tool-one.csv). Use **Tool use only**, removing General quality if present. Select E08 and choose the actual **GetStudySession** capability, then save. CSV expected-response text does not configure expected tools. Do not add Tool use to the three-case set while leaving other cases blank: missing expectations produce **Invalid**, not a skipped check.
-5. For each set, under **Additional configuration > Manage**, check the user and connections. Use an approved test identity with intended learner access. A maker's access does not establish a learner's access. Save and run using the tenant's displayed control. Only one evaluation can run at a time; finish one before starting another.
-6. Open a completed case. Read expected versus actual response and grading explanation; select **Show activity map**. Inspect knowledge and tool nodes, including actual inputs and outputs. Tool use checks that the selected capability ran; manually inspect its parameters and returned values. Generated rationale is a troubleshooting aid, not proof that a claim is correct.
-7. Compare two runs of **AI901-live-three** using **Compare with**. Record the one change between runs and inspect improvements and regressions individually. Export actual results using **Export test results** from the results menu. Keep the semantic and tool-set results separate, including their denominators and Invalid/Error cases. Keep sensitive exports in the approved private evidence location.
+See [evaluation results](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-results)
+and [activity review](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-review-activity).
 
-**Live-class pacing:** both sets and a semantic before/after comparison are prepared during rehearsal. The instructor shows their configuration, reruns only the one-case tool set live, and reviews the genuine prepared semantic comparison. Makers may perform the full creation steps during follow-up. A two-minute execution delay triggers the dated rehearsal recovery rather than consuming learner decision time. These instructions do not establish that preparation has happened.
+## Make the pilot decision
 
-**Recovery:** if native evaluation is unavailable or blocked, manually run the same prompts and label results **MANUAL TEST**. The instructor shows a dated genuine rehearsal capture for the native feature. If none exists, that native demonstration remains a delivery gap. Do not disable data policy to make a test pass.
+1. Read the [synthetic operational example](worked-example.md). Calculate its rates and identify the
+   unfulfilled promise. The figures are invented learning data, not measurements of the course agent.
+2. Choose **GO**, **CONDITIONAL**, or **NO-GO**. For CONDITIONAL, users wait until the named conditions are met.
+3. Record audience, owner, data boundary, access checks, stop condition, and recovery plan.
+4. Name a concrete control for each [Power Platform Well-Architected concern](https://learn.microsoft.com/en-us/power-platform/well-architected/).
+5. Name the missing evidence that could change your decision.
 
-Sources: [Create test sets](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-create), [results and comparisons](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-results), [activity review](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-review-activity).
+**Publication check:** Saving changes and publishing them are separate operations. Inspect the actual
+published version and test a new channel conversation using an intended user identity. A maker's test
+does not establish another person's access. Trials cannot publish; use the [access guide](../../learner/access.md)
+and [Microsoft publication guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
-## 3. Diagnose operational evidence
-
-Read [the synthetic example](worked-example.md). Calculate resolution and no-escalation rates using the stated denominators. Identify why the superficially good containment number hides failure. Read the short transcript and name the smallest repair. Do not copy invented numbers into an actual evidence record.
-
-In the real tenant, open **Monitor**, select the rehearsed reporting period, inspect outcome labels and a permitted transcript. **Test-panel traffic does not populate Monitor.** Analytics can take up to an hour after a session ends to appear; use precollected, sanitized channel evidence instead of waiting in class. Missing transcript permissions do not prove that no conversation occurred. [Monitor documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-summary)
-
-## 4. Observe actual publishing
-
-Predict: will saving a topic change the agent installed in Teams? No. It must be republished; existing conversations may need a new session.
-
-Watch the instructor confirm authentication and authorized audience, publish, enable Teams, install for their own use, and test a fresh conversation. Record the actual result. Learners on trial accounts observe this step because their trial cannot publish. Follow the [instructor procedure](../../instructor/04-operate-guide.md). Learners publish only within their organization's approved scope.
-
-## 5. Make the pilot decision in seven minutes
-
-1. **Two minutes:** choose GO, CONDITIONAL, or NO-GO. CONDITIONAL means approval is pending and users do not start yet. Unknown access or untested publication blocks GO.
-2. **Three minutes:** identify a control for each Well-Architected pillar, plus owner, audience, data boundary, and stop condition.
-3. **Two minutes:** exchange the decision with a partner. Your partner names the missing evidence that would most change the decision. Revise your answer.
-
-**Success check:** distinguish synthetic examples, manually observed results, native results, and unperformed checks. Follow-up includes [genuine topic YAML inspection](../../contoso-ai901-agent/exports/README.md); no coding is required during class.
+**Success:** Your decision distinguishes response quality, successful effects, and usable access.
+Never infer production readiness from a single successful demo.

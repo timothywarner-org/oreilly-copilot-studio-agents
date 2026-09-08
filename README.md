@@ -1,97 +1,55 @@
 # Build AI Agents to Automate Your Workflows
 
-### One agent. Four capability layers. Evidence before confidence.
+**Tim Warner · O'Reilly Live · September 8, 2026 · 9:00 AM to 1:00 PM Central**
 
-**Tim Warner · O’Reilly Live · September 8, 2026 · 9:00 AM–1:00 PM Central**
+Learn Microsoft Copilot Studio through one example: the **Contoso AI Fundamentals Coach** for
+**AI-901**. You are learning agent design. Contoso employees studying for certification are the
+fictional users of the agent.
 
-[Start here](START-HERE.md) · [The agent kit](contoso-ai901-agent/README.md) · [Every link, verified](sources/link-register.md) · [Course page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/) · [TechTrainerTim](https://techtrainertim.com)
+[Start here](START-HERE.md) · [Download the 66-slide PowerPoint](slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) · [Agent examples](contoso-ai901-agent/README.md) · [Microsoft references](sources/README.md)
 
-**Class slides:** [Download the September 8 PowerPoint deck, v2](slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) (66 slides, larger type, diagrams, and Microsoft Learn source lines). The [original 44-slide build](slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) is kept for reference.
+## Your learning path
 
-## What you build
-
-The **Contoso AI Fundamentals Coach**, a Microsoft Copilot Studio agent for a fictional company putting
-400 employees through **Microsoft Certified: Azure AI Fundamentals**, currently exam **AI-901**.
-
-The coach does four things and refuses everything else:
-
-1. **Explains** an AI-901 concept from approved evidence, with a citation you can trace.
-2. **Quizzes** you with one original practice question at a time, then waits for your answer before grading it.
-3. **Returns** a fixed 30-minute study session for one focus: `responsible-ai`, `workloads`, or `foundry`.
-4. **Records** a synthetic certification signup in SharePoint after confirmation, then a separate flow announces it in Teams.
-
-That fourth one is where the interesting judgment lives. The agent writes to a real system, so it has to
-get fresh confirmation first, and it must distinguish the saved signup from the separate Teams notification.
-
-AI-901 is the subject matter. **Agent building is the skill.** You can swap the exam for your own domain
-and the four layers do not change.
-
-## Your route
-
-| Module | What you do | What you leave with |
+| Module | What you learn | Your activity |
 | --- | --- | --- |
-| [01 · Inception](modules/01-inception/README.md) | Define persona, instructions, topic map, guardrails, and success metrics. | An agent brief you can actually test. |
-| [02 · Build](modules/02-build/README.md) | Ground answers and design a teach-check-handoff topic. | A traceable answer and a topic that handles uncertainty. |
-| [03 · Extend](modules/03-extend/README.md) | Add a study-session action; distinguish flows, MCP, and agent delegation. | A bounded tool contract and a deliberate escalation path. |
-| [04 · Operate](modules/04-operate/README.md) | Evaluate, observe, govern, and prepare publication. | Evidence and a go/no-go pilot decision. |
+| [01 · Inception](modules/01-inception/README.md) | Define the user, job, instructions, boundaries, and evidence of success | Write an agent brief |
+| [02 · Build](modules/02-build/README.md) | Ground an answer and trace a responsible AI question through variables and branches | Predict the feedback and explain the wait point |
+| [03 · Extend](modules/03-extend/README.md) | Use a fixed study-session tool and connect a confirmed signup to a Teams announcement | Specify inputs, outputs, consent, and evidence |
+| [04 · Operate](modules/04-operate/README.md) | Evaluate behavior, inspect failures, and justify a scoped pilot | Make an evidence-backed release decision |
 
-Each module has a lab, a worksheet, and worked answers. After the session,
-[practice mode](practice/README.md) and the [evaluation cases](evals/README.md) let you check your own build.
+**No tenant or coding is required during class.** Watch the demonstrations, make predictions, and
+complete the worksheets. For optional practice afterward, use [the access guide](learner/access.md)
+and the learner walkthroughs. A Copilot Studio trial supports creation and test chat; publishing
+requires suitable entitlement. [Microsoft licensing guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions).
 
-## What you need
+## What the coach demonstrates
 
-**Nothing.** The agent is built live in front of you, and every exercise is a prediction, a trace, or a
-decision you can make without an account. Module 1 demonstrates trial signup for anyone who wants to
-follow along later.
+- **Grounding:** explain a concept using a source you can inspect.
+- **Topics:** present one original question, wait, and give feedback. The fixed RAI example uses four
+  choices and three variables; the generated practice topic is a separate, more advanced example.
+- **Tools:** return one fixed 30-minute session for `responsible-ai`, `workloads`, or `foundry`.
+- **Events:** save a synthetic signup after confirmation. A separate SharePoint-triggered flow posts
+  to **Contoso Ltd Community > General**.
 
-For independent practice afterward you will want a Microsoft 365 work or trial account with Copilot
-Studio access, in a nonproduction environment, using synthetic data only. A trial supports building and
-testing but not publishing. No coding, no paid API key, no Python, no GitHub Copilot subscription.
+The sample files support learning and adaptation. They do not provision a complete agent or grant
+access to the instructor's environment. Original practice items and fictional Contoso policies are
+clearly identified. The [resource guide](learner/README.md) explains where each file fits.
 
-## What you get
+## Approved objectives
 
-| Folder | What is in it |
-| --- | --- |
-| [`contoso-ai901-agent/`](contoso-ai901-agent/README.md) | The whole agent: brief, instructions, knowledge, topic map, topics, tool contracts, evaluation sets, icons, and a click-by-click build runbook |
-| [`modules/`](modules/01-inception/README.md) | Four modules, each with a lab and a worksheet |
-| [`sources/link-register.md`](sources/link-register.md) | Every Microsoft Learn page behind the course, grouped by segment and checked for reachability |
-| [`practice/`](practice/README.md) | Two-phase self-study: question first, feedback after you answer |
-| [`evals/`](evals/README.md) | Twelve scenarios for checking your own agent |
+These four objectives are quoted exactly as approved. **LO2 names AZ-900; this delivery uses AI-901.**
+The difference changes the example's subject matter, while the agent-building objective stays intact.
+Use the [current AI-901 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) for certification scope.
 
-The kit is **paste-ready design input for a build you perform by hand in the portal**. It is not an
-importable solution file. The instructor's [September 7 tenant rehearsal](contoso-ai901-agent/tenant-rehearsal-2026-09-07.md)
-records actual tests of the coach, knowledge, practice topic, study session, and signup-to-Teams flow.
-Expected results elsewhere remain things to verify; the rehearsal does not establish learner access.
+- **LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
+- **LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+- **LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
+- **LO4:** Evaluate, publish, observe, and govern the agent using analytics, agent evaluations, Power Platform Well-Architected guidance, and security principles.
 
-## The one wording difference
+## After class
 
-Objective LO2 below says **AZ-900** while the build is **AI-901**. AI-900 retired on June 30, 2026 and
-AI-901 replaced it under the same certification name, after the objectives were approved. The objective
-text is quoted exactly as approved rather than quietly rewritten. Same skill, current exam.
+Use [practice mode](practice/README.md), then run the relevant [evaluation scenarios](evals/README.md)
+in your own approved environment. Keep predictions separate from observed results. A successful demo
+does not establish readiness for your users or their data.
 
-- **LO1** — Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
-- **LO2** — Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
-- **LO3** — Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
-- **LO4** — Evaluate, publish, observe, and govern the agent using analytics, agent evaluations, Power Platform Well-Architected guidance, and security principles.
-
-## Optional local tooling
-
-You do not need any of this to take the course. It exists to keep the written material consistent.
-
-```powershell
-npm test          # offline tests for the reference function and repository checks
-npm run validate  # cross-file integrity checks, no network
-npm run check:links   # reachability of every link in the link register, two passes
-npm run demo:plan # optional multi-day study-plan reference function
-```
-
-**Node.js 22 or newer**, zero third-party packages. None of it calls Copilot Studio or creates cloud resources.
-
-## For the instructor
-
-[Run of show](instructor/run-of-show.md) · [Teaching design](docs/teaching-design.md) ·
-[Delivery status and open gates](docs/known-gaps.md) · [Source register](sources/README.md) ·
-[Curriculum delta](docs/course-delta.md) · [Rights and distribution](RIGHTS.md)
-
-Microsoft Learn is the authority for product behavior; re-verify anything that looks stale before you
-teach it. This repository stays private until Tim approves publication after a rights and privacy review.
+[Course page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/) · [Tim Warner](https://techtrainertim.com) · [Rights](RIGHTS.md) · [Report a sensitive issue](SECURITY.md)

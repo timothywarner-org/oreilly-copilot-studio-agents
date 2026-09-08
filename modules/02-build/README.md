@@ -1,23 +1,18 @@
-# 02 · Build: Evidence, then a real teaching conversation
+# 02 · Build: evidence, variables, and a real wait point
 
-**Outcome LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+**LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
-**Smallest useful build:** One original text file, one authored shared-responsibility topic, and an honest fallback. The instructor demonstrates source configuration and input tuning. Everyone predicts, traces and explains one teaching decision without needing a tenant. Authoring is optional after-class practice.
+Ground a concept answer, then inspect RAI Single Question Demo. It presents four choices and uses CorrectAnswer, StudentAnswer, and IsCorrect to select feedback.
 
-| Minutes | Learning move | Evidence |
-| --- | --- | --- |
-| 0-4 | Retrieve the component model from memory | Instruction versus evidence |
-| 4-12 | Add one source; test known and unknown facts | Supported claim and unsupported request |
-| 12-17 | Inspect generative answers scope and official-source extension | Explain scope and citation |
-| 17-29 | Build teach-question-wait-feedback | Correct and incorrect answer paths |
-| 29-34 | Compare automatic topic inputs with an explicit question | Supplied versus missing input |
-| 34-38 | Repair fallback | Before/after behavior |
-| 38-45 | Universal rewrite, trace, and explanation | Completed worksheet |
-| 45-50 | Hinge question and Q&A | Defend a design choice |
-| 50-60 | Break | Return ready for Extend |
+**During class:** Predict the variables and branch for A and B. Rewrite the corrective feedback so it explains the misconception. No account or coding is required. The instructor performs the tenant operations.
 
-**Start:** [lab](lab.md) and [worksheet](worksheet.md). **Instructor:** [complete guide](../../instructor/02-build-guide.md).
+**Time:** 50 minutes, followed by a 10-minute break.
 
-**Checkpoint:** A real wait point, feedback for each choice, evidence behind a factual answer, and an honest uncertainty branch. Predicted results do not prove execution.
+1. Read [the exercise](lab.md).
+2. Complete [the worksheet](worksheet.md) before checking the worked answer.
+3. Label predictions **PREDICTED**, demonstration evidence **OBSERVED DEMO**, and unperformed tests **NOT RUN**.
+4. Use the optional practice steps after class in your own approved environment.
 
-**Continue:** [Extend](../03-extend/README.md). [Current product sources](../../sources/research-build.md).
+**Example scope:** The approved LO2 wording names AZ-900. The course uses AI-901 and the responsible AI topic, as explained in the [course introduction](../../README.md#approved-objectives).
+
+[Microsoft references](../../sources/README.md) · [Continue](../03-extend/README.md)

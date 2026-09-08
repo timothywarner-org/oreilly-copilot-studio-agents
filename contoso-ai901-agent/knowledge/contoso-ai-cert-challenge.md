@@ -57,9 +57,9 @@ into the coach. Achievement evidence belongs in the approved internal process, n
 The coach can explain these fictional rules and refer an employee to the human program owner. It
 cannot verify a pass, decide an individual's eligibility, reserve an award, determine rank, or pay money.
 
-**RecordExamMilestone** records and announces a **self-reported exam booking**, after confirmation.
-It is not an award application, pass verification, leaderboard entry, or payment request. Consent to
-record a booking does not authorize a reward transaction.
+**RecordCertificationSignup** records a **synthetic study signup**, after fresh confirmation of the
+SharePoint row and separate Teams announcement. It is not an exam booking, award application, pass
+verification, leaderboard entry, or payment request. Signup consent does not authorize a reward transaction.
 
 ## Information this policy does not provide
 

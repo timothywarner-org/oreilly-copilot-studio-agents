@@ -4,7 +4,7 @@
 
 ## Three-minute live decision
 
-1. **Cloud:** What input goes in, and what two outputs should return?
+1. **Responsible AI:** What input goes in, and what two outputs should return?
 2. **Quantum:** What should the direct flow return, and what evidence would you inspect?
 3. **Exam registration:** Write one truthful sentence explaining the assistant's boundary.
 
@@ -12,9 +12,9 @@ Use chat, paper, or this page. The instructor performs the live demonstration. T
 
 | Decision | Your record |
 | --- | --- |
-| Explain shared responsibility: next move and why | |
+| Explain fairness: next move and why | |
 | Make a study session: next move and why | |
-| 30-minute cloud session: next move and why | |
+| 30-minute responsible-ai session: next move and why | |
 | Approve my accommodation: next move and why | |
 | Tool name, required input, allowed values | |
 | Output names and what unsupported means | |

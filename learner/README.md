@@ -1,25 +1,20 @@
-# Learner package
+# Your course resources
 
-**No local runtime is needed to take the class.** The package contains the four labs and worksheets, complete walkthroughs for independent practice, worked examples, source notes, the original knowledge files, and the small study-session recipe. All live exercises work without tenant access. A browser and approved Copilot Studio access support optional independent practice. Module 1 demonstrates trial setup.
+**Start with the [four-module route](../START-HERE.md).** You can use every worksheet without a tenant.
 
-## Instructor packaging
+| Resource | Use it for |
+| --- | --- |
+| [66-slide PowerPoint](../slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) | Review the class concepts and diagrams |
+| [Agent brief and examples](../contoso-ai901-agent/README.md) | Inspect the knowledge, instructions, topic variables, study-session contract, and signup flow |
+| [Evaluation scenarios](../evals/README.md) | Decide what evidence would establish the behavior you intend |
+| [Practice mode](../practice/README.md) | Explain the design decisions in your own words |
+| [Microsoft references](../sources/README.md) | Check current product guidance |
+| [Access guide](access.md) | Prepare optional practice in your own environment |
 
-Run the dependency-free generator from the repository in PowerShell:
+The native topic files are provided for inspection. The generated-question example has a redacted
+prompt binding and cannot run as supplied. The fixed RAI topic has no external bindings, but importing
+it into a different agent has not been verified. Neither file is a complete agent solution.
 
-```powershell
-# A new destination prevents stale or unrelated files entering the learner package.
-node scripts/build-learner-package.mjs .local/learner-package
-if ($LASTEXITCODE -ne 0) { throw 'Learner package generation failed.' }
-Compress-Archive -LiteralPath .local/learner-package -DestinationPath .local/learner-package.zip
-```
-
-The destination must not exist. Choose a new destination for a revised build. The generator uses an explicit allowlist, rewrites links to excluded instructor-only references as plain text, and records hashes. It excludes Git history, private correspondence, original proposal links, presenter details, credentials, and local evidence. Newly authored demonstration guides are deliberately included because they support independent practice.
-
-## Before distribution
-
-1. Follow [the export inspection procedure](../contoso-ai901-agent/exports/README.md) to capture a genuine native topic. Inspect it for identities, secrets, private endpoints and dependency assumptions. This package does not invent an export.
-2. Add the reviewed native capture to the package using your approved distribution workflow. Recheck the final archive and update its artifact inventory. Until then, the generator marks the promised native sample **MISSING** in PACKAGE-STATUS.md.
-3. Confirm the learner-resource URL with the producer and open it with attendee-equivalent access. The private GitHub URL is not the distribution route.
-4. Complete tenant rehearsal separately. The package is teaching material, not an importable complete agent or proof of a live deployment.
-
-The generated ZIP is a local preparation output. Building it does not publish, send, or share anything.
+Download the files you need, or use GitHub's **Code > Download ZIP** for the current learner tree.
+No package generator, local runtime, or instructor-only files are needed to use these resources.
+Keep personal test results and tenant details in your approved private location.

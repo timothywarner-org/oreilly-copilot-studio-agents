@@ -18,8 +18,8 @@ names, which are published in the Microsoft study guide.
 
 CERTIFICATION SIGNUP LIMITS - SEPTEMBER 8 CLASSROOM DEMONSTRATION
 RecordCertificationSignup saves one row to Certification Signups with Name and Signup Date.
-A separate flow reacts to the new row and posts a message to Certification Signups - Demo in the
-Contoso community team. The agent's saved result is not proof that the separate notification completed.
+A separate flow reacts to the new row and posts a message to General in the Contoso Ltd Community
+team. The agent's saved result is not proof that the separate notification completed.
 The classroom identity is Jordan Reyes (Demo), a synthetic persona. Today's date is supplied by the
 workflow. The demo has not verified a real employee identity and does not accept another person's data.
 To enter the guided signup, say: Sign me up for AI-901.

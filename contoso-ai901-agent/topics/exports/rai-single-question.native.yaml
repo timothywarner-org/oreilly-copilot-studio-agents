@@ -1,0 +1,79 @@
+# Captured from the saved native topic on 2026-09-08.
+# Fixed teaching question; no tenant IDs, tools, or external writes.
+kind: AdaptiveDialog
+modelDescription: Give one fixed, original single-answer multiple-choice question about responsible AI (RAI), with four choices. Use for an RAI question, responsible AI quiz, sample question on RAI, or the variables and topic-flow demo. Wait for one answer, then give deterministic feedback. Prefer this topic for explicitly responsible AI practice requests.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - Give me a sample question on RAI
+      - Quiz me on responsible AI
+      - Give me an RAI multiple choice question
+      - Show the RAI variables demo
+      - Ask me one responsible AI question
+  actions:
+    - kind: SetVariable
+      id: set_correct_answer
+      variable: init:Topic.CorrectAnswer
+      value: B
+    - kind: Question
+      id: ask_rai_question
+      alwaysPrompt: true
+      variable: init:Topic.StudentAnswer
+      prompt: |-
+        **Responsible AI: choose one answer.**
+
+        Contoso uses an AI system to shortlist job applicants. Equally qualified applicants from one demographic group are consistently rejected more often than applicants from another group. Which responsible AI principle most directly addresses this unequal treatment?
+
+        A. Transparency
+
+        B. Fairness
+
+        C. Privacy and security
+
+        D. Reliability and safety
+
+        Select A, B, C, or D. This is an original practice question.
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: A
+              displayName: A
+            - id: B
+              displayName: B
+            - id: C
+              displayName: C
+            - id: D
+              displayName: D
+    - kind: SetVariable
+      id: compare_student_answer
+      variable: init:Topic.IsCorrect
+      value: =Text(Topic.StudentAnswer) = Topic.CorrectAnswer
+    - kind: ConditionGroup
+      id: branch_on_result
+      conditions:
+        - id: correct_branch
+          condition: =Topic.IsCorrect = true
+          actions:
+            - kind: SendActivity
+              id: correct_feedback
+              activity: "Correct. You chose {Topic.StudentAnswer}. **B. Fairness** is the best answer because the problem is unequal treatment of equally qualified applicants across groups."
+      elseActions:
+        - kind: SendActivity
+          id: incorrect_feedback
+          activity: "You chose {Topic.StudentAnswer}. The best answer is **{Topic.CorrectAnswer}. Fairness**. Focus on the clue: equally qualified applicants receive different treatment across groups."
+    - kind: SendActivity
+      id: explain_distractors_and_source
+      activity: |-
+        Transparency concerns understanding decisions. Privacy and security concerns protecting data. Reliability and safety concerns dependable, safe behavior. All matter, but the unequal treatment in this scenario points most directly to fairness.
+
+        Source: [Microsoft Learn: What is Responsible AI?](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai?view=azureml-api-2)
+
+        Practice complete. This sample is not a real exam item.
+    - kind: CancelAllDialogs
+      id: finish_rai_demo
+inputType: {}
+outputType: {}

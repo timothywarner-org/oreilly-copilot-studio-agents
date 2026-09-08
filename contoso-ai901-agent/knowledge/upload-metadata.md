@@ -1,64 +1,30 @@
-# Knowledge upload metadata
+# Knowledge: choose the right evidence
 
-**Start with one source.** Adding a source isn't proof that retrieval works, and three sources on a
-cold tenant is three ways for the first demo to fail. Add `ai901-concepts.txt` first, prove a known
-statement comes back, then add the rest.
+**Start with one source and verify retrieval before adding more.** The files below have different
+authority. Their descriptions help the agent choose relevant evidence.
 
-| Source | Suggested description | Don't use it for |
+| File | Suggested description | Boundary |
 | --- | --- | --- |
-| [`ai901-concepts.txt`](ai901-concepts.txt) | Original Contoso course reference for responsible AI principles, AI workload shapes, and Microsoft Foundry agent types. Use first for concept questions. | A complete AI-901 syllabus, an official Microsoft document, current exam weights, or exam policy. |
-| [`contoso-enablement-policy.txt`](contoso-enablement-policy.txt) | FICTIONAL Contoso rules for study sessions and confirmed certification study signups. Defines the synthetic demo identity, Name and Signup Date, separate Teams announcement, fresh consent, and actions the coach refuses. | Microsoft policy, real employee entitlements, exam booking, or an actual support service. |
-| [`ai901-objective-domain.md`](ai901-objective-domain.md) | Dated Microsoft Learn AI-901 objective-domain snapshot converted with MarkItDown. Contains the audience profile, two weighted domains, seven objective groups, and all objective bullets. Use for exam scope, Python expectations, Foundry tasks, and weights. | Current availability guarantees, exam administration, original practice answers, or company reward rules. |
-| [`contoso-ai-cert-challenge.md`](contoso-ai-cert-challenge.md) | FICTIONAL Contoso AI Cert Challenge policy. The first 50 qualifying employees to pass AI-901 and earn the certification receive $100 USD each. Covers eligibility, verification, the 50-award limit, and unavailable live data. | Live winner counts, rank, pass verification, booking records as reward claims, or payment execution. |
-| Microsoft Learn AI-901 study guide | Official current scope of Microsoft Certified: Azure AI Fundamentals. Use for questions about what the exam covers. Prefer the source's own current wording. | Guessing exam items, predicting a score, or promising an administrative outcome. |
-| [`evidence-register.json`](evidence-register.json) | Not uploaded as agent knowledge. Its packets are passed into the practice-question prompt by the topic, and its source mapping is used to display a citation. | Agent-wide retrieval. Keep it out of the general knowledge scope so a concept answer can't leak an answer key. |
+| [ai901-concepts.txt](ai901-concepts.txt) | Original Contoso explanations of responsible AI, AI workloads, and Foundry agent concepts | Course-authored teaching text, not a complete syllabus |
+| [ai901-objective-domain.md](ai901-objective-domain.md) | Dated Microsoft Learn AI-901 skills snapshot, including audience, domains, weights, and objectives | Check the live guide for current scope and availability |
+| [contoso-ai-cert-challenge.md](contoso-ai-cert-challenge.md) | Fictional Contoso reward policy: first 50 qualifying employees, $100 each, with human verification | No real entitlement, live award count, or payment capability |
+| [contoso-enablement-policy.txt](contoso-enablement-policy.txt) | Fictional rules for fixed study sessions, synthetic signups, fresh confirmation, and separate Teams announcements | No exam booking, verified pass, reward reservation, or human transfer |
 
-## Verification, in order
+## Optional upload and test
 
-1. Add the source, then wait for ingestion to report ready. A source that is still processing isn't a
-   configuration bug.
-2. **Retrieve a known statement.** Ask something the file answers plainly, such as
-   *"What are the six responsible AI principles?"* Confirm the six named principles come back.
-3. **Inspect the citation.** Confirm the response attributes the answer to the source you added, in a
-   channel that supports citations.
-4. **Test the boundary.** Ask something the file doesn't cover, such as *"How many questions are on
-   the exam?"* Confirm you get a stated limitation and a pointer to the official guide, not a number.
-5. **Test the fictional-policy boundary.** Ask *"Is that a Microsoft rule?"* about a policy statement.
-   Confirm the agent identifies it as the course scenario's invented rule.
+1. Follow [Microsoft's file knowledge procedure](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload).
+   Add ai901-concepts.txt first and wait for its status to become Ready.
+2. Request the six responsible AI principles. Inspect the answer and its supporting source.
+3. Request an exact exam appointment time. Verify an honest limitation because these files contain no booking data.
+4. Add the objective and policy files with their descriptions. Request the domains and the fictional
+   challenge rules, checking that the response attributes each claim to the appropriate source.
+5. Ask whether the company reward is a Microsoft rule. The answer must distinguish fictional policy
+   from official exam requirements.
 
-Step 4 is the demo. A source that answers what it knows is unremarkable; a source that refuses what it
-doesn't know is the thing your audience came to see.
+Keep evaluation answers, agent instructions, and native topic files out of general knowledge.
+After editing a local knowledge file, update the tenant upload and repeat the relevant retrieval test.
 
-## Upload the new sources
+All four files reported Ready in the instructor's environment. Ready establishes ingestion, not
+correctness of every possible answer. Verify your own retrieval and source boundaries.
 
-Upload the two new `.md` files individually and use their descriptions above. Microsoft Learn lists
-Markdown among supported text uploads. Keep instructions, evaluation answers, manifests, provenance,
-and the evidence register out of general knowledge.
-
-Check these three requests after ingestion:
-
-1. **What are AI-901's two domains and weights?** Expect 40-45% for identifying AI concepts and
-   capabilities and 55-60% for implementing solutions with Microsoft Foundry, with the snapshot cited.
-2. **How does the Contoso $100 challenge work?** Expect the first 50 qualifying employees, $100 USD
-   each, achievement verification, and attribution to fictional Contoso policy.
-3. **I booked AI-901. Pay me now.** Expect no award or payment claim. Booking is insufficient.
-
-The full source excerpt is generated by [`Update-AI901Knowledge.ps1`](../scripts/Update-AI901Knowledge.ps1).
-The conversion record is [`ai901-objective-domain.provenance.json`](../sources/ai901-objective-domain.provenance.json).
-Re-upload after a refresh; changing the local file does not refresh a tenant upload.
-
-Source: [Supported file types](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload).
-
-## Scoping the AI-901 study guide
-
-Inspect the study guide as a human reference. For a URL knowledge source, verify that the specific
-intended material is actually retrievable rather than assuming a deep link imports that page verbatim,
-and follow the URL constraints recorded in the
-[Build guide](../../instructor/02-build-guide.md). Restrict the source scope and the general-knowledge
-fallback so a concept answer can't quietly become a general web answer.
-
-Add permitted sources under **Knowledge**, or within a topic-level generative answers configuration
-when you want the retrieval bounded to one topic. Follow current Microsoft Learn instructions for the
-authoring surface your tenant presents.
-
-Source: https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio
+[Knowledge guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio) · [Current AI-901 guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901)

@@ -1,18 +1,19 @@
-# Native topic inspection artifact
+# Inspect the native topics
 
-[`practice-ai901-question.native.yaml`](practice-ai901-question.native.yaml) was exported from the
-saved **Practice AI-901 Question** topic in the instructor tenant on **September 7, 2026**, after
-native checker validation and live conversation tests. The topic was built from the native authoring
-scaffold and inspected prompt schema, then completed and saved using the tenant API.
+**Read the saved conversation structure alongside the visual canvas.** These are native topic
+captures, not a complete agent solution or proof that another tenant can run them unchanged.
 
-**This is an inspection artifact, not an import package.** The tenant-specific prompt identifier was
-replaced with `<PROMPT_ID_REDACTED>` and two explanatory header comments were added. The remaining
-topic body is the saved tenant source. The prompt, knowledge, connections, and agent configuration
-are separate resources and are not included here.
+| File | What to trace | Dependency boundary |
+| --- | --- | --- |
+| [RAI Single Question Demo](rai-single-question.native.yaml) | One fixed four-choice question, CorrectAnswer, StudentAnswer, IsCorrect, two feedback branches, and End all topics | No external tool or tenant binding; portability to another agent has not been tested |
+| [Practice AI-901 Question](practice-ai901-question.native.yaml) | Study-area selection, evidence, generated three-choice item, answer wait, saved-key grading, citation, and repeat loop | The prompt binding is redacted as `<PROMPT_ID_REDACTED>`; a separate prompt resource is required |
 
-Follow the source from the study-area Question node through evidence selection, prompt invocation,
-output validation, the explicit answer wait point, saved-key grading, citation, state clearing, and
-another-question loop. The visible evidence packets and Microsoft Learn links belong to the kit.
+The fixed topic was saved and tested in the instructor tenant on September 8. The generated topic
+was captured September 7 after native checker and conversation tests. The redaction and header
+comments are identified in the generated-topic file. No credentials or live connector bindings are included.
 
-See the [dated rehearsal record](../../tenant-rehearsal-2026-09-07.md) for what was actually tested
-and what remains unverified. Do not treat this export as proof of evaluation quality or portability.
+Start with [the fixed-topic walkthrough](../rai-single-question-demo.md). Identify the Question node
+that pauses, the variable that records the choice, and the condition that selects feedback. Then
+compare the more complex generated example. A successful checker does not establish practice-item quality.
+
+[Microsoft topic guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-create-edit-topics)

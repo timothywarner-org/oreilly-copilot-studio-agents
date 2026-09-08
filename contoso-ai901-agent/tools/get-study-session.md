@@ -1,75 +1,38 @@
-# GetStudySession - AI-901 focus swap
+# GetStudySession: one fixed study activity
 
-**You are editing three Set variable actions, not rebuilding a flow.** The flow shape from
-[`../../contoso-ai901-agent/tools/get-study-session.md`](../../contoso-ai901-agent/tools/get-study-session.md) is
-unchanged: one Text input, two initialized variables, three flat conditions, one Respond to the agent.
-Only the compared values and the plan text change. Budget four minutes, not forty.
+**Purpose:** Learn a tool's input/output contract using a flow that returns authored text and makes
+no external writes. The three focus values are teaching shortcuts, not official exam-domain names.
 
-**Design recipe with tenant evidence added September 7.** The three supported focuses, missing
-focus, and unsupported focus were tested. See the [dated rehearsal](../tenant-rehearsal-2026-09-07.md)
-for results and the remaining scope-clarification issue. The procedure below is a build reference.
-
-## What changes
-
-| Element | AI-901 build | AI-901 build |
-| --- | --- | --- |
-| Compared values | `cloud`, `security`, `governance` | `responsible-ai`, `workloads`, `foundry` |
-| Plan text | AI-901 activities | The three blocks below |
-| Default plan | Choose cloud, security, or governance. | Choose responsible-ai, workloads, or foundry. |
-| Tool description | AI-901 wording | The description below |
-| Flow name, inputs, outputs, statuses, condition count | unchanged | unchanged |
-
-Keeping the flow name `GetStudySession` means the instructor guides, the evaluation cases, and the
-extension-decision material all still line up. Renaming it two days before delivery buys nothing.
-
-## Contract
-
-| Element | Exact value |
+| Contract element | Value |
 | --- | --- |
-| Flow/tool name | GetStudySession |
-| Required trigger input | focus, Text |
-| Supported focus | responsible-ai, workloads, foundry |
-| Response outputs | status, Text; plan, Text |
-| Supported status | ok |
-| Default status | unsupported |
-| Default plan | Choose responsible-ai, workloads, or foundry. |
-| External side effects | None |
+| Tool | GetStudySession |
+| Required input | focus, Text |
+| Supported values | responsible-ai, workloads, foundry |
+| Outputs | status, Text; plan, Text |
+| Supported result | ok and the matching 30-minute plan |
+| Unsupported result | unsupported and Choose responsible-ai, workloads, or foundry. |
 
-The canonical text lives in [`get-study-session.json`](get-study-session.json). That JSON is an
-expected-output fixture, not an import format.
+The [JSON fixture](get-study-session.json) supplies expected values for inspection. It is not a flow import.
 
-## Edit procedure
+## Optional flow walkthrough
 
-1. Open the existing **GetStudySession** agent flow.
-2. In the trigger card, update the **focus** input description to: "One study area: responsible-ai,
-   workloads, or foundry. Obtain a choice if missing."
-3. Update the **plan** initialization value to `Choose responsible-ai, workloads, or foundry.`
-   Leave the **status** initialization at `unsupported`.
-4. In each of the three flat conditions, change the compared literal and the **Set variable** plan text
-   to the matching block below. Keep the conditions flat at the outer level; don't nest them, and don't add a second Respond to the agent.
-5. Confirm **Respond to the agent > Settings > Networking > Asynchronous response = Off**. The response
-   must complete inside the documented synchronous limit. Reference:
-   [Create an agent flow as a tool](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create).
-6. Run **Flow checker**, then **Publish**. Publishing the flow makes it eligible as a tool. It doesn't
-   publish the agent to a channel.
-7. **Test > Manually** with each of the three values and with `quantum`. Inspect the branch taken and
-   the response outputs, not just the chat text.
+1. Create an agent flow with **When an agent calls the flow** and **Respond to the agent**, following
+   [Microsoft's flow guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create).
+2. Add the required Text input **focus**. Describe its three allowed values and the need to collect a missing choice.
+3. Initialize two String variables: **sessionStatus** = `unsupported` and **sessionPlan** =
+   `Choose responsible-ai, workloads, or foundry.`. These defaults make unsupported input explicit.
+4. Add three sequential conditions comparing focus with each supported value. In each Yes branch,
+   set sessionStatus to `ok` and sessionPlan to its exact text below. Leave the No branches empty.
+5. In the single response action, return Text outputs **status** and **plan**, mapped to those variables.
+   Keep the response synchronous. Publish the flow, then add the actual flow as the agent's tool.
+6. Test each supported focus and `quantum` directly. Inspect the input, branch, and response outputs.
+7. In agent chat, test a supplied focus and then a missing one. Verify the actual tool call and returned text.
 
-## Tool description to paste
+**Suggested tool description:** Return one fixed 30-minute AI-901 study session for responsible-ai,
+workloads, or foundry. Collect a missing focus. Explain the limit for custom durations or multi-day plans.
+This flow cannot book an exam, store progress, or contact anyone.
 
-> Create one fixed 30-minute AI-901 study session. Supported focus values: responsible-ai, workloads,
-> foundry. Use this tool for a study session or plan. It cannot create a seven-day plan or a 90-minute
-> session. Explain that limit when a request exceeds it, then offer one supported 30-minute session.
-> Ask the learner to choose a focus if it is missing.
-
-This description was saved in the native tool and published September 7. A fresh manual check named
-the 30-minute session, but still did not explicitly decline a seven-day request. Retain that remaining
-issue in the evaluation record; the description alone does not prove the desired behavior.
-
-Keep **Fill using = Dynamically fill with AI** for `focus`, and set its description to the trigger
-description from step 2. Automatic filling is convenient. It isn't validation and it isn't authorization.
-
-## Copy-ready plan values
+## Authored plan values
 
 ### responsible-ai
 
@@ -83,22 +46,23 @@ AI workloads study session, 30 minutes. Minutes 0-10: Read the AI workloads sect
 
 Microsoft Foundry study session, 30 minutes. Minutes 0-10: Read the Foundry section of the current AI-901 study guide and the Foundry agents overview. Minutes 10-20: Open the Foundry portal and inspect one prompt agent's instructions, model, and attached tools without changing anything. Minutes 20-25: Without notes, explain when a Contoso team should build a hosted agent rather than a prompt agent. Minutes 25-30: Check your explanation against Microsoft Learn and write one question for your mentor.
 
-**Subject authority:** the [current AI-901 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901).
-These are original study activities, not official exam items and not a promise of certification readiness.
+The Foundry activity is optional practice for someone with approved Foundry access. Class participants
+can inspect the instructor's example without signing in. These are original activities, not official
+exam questions or a guarantee of certification readiness.
 
-## Expected cases
+## Check the boundary
 
-| Test | Expected behavior | Evidence to inspect |
-| --- | --- | --- |
-| Flow test: each of the three values | `ok` plus the exact matching text above | Trigger input, branch taken, response outputs |
-| Flow test: `quantum` | `unsupported` plus the choice prompt | All conditions false; initialized defaults returned |
-| Chat: "Give me a study session" | Clarifies the focus before calling | No invented focus, then a correct call |
-| Chat: "Make it 90 minutes over three days" | Explains the fixed 30-minute scope | Honest limitation plus a supported offer |
-| Chat: "cloud" | `unsupported`, because the AI-901 values are gone | Proof the swap actually took effect |
-| Tool disabled | Truthful unavailability, never a synthetic `ok` | Actual state |
+| Test | Expected evidence |
+| --- | --- |
+| Each supported direct flow input | status=ok and the exact matching plan |
+| Direct flow input quantum | status=unsupported and the choice prompt |
+| Chat request without focus | Collect a choice before calling |
+| A request for 90 minutes or seven days | Explain the fixed 30-minute limit |
+| Tool unavailable | State the failure without inventing a successful result |
 
-The `cloud` case is worth one deliberate run. It proves the edit landed, and it catches the failure
-mode where a stale published version is still bound to the agent.
+The instructor tested the supported values, missing focus, and unsupported focus on September 7.
+A broader-duration request still needed clearer limitation wording in that rehearsal. Treat that as a
+test to perform, not a passed capability. A disabled-tool test also does not establish how runtime
+exceptions are handled.
 
-**Don't claim a runtime-exception test from a disabled-tool test.** Turning a tool off demonstrates
-unavailability. It says nothing about how the agent handles a connector throwing at runtime.
+[AI-901 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901)

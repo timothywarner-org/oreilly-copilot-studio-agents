@@ -9,9 +9,9 @@ documentation index rather than typed from memory, then every URL was requested 
 internet. Only entries that returned HTTP 200 on both passes are listed. The verification record at the
 bottom carries the date and counts.
 
-**What a green check does not prove.** Reachability is not accuracy. A page can answer 200 and still have
+**What reachability does not prove.** Reachability is not accuracy. A page can answer 200 and still have
 been rewritten since this list was made. Copilot Studio changes quickly. Re-read anything that contradicts
-what you see in your own tenant, and trust the portal over any document, including this one.
+what you see in your own tenant. Use Microsoft Learn for supported behavior and inspect tenant settings when the experience differs.
 
 ## Start here
 
@@ -109,35 +109,9 @@ Test it, watch it, govern it, and decide whether it is ready for anyone else.
 | https://learn.microsoft.com/microsoft-copilot-studio/security-and-governance | Copilot Studio security and governance | The security and data governance controls, including DLP, customer-managed keys, and audit logging. |
 | https://learn.microsoft.com/microsoft-copilot-studio/guidance/sec-gov-phase2 | Implement a zoned governance strategy | Environment strategy and tenant data boundaries through the zoned governance model. |
 
-## Verification record
+## Reference check
 
-Checked with `npm run check:links`, which requests every URL twice and reports PASS only when both
-passes return HTTP 200. A URL that succeeds once and fails once is reported as UNSTABLE, not rounded up.
-
-| Field | Value |
-| --- | --- |
-| Checked on | 2026-09-07 |
-| Unique URLs | 56 |
-| Passes per URL | 2, run twice, so 4 requests each |
-| Total requests | 224, of which 223 returned 200 |
-| Reachable | 56 |
-| Dead | 0 |
-| Transient failures | 1, retried clean 7 times |
-
-223 of the 224 requests returned 200. One request to the agent flows overview page timed out on the
-second invocation; the retry in that same invocation returned 200, and six further requests to that URL
-all returned 200, so it is recorded as reachable with one transient network failure rather than as a
-problem with the link. Running the check twice is what surfaced that, and it is the reason a single green
-run is not enough.
-
-Every URL also redirects to its `/en-us/` equivalent. That is expected: the locale-neutral form is listed
-on purpose so readers outside the United States are served their own language.
-
-Re-run the check before each delivery:
-
-```powershell
-npm run check:links
-```
-
-Scope: HTTP reachability from one machine at one moment. It does not verify that a page still says what
-it said, and it cannot see anything your tenant blocks.
+**Checked September 8, 2026.** Every URL in this list returned successfully. The broader learner-tree
+check reached all 96 distinct URLs at least once; Microsoft rate-limited some repeat requests.
+Reachability does not prove that a page's content is unchanged or that your tenant has the feature.
+Use the current linked guidance when making a product decision.
