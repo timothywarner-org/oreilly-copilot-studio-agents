@@ -5,7 +5,7 @@ you are learning how to build a grounded, testable agent in Microsoft Copilot St
 
 ## During class
 
-1. Open [the slides](slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) and the current module worksheet.
+1. Open [the slides](slides/Warner-CopilotStudio-Agents-2026-09-08-v3.pptx) and the current module worksheet.
 2. Predict the next response or branch before the instructor runs it.
 3. Compare the response with its source, variables, or actual tool result.
 4. Record what you would change and the test that would prove your change helped.
@@ -33,5 +33,4 @@ Use synthetic data and your organization's approved environment. A trial support
 testing, while publishing requires appropriate entitlement. See [Microsoft's access guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions).
 
 Finish with [practice questions about agent design](practice/README.md) and the
-[evaluation checklist](evals/README.md). The [README](README.md#approved-objectives) preserves the
-approved objectives and explains the AZ-900 / AI-901 wording difference.
+[evaluation checklist](evals/README.md). The [README](README.md#learning-objectives) lists the four learning objectives.

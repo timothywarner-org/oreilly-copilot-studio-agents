@@ -6,7 +6,7 @@ Learn Microsoft Copilot Studio through one example: the **Contoso AI Fundamental
 **AI-901**. You are learning agent design. Contoso employees studying for certification are the
 fictional users of the agent.
 
-[Start here](START-HERE.md) · [Download the 66-slide PowerPoint](slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) · [Agent examples](contoso-ai901-agent/README.md) · [Microsoft references](sources/README.md)
+[Start here](START-HERE.md) · [Download the 66-slide PowerPoint](slides/Warner-CopilotStudio-Agents-2026-09-08-v3.pptx) · [Agent examples](contoso-ai901-agent/README.md) · [Microsoft references](sources/README.md)
 
 ## Your learning path
 
@@ -35,14 +35,12 @@ The sample files support learning and adaptation. They do not provision a comple
 access to the instructor's environment. Original practice items and fictional Contoso policies are
 clearly identified. The [resource guide](learner/README.md) explains where each file fits.
 
-## Approved objectives
+## Learning objectives
 
-These four objectives are quoted exactly as approved. **LO2 names AZ-900; this delivery uses AI-901.**
-The difference changes the example's subject matter, while the agent-building objective stays intact.
 Use the [current AI-901 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901) for certification scope.
 
 - **LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
-- **LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+- **LO2:** Build a grounded AI-901 study assistant using knowledge sources, topics, generative answers, and test prompts.
 - **LO3:** Extend the agent with actions, agent flows, MCP and subagent concepts, and human handoff patterns.
 - **LO4:** Evaluate, publish, observe, and govern the agent using analytics, agent evaluations, Power Platform Well-Architected guidance, and security principles.
 

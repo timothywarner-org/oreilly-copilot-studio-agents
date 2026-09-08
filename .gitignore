@@ -55,7 +55,7 @@
 !/contoso-ai901-agent/evals/native-core-five.csv
 !/contoso-ai901-agent/evals/native-routing.csv
 !/contoso-ai901-agent/evals/ai901-challenge.csv
-!/slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx
+!/slides/Warner-CopilotStudio-Agents-2026-09-08-v3.pptx
 
 # Do not traverse local evidence, dependencies, private sources, or generated drafts.
 /.git/

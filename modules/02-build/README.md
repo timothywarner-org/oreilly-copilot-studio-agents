@@ -1,6 +1,6 @@
 # 02 · Build: evidence, variables, and a real wait point
 
-**LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+**LO2:** Build a grounded AI-901 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
 Ground a concept answer, then inspect RAI Single Question Demo. It presents four choices and uses CorrectAnswer, StudentAnswer, and IsCorrect to select feedback.
 
@@ -12,7 +12,5 @@ Ground a concept answer, then inspect RAI Single Question Demo. It presents four
 2. Complete [the worksheet](worksheet.md) before checking the worked answer.
 3. Label predictions **PREDICTED**, demonstration evidence **OBSERVED DEMO**, and unperformed tests **NOT RUN**.
 4. Use the optional practice steps after class in your own approved environment.
-
-**Example scope:** The approved LO2 wording names AZ-900. The course uses AI-901 and the responsible AI topic, as explained in the [course introduction](../../README.md#approved-objectives).
 
 [Microsoft references](../../sources/README.md) · [Continue](../03-extend/README.md)

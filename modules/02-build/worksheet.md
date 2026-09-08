@@ -1,6 +1,6 @@
 # Build worksheet
 
-**LO2:** Build a grounded AZ-900 study assistant using knowledge sources, topics, generative answers, and test prompts.
+**LO2:** Build a grounded AI-901 study assistant using knowledge sources, topics, generative answers, and test prompts.
 
 | Decision or evidence | Your record |
 | --- | --- |

@@ -4,7 +4,7 @@
 
 | Resource | Use it for |
 | --- | --- |
-| [66-slide PowerPoint](../slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) | Review the class concepts and diagrams |
+| [66-slide PowerPoint](../slides/Warner-CopilotStudio-Agents-2026-09-08-v3.pptx) | Review the class concepts and diagrams |
 | [Agent brief and examples](../contoso-ai901-agent/README.md) | Inspect the knowledge, instructions, topic variables, study-session contract, and signup flow |
 | [Evaluation scenarios](../evals/README.md) | Decide what evidence would establish the behavior you intend |
 | [Practice mode](../practice/README.md) | Explain the design decisions in your own words |
