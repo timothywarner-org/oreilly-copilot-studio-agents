@@ -1,40 +1,36 @@
 # Start here
 
-**Today’s build: an AZ-900 Cert-Prep Assistant in Microsoft Copilot Studio.**
-You are learning to build an agent, not taking an AZ-900 exam cram.
+**Follow one agent through Inception, Build, Extend, and Operate.** AI-901 supplies the subject matter;
+you are learning how to build a grounded, testable agent in Microsoft Copilot Studio.
 
-## Choose your route
+## During class
 
-**Maker route:** You have a Microsoft 365 work or trial account with Copilot Studio access and
-permission to create an agent in an appropriate environment. Have Teams available in a browser
-or its desktop app. Use a nonproduction environment and synthetic inputs only.
+1. Open [the slides](slides/Warner-CopilotStudio-Agents-2026-09-08-v3.pptx) and the current module worksheet.
+2. Predict the next response or branch before the instructor runs it.
+3. Compare the response with its source, variables, or actual tool result.
+4. Record what you would change and the test that would prove your change helped.
 
-**Observer route:** Keep the module worksheet open. Predict the next agent response, record
-what evidence you would expect, and compare it with the demonstration. Complete the same design
-and evaluation decisions without provisioning anything during class.
+Use **PREDICTED**, **OBSERVED DEMO**, and **NOT RUN** to identify your evidence. You can complete
+every live activity without an account, installation, or tenant. No coding is required.
 
-No coding, paid API key, Python installation, or GitHub Copilot subscription is required for the core course.
-VS Code and the repository’s Node.js checks are optional.
+## Open your module
 
-## Before the session
+| Module | Exercise | Worksheet |
+| --- | --- | --- |
+| [Inception](modules/01-inception/README.md) | [Plan the agent](modules/01-inception/lab.md) | [Planning worksheet](modules/01-inception/worksheet.md) |
+| [Build](modules/02-build/README.md) | [Trace the RAI question](modules/02-build/lab.md) | [Topic worksheet](modules/02-build/worksheet.md) |
+| [Extend](modules/03-extend/README.md) | [Inspect a tool and an event](modules/03-extend/lab.md) | [Contract worksheet](modules/03-extend/worksheet.md) |
+| [Operate](modules/04-operate/README.md) | [Make a pilot decision](modules/04-operate/lab.md) | [Evidence worksheet](modules/04-operate/worksheet.md) |
 
-1. Open the [first module](modules/01-inception/README.md) and its worksheet.
-2. For the maker route, verify your account can create and test an agent before class.
-3. Check the [environment notes](docs/environment-notes.md). A trial’s ability to build/test does
-   not prove that you can publish an agent.
-4. Keep [the knowledge upload descriptions](sample-agent/knowledge/upload-metadata.md) ready.
-5. Save your work in a private local location. Do not submit identifiers, secrets, or personal records
-   in an issue or in chat.
+## Practice afterward
 
-## During each module
+Use the [access guide](learner/access.md), then the [agent examples](contoso-ai901-agent/README.md).
+Start with one knowledge file and the fixed RAI topic before adding a tool or a signup workflow.
+The supplied instructions describe the completed demonstration; naming a topic or tool in instructions
+does not create or connect it. Keep instructions aligned with what you actually configure.
 
-Predict → observe → explain → try → check evidence.
-An expected response is not an observed response. Mark unexecuted checks **NOT RUN**.
-If a portal feature is missing, record the difference and use the observer route.
-Do not change tenants, disable policy, or upgrade licenses impulsively to catch up.
+Use synthetic data and your organization's approved environment. A trial supports building and
+testing, while publishing requires appropriate entitlement. See [Microsoft's access guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions).
 
-## After the session
-
-Use [practice mode](practice/README.md), then extend one topic and rerun the relevant
-[evaluation cases](evals/README.md). A useful first success is a small assistant with clear limits,
-not an unbounded agent with every connector enabled.
+Finish with [practice questions about agent design](practice/README.md) and the
+[evaluation checklist](evals/README.md). The [README](README.md#learning-objectives) lists the four learning objectives.

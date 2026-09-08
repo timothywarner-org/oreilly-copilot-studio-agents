@@ -1,31 +1,28 @@
-# Inception lab
+# Inception exercise: plan before you click
 
-**Target:** LO1. **Artifact:** [worksheet.md](worksheet.md).
+**Five minutes. No account required.** Write your decisions in the [worksheet](worksheet.md).
 
-These steps operationalize the approved activity. They are newly authored guidance, not proof that the
-workflow has been run in your tenant. Never bypass tenant policy to complete an exercise.
+1. Name the user and job: a Contoso employee wants to understand one AI concept and practice it.
+2. Write one instruction, one topic, and one observable success criterion.
+3. Name a request the agent must decline or refer to an official process.
+4. Revise one vague phrase so another person could score the result.
 
-## Steps
+## Worked answer, after you write
 
-1. Write the user persona: a cloud beginner seeking study support. Distinguish this persona from you, the maker.
-2. Complete the job, non-goals, and source authority fields in worksheet.md before opening authoring controls.
-3. For the maker route, sign in to Copilot Studio and select your approved nonproduction environment. Follow the documented standard-harness creation route in the environment notes.
-4. Create a blank agent named AZ-900 Cert-Prep Assistant. Inspect Overview, then use the Instruction section’s Edit control to paste the reviewed sample instructions and save. Verify the orchestration configuration in your actual surface.
-5. Compare the generated defaults with sample-agent/topic-map.json. Remove or decline suggested capabilities that do not serve the agreed scope.
-6. Test a normal study request, an unrelated request, and a request to guarantee an exam pass. Record observed behavior or mark NOT RUN.
-7. Explain one safe boundary aloud. Save the actual checkpoint privately if you created an agent.
+| Field | Example |
+| --- | --- |
+| Instruction | Present one original question and wait for my answer before giving feedback |
+| Topic | RAI Single Question Demo: collect one choice and branch on correctness |
+| Success | The first turn contains the question and no key; feedback follows the learner's reply |
+| Hard failure | Claims it booked an exam, paid a reward, or guarantees a pass |
+| Source | Original course concept file for the example; Microsoft Learn for current product and exam scope |
 
-## Checkpoint
+## Optional independent practice
 
-You can name the user, job, allowed actions, unsupported actions, and a testable failure condition without relying on the portal UI.
+Use the [access guide](../../learner/access.md) and [Microsoft's creation steps](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-first-bot)
+to create Contoso AI Fundamentals Coach in an approved environment. Compare your plan with the
+[agent brief](../../contoso-ai901-agent/agent-brief.md). Use the [sample instructions](../../contoso-ai901-agent/instructions.md)
+as a reference, retaining capability claims only as you configure and test those capabilities.
 
-## Recovery
-
-Without working tenant access, complete the worksheet using a diagram and predicted behavior.
-Label predicted responses **PREDICTED**. Leave execution results **NOT RUN**.
-Do not publish personal data or screenshots containing identities or secrets.
-
-## Optional stretch
-
-Change one assumption in your worksheet, then explain which downstream module or evaluation case must change.
-Do not add a new platform, production connector, or unrelated scenario.
+**Exit question:** Why is "be accurate" an inadequate success criterion?
+**Worked answer:** It does not identify a test request, acceptable response, supporting evidence, or failure condition.

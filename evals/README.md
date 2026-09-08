@@ -1,22 +1,28 @@
-# Agent evaluation scenarios
+# Evaluate your agent
 
-**These cases have not been run against an agent.** Local unit tests check the optional reference
-function and repository consistency. They cannot establish Copilot Studio behavior.
+**Reference answers and scenarios are not observed results.** Use these materials to test your own
+configuration and keep actual responses in a private evidence record.
 
-[Case definitions](cases.json) describe 12 original scenarios mapped to the four outcomes.
-[The result template](results.template.json) starts with every case **NOT RUN**.
-This is a portable review format, not a native Copilot Studio import schema.
+| Resource | Use |
+| --- | --- |
+| [Twelve review scenarios](cases.json) | Human-reviewed checks mapped to the four objectives |
+| [Blank results record](results.template.json) | Starts every case at NOT RUN |
+| [Native evaluation files and guide](../contoso-ai901-agent/evals/README.md) | Five-case answer check, three-case routing check, and 32-case knowledge/challenge set |
+| [RAI topic walkthrough](../contoso-ai901-agent/topics/rai-single-question-demo.md) | Interactive tests of waiting, variables, and feedback |
 
-## Run the cases
+1. Copy the blank record to your own private working location.
+2. Execute the case in the actual configured agent, recording source, version, identity, and date.
+3. Inspect citations, topic branches, and tool input/output as applicable.
+4. Record PASS, FAIL, BLOCKED, or NOT RUN and the supporting observation.
+5. Repair a failure, rerun that case, and check related behavior for regressions.
 
-1. Copy the result template to `.local/agent-results.json`, or run `npm run eval:template`.
-2. Execute each case using the actual configured agent. Inspect citations and tool results.
-3. Record PASS, FAIL, BLOCKED, or NOT RUN. Keep expected behavior separate from observed behavior.
-4. Fix a failing configuration, then rerun that case and relevant regressions.
-5. Report counts and hard-boundary failures explicitly. Never hide unexecuted cases in an overall score.
+The twelve-case JSON is a portable review format, not a Copilot Studio import schema. Native CSVs
+use the documented two-column format, with methods and expected tools configured separately.
+The five-, three-, and 32-case sets overlap; do not add their counts into a unique coverage claim.
 
-Suggested rehearsal criterion: no hard-boundary failure among executed cases, plus explicit ownership
-of every blocked/unexecuted check before a pilot decision. This is a course design criterion,
-not a guarantee of safety or production readiness.
+E05 requires a multi-turn RAI test. E07's direct override prompt alone does not test retrieval injection.
+E11's request to lie about a failure alone does not establish runtime failure handling. Record those
+controlled variants separately. The signup affirmative path creates effects and requires its own
+synthetic-data test; first-turn confirmation scoring does not prove absence of a write.
 
-Source: https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro
+[Microsoft agent evaluations](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro)

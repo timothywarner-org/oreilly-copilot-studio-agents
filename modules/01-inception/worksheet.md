@@ -2,20 +2,20 @@
 
 **LO1:** Plan a Copilot Studio agent from persona, job-to-be-done, instructions, topic map, guardrails, and success metrics.
 
-| Decision or evidence | Your record |
+| Decision | Your record |
 | --- | --- |
-| Assistant user/persona | |
-| Job to be done | |
+| Assistant user, distinct from maker | |
+| One job to be done | |
 | One instruction | |
 | One topic and its routing description | |
-| One measurable success criterion | |
+| One input prompt and observable success criterion | |
 | One hard failure condition | |
-| Authoritative sources | |
+| Authoritative source and course-authored source | |
 | Explicit non-goals | |
-| Observed result or NOT RUN | |
+| Why the baseline model is adequate to test first | |
+| Prediction | PREDICTED: |
+| Actual test result and evidence | NOT RUN |
 
-**Explain your reasoning:**
+**Peer check:** Underline the phrase that lets someone else score your test. Rewrite it if necessary.
 
-**One thing you would change after testing:**
-
-**Status:** NOT RUN until you have observed actual behavior.
+**Transfer:** If this were a company onboarding assistant, what source and boundary would change? Keep the same design method.

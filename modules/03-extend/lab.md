@@ -1,31 +1,21 @@
-# Extend lab
+# Extend exercise: inspect the contract and the effect
 
-**Target:** LO3. **Artifact:** [worksheet.md](worksheet.md).
+**Three minutes. No account required.** Answer in the [worksheet](worksheet.md) before opening the
+[worked example](worked-example.md).
 
-These steps operationalize the approved activity. They are newly authored guidance, not proof that the
-workflow has been run in your tenant. Never bypass tenant policy to complete an exercise.
+1. A colleague requests a **responsible-ai** study session. Name the input and the two outputs of
+   [GetStudySession](../../contoso-ai901-agent/tools/get-study-session.md).
+2. They request **quantum** instead. Predict the direct flow result and the missing-focus conversation.
+3. They request an AI-901 study signup. Explain the confirmation required and the two external results
+   you would inspect before claiming that the row and announcement both exist.
 
-## Steps
+The study-session flow returns text without external writes. The signup example creates a row after
+fresh confirmation. The [independent event flow](../../contoso-ai901-agent/signup-trigger-2026-09-08.md)
+then posts to **Contoso Ltd Community > General**. Saving a signup is not an exam booking.
 
-1. Read the study-plan contract and flow design. Identify every input and confirm that the tool has no external side effects.
-2. Predict the output for the three-day example. Decide how the agent should handle missing days, negative minutes, or an unsupported focus code.
-3. For the maker route, implement the bounded agent flow in an approved environment and bind it to the agent. Follow the flow-design sequence; record the actual binding privately.
-4. Test a valid plan and an invalid request. Inspect returned data. A generated sentence about success is not tool execution evidence.
-5. Compare actions, agent flows, HTTP, MCP, and delegation using extension-decisions.md. Choose one real approved MCP capability only when available; do not expose unrelated tools.
-6. Test an exam-registration request. The sample tool cannot register anyone. Require a truthful boundary and an actual configured handoff or an honest limitation.
-7. Use the optional Node reference demo only as a contract oracle or declared offline fallback. Never relabel its output as a Copilot Studio execution.
+**Optional after class:** Build and test GetStudySession using its recipe. Then inspect the signup
+event design. If you reproduce the write path, use your own approved list, channel, and synthetic data.
+Check every successful operation in its destination before retrying an ambiguous result.
 
-## Checkpoint
-
-You can distinguish a narrative answer, a validated tool result, a blocked action, and a real human handoff.
-
-## Recovery
-
-Without working tenant access, complete the worksheet using a diagram and predicted behavior.
-Label predicted responses **PREDICTED**. Leave execution results **NOT RUN**.
-Do not publish personal data or screenshots containing identities or secrets.
-
-## Optional stretch
-
-Change one assumption in your worksheet, then explain which downstream module or evaluation case must change.
-Do not add a new platform, production connector, or unrelated scenario.
+**Transfer:** Explain when an [MCP connection, another agent, or a human referral](../../contoso-ai901-agent/tools/extension-decisions.md)
+would add useful capability. A connection alone does not establish permission or a completed action.

@@ -1,31 +1,43 @@
-# Build lab
+# Build exercise: trace the RAI question
 
-**Target:** LO2. **Artifact:** [worksheet.md](worksheet.md).
+**Seven minutes. No account required.** Use the [worksheet](worksheet.md) and
+[RAI Single Question Demo](../../contoso-ai901-agent/topics/rai-single-question-demo.md).
 
-These steps operationalize the approved activity. They are newly authored guidance, not proof that the
-workflow has been run in your tenant. Never bypass tenant policy to complete an exercise.
+The topic presents a Contoso hiring scenario with four labeled choices. It saves one answer, computes
+a Boolean, and follows a feedback branch. The key appears only after the student responds.
 
-## Steps
+1. Predict CorrectAnswer, StudentAnswer, and IsCorrect after choosing **A**.
+2. Trace the branch and rewrite the corrective feedback in your own words.
+3. Repeat the prediction for **B**. Explain exactly which node makes the conversation wait.
+4. Separate the fixed topic message from a generated answer that retrieves a knowledge source.
 
-1. Read the knowledge source descriptions. Separate official Microsoft Learn material from the fictional demonstration policy.
-2. For the maker route, add approved knowledge under the agent’s Knowledge page or the selected generative answers node. Use the upload descriptions. Wait for readiness and verify retrieval rather than assuming it.
-3. Design the practice-question topic: explain a concept from a trusted source, present one original question, wait for a learner answer, then explain the result.
-4. Record how topic inputs are obtained. Discuss AutomaticTaskInput as named in the proposal, but inspect the actual native configuration before authoring. Clarify missing inputs instead of guessing them.
-5. Test a known statement, a question not supported by the sources, and an instruction hidden in a retrieved passage that tries to override the agent’s rules.
-6. Inspect the actual evidence behind each answer. A plausible citation is not enough. Do not fabricate a citation if the source was not retrieved.
-7. For observer mode, draw the same topic sequence and predict the response at each branch. Mark predictions separately from observed results.
+## Worked answer
 
-## Checkpoint
+| Selection | CorrectAnswer | StudentAnswer | IsCorrect | Branch |
+| --- | --- | --- | --- | --- |
+| A | B | A | false | All other conditions, corrective feedback |
+| B | B | B | true | Correct-feedback branch |
 
-Your topic has a real wait point, a check of understanding, a traceable source, and a truthful uncertainty/handoff branch.
+The **Question** node saves StudentAnswer and always prompts. A question mark in a Message node
+does not create the same wait point. The Set variable expression converts the choice to text before
+comparing it with the saved key. The condition uses the resulting Boolean.
 
-## Recovery
+**Corrective explanation:** Equally qualified applicants receive different treatment across groups,
+which identifies fairness. Transparency concerns understanding decisions.
 
-Without working tenant access, complete the worksheet using a diagram and predicted behavior.
-Label predicted responses **PREDICTED**. Leave execution results **NOT RUN**.
-Do not publish personal data or screenshots containing identities or secrets.
+## Optional independent practice
 
-## Optional stretch
+1. Add [ai901-concepts.txt](../../contoso-ai901-agent/knowledge/ai901-concepts.txt) as knowledge using the
+   [source descriptions](../../contoso-ai901-agent/knowledge/upload-metadata.md). Wait for Ready, then
+   request the six responsible AI principles and inspect the supporting citation.
+2. Request an exact exam appointment time. No source in the kit supplies that personal information.
+   Verify that the agent states the limitation.
+3. Build the fixed topic from [the learner walkthrough](../../contoso-ai901-agent/topics/rai-single-question-demo.md).
+   Test A and B in fresh conversations, inspect the three variables, and verify that the topic ends.
+4. Compare your canvas with the [saved native source](../../contoso-ai901-agent/topics/exports/rai-single-question.native.yaml).
+   Source inspection is optional and requires no programming.
 
-Change one assumption in your worksheet, then explain which downstream module or evaluation case must change.
-Do not add a new platform, production connector, or unrelated scenario.
+**Success:** A source supports the generated answer; the fixed topic pauses; each choice follows the
+appropriate feedback branch. Mark any unexecuted check **NOT RUN**.
+
+[Topic documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-create-edit-topics) · [Variables documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-variables)

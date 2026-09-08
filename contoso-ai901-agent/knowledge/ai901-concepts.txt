@@ -1,0 +1,90 @@
+AI FUNDAMENTALS CONCEPTS FOR THE CONTOSO AI COACH
+Original course teaching reference. Reviewed 2026-09-06.
+This is a small course-authored explanation. It isn't a Microsoft publication, an exam dump, or a
+complete AI-901 study guide. Contoso is fictional. It contains no exam prices, pass predictions,
+scheduling details, or claims about how many items an exam contains.
+
+WHICH EXAM THIS COACH SUPPORTS
+The certification is Microsoft Certified: Azure AI Fundamentals. The exam that currently leads to it is
+AI-901. The earlier exam, AI-900, retired on June 30, 2026. The certification name didn't change, and
+someone who earned it through AI-900 holds the same credential as someone who earns it through AI-901.
+AI-901 publishes two skill areas rather than the five that AI-900 used: identifying AI concepts and
+capabilities, and implementing AI solutions by using Microsoft Foundry. Use the official study guide
+for current weights and scope.
+
+RESPONSIBLE AI: SIX PRINCIPLES
+Microsoft's Responsible AI Standard is built on six principles: fairness, reliability and safety,
+privacy and security, inclusiveness, transparency, and accountability.
+Fairness means similar cases get similar treatment. If Contoso built a model to rank internal job
+applicants, two applicants with comparable experience shouldn't be scored differently because of a
+sensitive attribute.
+Reliability and safety means the system behaves predictably across the range of inputs it will really
+see, including inputs nobody planned for, and fails in a safe direction rather than a confident one.
+Privacy and security means the system uses only data it is authorized to use and protects what it
+touches.
+Inclusiveness means the system works for the full range of people it serves, including people using
+assistive technology or a language other than the one it was tuned on.
+Transparency means people can tell what the system does, what it can't do, and where its output came
+from.
+Accountability means a named human is answerable for the system. A principle without an owner is a
+poster, not a control.
+These are design-time decisions, not a review you run the week before launch.
+
+AI WORKLOADS: NAMING WHAT YOU ARE ACTUALLY BUILDING
+AI-901 groups common workloads into a handful of recognizable shapes: generative and agentic AI, text
+analysis, speech, computer vision, and information extraction. Choosing the right shape is most of the
+work, because it determines which service and which model you reach for.
+Text analysis covers a set of named techniques worth telling apart. Keyword extraction pulls out the
+terms a document is about. Entity detection identifies the specific things named in it, such as a
+person, an organization, or a date. Sentiment analysis estimates the attitude expressed. Summarization
+produces a shorter version that preserves the meaning.
+Speech splits into recognition, turning spoken audio into text, and synthesis, turning text into
+spoken audio. They are different capabilities and are commonly configured separately.
+Computer vision covers interpreting existing images, while image generation produces new ones. A
+multimodal model can accept an image alongside text in the same prompt, which is why "can it see the
+picture" and "can it draw a picture" are two separate questions about a model.
+Information extraction pulls structured fields out of unstructured material, including documents,
+forms, images, audio, and video. Contoso's expense receipts are an information-extraction problem, not
+a computer-vision problem, even though the input is a photograph.
+
+MODEL SELECTION IS A CAPABILITY QUESTION
+Picking a model starts with what the workload requires: does it need to read images, produce audio,
+handle a long input, or run cheaply at high volume. Capability first, then deployment options and
+configuration parameters. Contoso's rule of thumb for this course is that a model is a component you
+choose against requirements, not a brand you commit to.
+
+MICROSOFT FOUNDRY: ONE PLACE FOR AGENTS, MODELS, AND TOOLS
+Microsoft Foundry brings agents, models, and tools together under a single management grouping, with
+unified role-based access control, networking, and policy, plus built-in tracing, monitoring, and
+evaluation.
+Its model catalog carries more than 10,000 models from Microsoft, OpenAI, Anthropic, Meta, and others,
+organized into models sold by Azure and models from partners and the community.
+Foundry Agent Service offers two agent types, and telling them apart is a common exam-shaped
+distinction. A prompt agent is declarative: you supply instructions, choose a model, attach tools, and
+Foundry runs it with no application code or containers to maintain. A hosted agent is code: you bring
+your own agent code or framework, package it, and Foundry runs it with a managed endpoint, automatic
+scaling, its own Microsoft Entra identity, and end-to-end observability.
+The short version Contoso teaches: a prompt agent is configuration you hand to Foundry, and a hosted
+agent is code Foundry hosts for you. Start declarative, move to code when the requirement demands it.
+
+WHY THIS SCENARIO IS RECURSIVE
+The assistant explaining these ideas is itself an agent built from instructions, knowledge, topics, and
+tools. The Copilot Studio agent in this class and a Foundry prompt agent are different products with
+the same shape: instructions plus a model plus attached capability. Noticing that is worth more than
+memorizing either portal.
+
+SOURCE TRAIL
+Current exam scope and weights:
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901
+Exam retirement dates:
+https://learn.microsoft.com/en-us/credentials/support/retired-certification-exams
+The six responsible AI principles:
+https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai
+Microsoft Foundry overview:
+https://learn.microsoft.com/azure/foundry/what-is-foundry
+Prompt agents and hosted agents:
+https://learn.microsoft.com/azure/foundry/agents/overview
+Foundry model catalog:
+https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview
+Open those sources to verify current details. A URL printed in this file is a reference for the reader.
+It doesn't prove that an agent retrieved that webpage.

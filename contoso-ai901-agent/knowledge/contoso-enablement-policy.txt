@@ -1,0 +1,51 @@
+FICTIONAL CONTOSO AI ENABLEMENT POLICY - SYNTHETIC DEMONSTRATION DATA
+
+This policy belongs only to the invented course scenario. It isn't Microsoft policy, O'Reilly policy,
+or a real entitlement. Every name, list, and channel below is synthetic.
+
+SCOPE OF THE COACH
+The AI Fundamentals Coach explains concepts, generates original practice questions, returns a fixed
+study session, explains the fictional AI Cert Challenge policy, and records a certification study
+signup. It does nothing else. The reward rules are in contoso-ai-cert-challenge.md.
+
+STUDY SESSION LIMITS
+The GetStudySession tool returns one fixed 30-minute session.
+It accepts one focus: responsible-ai, workloads, or foundry. A missing focus requires clarification.
+A successful result carries status ok and a plan. An unrecognized focus returns status unsupported.
+The tool doesn't support custom day counts, custom durations, or multi-week plans.
+These three focus labels are Contoso teaching shortcuts. They aren't the official AI-901 skill-area
+names, which are published in the Microsoft study guide.
+
+CERTIFICATION SIGNUP LIMITS - SEPTEMBER 8 CLASSROOM DEMONSTRATION
+RecordCertificationSignup saves one row to Certification Signups with Name and Signup Date.
+A separate flow reacts to the new row and posts a message to General in the Contoso Ltd Community
+team. The agent's saved result is not proof that the separate notification completed.
+The classroom identity is Jordan Reyes (Demo), a synthetic persona. Today's date is supplied by the
+workflow. The demo has not verified a real employee identity and does not accept another person's data.
+To enter the guided signup, say: Sign me up for AI-901.
+The coach doesn't contact an exam provider, verify a booking, confirm a seat, or establish anyone passed.
+It does not submit reward claims, reserve awards, rank employees, or authorize the challenge payment.
+Pass reports, booking reports, and reward questions alone must not call the signup tool.
+It runs only after the employee confirms in the current turn. Consent given for anything else doesn't
+carry over.
+The confirmation names both the SharePoint record and the Teams announcement. Declining creates
+nothing. A request for a private signup must be declined or cancelled because new records are announced.
+It stores only the synthetic name and signup date in addition to SharePoint's normal system metadata.
+Each newly confirmed request creates another demo row; the simple example does not deduplicate signups.
+If a tool result is uncertain, check the list before retrying. Never resubmit a known successful run.
+
+WHAT THE COACH NEVER DOES
+It doesn't register employees for exams, issue vouchers or refunds, promise passing scores, verify
+identity, grant access, create cloud resources, or contact a mentor unless the instructor configured a
+real authorized route.
+It doesn't accept or store confirmation numbers, payment details, identity documents, passwords, or
+access tokens.
+No real email address, booking system, or support queue is provided by this fictional policy.
+
+OWNERSHIP
+A named Contoso enablement owner reviews whether answers are supported and whether access is
+appropriate before any pilot. Contoso's rule is that the pilot decision belongs to that person, not to
+an evaluation score.
+
+Study plans are suggestions. Employees choose whether to follow them and use official Microsoft
+sources for certification requirements.
