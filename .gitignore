@@ -18,6 +18,7 @@ node_modules
 *.pptx
 # Tim approved this course deck for learner sharing. Keep templates and private builds excluded.
 !/slides/Warner-CopilotStudio-Agents-2026-09-08.pptx
+!/slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx
 *.mp4
 *.mov
 .DS_Store

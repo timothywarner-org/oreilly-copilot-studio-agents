@@ -6,7 +6,7 @@
 
 [Start here](START-HERE.md) · [The agent kit](contoso-ai901-agent/README.md) · [Every link, verified](sources/link-register.md) · [Course page](https://www.oreilly.com/live-events/build-ai-agents-to-automate-your-workflows/0642572413361/0642572413354/) · [TechTrainerTim](https://techtrainertim.com)
 
-**Class slides:** [Download the September 8 PowerPoint deck](slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) (44 slides).
+**Class slides:** [Download the September 8 PowerPoint deck, v2](slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx) (66 slides, larger type, diagrams, and Microsoft Learn source lines). The [original 44-slide build](slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) is kept for reference.
 
 ## What you build
 

@@ -112,7 +112,7 @@ def main():
     sub = ph(s, 1)
     if sub is not None:
         set_text(sub, ["Tim Warner  |  September 8, 2026",
-                       "Microsoft Copilot Studio  |  timw.info"])
+                       "Microsoft Copilot Studio  |  TechTrainerTim.com"])
 
     # 2. Course flow
     s = add(prs, L_CONTENT,
@@ -244,7 +244,7 @@ def main():
         "Please complete the course evaluation",
         "",
         "Session materials:  " + REPO_URL,
-        "Tim Warner  |  timw.info  |  techtrainertim.com",
+        "Tim Warner  |  TechTrainerTim.com",
     ])
     drop_placeholder(s, 2)
 

@@ -1,6 +1,6 @@
 # Build the branded companion
 
-**Current learner deck:** [September 8 PowerPoint, 44 slides](../slides/Warner-CopilotStudio-Agents-2026-09-08.pptx).
+**Current learner deck:** [September 8 PowerPoint v2, 66 slides](../slides/Warner-CopilotStudio-Agents-2026-09-08-v2.pptx), built by `instructor/build-deck-v2.py`. The [original 44-slide build](../slides/Warner-CopilotStudio-Agents-2026-09-08.pptx) stays in place unchanged.
 Tim approved including this specific deck in Git for learner sharing on September 7. The supplied
 template and private builds remain ignored. The existing deck was copied byte-for-byte from the
 private build; this move did not revise or visually revalidate its contents.
